@@ -1,16 +1,96 @@
-# React + Vite
+# Krishna Tours Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern responsive website redesign for Krishna Tours built using React and Bootstrap.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project aims to redesign the existing Krishna Tours website with a modern user interface while maintaining the current business functionality.
 
-## React Compiler
+The website includes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Home Page
+* About Us Page
+* Our Fleet Page
+* Vehicle Details Page
+* Tour Packages Page
+* Contact Us Page
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* JavaScript
+
+### Styling
+
+* Bootstrap 5
+* Custom CSS
+* Bootstrap Icons
+
+### Routing
+
+* React Router DOM
+
+### Form Handling
+
+* Web3Forms
+
+---
+
+## Project Structure
+
+```text
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── Navbar.jsx
+│   └── Footer.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Fleet.jsx
+│   ├── VehicleDetails.jsx
+│   ├── Packages.jsx
+│   └── Contact.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## Features
+
+* Responsive Design
+* Modern UI/UX
+* Vehicle Listing System
+* Vehicle Detail Pages
+* Tour Package Display
+* Contact Form Integration
+* WhatsApp Inquiry Button
+* Mobile Friendly Navigation
+
+---
+
+
+
+## Team Workflow
+
+* Work on feature branches only.
+* Do not commit directly to the main branch.
+* Pull the latest changes before starting work.
+* Create Pull Requests for merging changes into main.
+
+---
+
+## Current Status
+
+Frontend development is currently in progress.
