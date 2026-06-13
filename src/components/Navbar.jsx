@@ -40,13 +40,9 @@ function Navbar() {
     Contact Us
   </Link>
 </li>
+   </ul>       
           
-          
-        </ul>
-
-        <button className="btn btn-warning">
-          Book Now
-        </button>
+        
 
       </div>
     </nav>
