@@ -1,0 +1,158 @@
+.about-hero {
+    height: 500px;
+
+    background-image: url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.stats-section {
+    background-color: #0B2E6B;
+    color: white;
+    padding: 50px 0;
+}
+
+.stats-section h3 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.stats-section p {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h5 {
+    margin-top: 15px;
+    color: #0B2E6B;
+    font-weight: 600;
+}
+.expertise-section{
+    margin-top: 50px;
+}
+
+.card p {
+    color: #555;
+}
+
+.bi {
+    color: #0B2E6B;
+    margin-bottom: 15px;
+}
+.legacy-section h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.advantage-list{
+    margin-top:20px;
+    padding-left:20px;
+}
+
+.advantage-list li{
+    margin-bottom:10px;
+}
+
+.mission-card{
+    background:#0B2E6B;
+    color:white;
+    border-radius:15px;
+}
+
+.vision-card{
+    background:white;
+    border-radius:15px;
+    box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.core-values{
+    background:#f8f9fa;
+}
+
+.core-values i{
+    color:#0B2E6B;
+    margin-bottom:15px;
+}
+
+.cta-section{
+    background:#0B2E6B;
+    color:white;
+    padding:80px 0;
+}
+
+.cta-section p{
+    max-width:600px;
+    margin:auto;
+}
+.about-hero{
+    height: 550px;
+
+    background-image:
+    linear-gradient(
+        rgba(11,46,107,0.55),
+        rgba(11,46,107,0.55)
+    ),
+    url("https://images.unsplash.com/photo-1564507592333-c60657eea523");
+
+    background-size: cover;
+    background-position: center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    font-weight:700;
+}
+
+.hero-content p{
+    font-size:1.4rem;
+    color:#f4d27c;
+    margin-top:15px;
+}
+.why-section{
+    margin-top: 50px;
+}
