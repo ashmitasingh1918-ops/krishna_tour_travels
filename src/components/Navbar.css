@@ -1,18 +1,10 @@
 .custom-navbar {
-    background-color: #0B2E6B;
+    background-color: #032478;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-.btn-warning {
-    background-color: #D4A017;
-    border: none;
-    font-weight: 600;
-}
 
-.btn-warning:hover {
-    background-color: #b98912;
-}
 .nav-link {
     color: white !important;
     font-weight: 500;
@@ -23,7 +15,7 @@
 }
 .navbar-brand {
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 .logo-img {
     height: 55px;
@@ -32,6 +24,7 @@
 }
 
 .brand-text {
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: white;
