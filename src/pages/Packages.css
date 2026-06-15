@@ -140,3 +140,72 @@
     color: #555;
     line-height: 1.7;
 }
+.itinerary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid #0b2e6b;
+}
+
+.itinerary-card h4 {
+    color: #0b2e6b;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.itinerary-card p {
+    color: #555;
+    line-height: 1.8;
+}
+.package-header {
+    padding: 40px 0 10px;
+}
+
+.package-header-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.package-title {
+    color: #0b2e6b;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.package-duration {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.package-price {
+    color: #d4a017;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.package-image {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+
+    .package-header-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .package-title {
+        font-size: 2rem;
+    }
+}

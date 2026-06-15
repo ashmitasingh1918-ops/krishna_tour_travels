@@ -91,9 +91,12 @@ function Packages() {
 
             <h6>₹6,500</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/delhi-agra-delhi-2n"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -115,9 +118,12 @@ function Packages() {
 
             <h6>₹24,900</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/golden-triangle"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -153,9 +159,12 @@ function Packages() {
 
             <h6>₹2,500</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+           <Link
+  to="/packages/delhi-agra-jaipur-delhi"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -177,9 +186,12 @@ function Packages() {
 
             <h6>₹6,500</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/delhi-agra-delhi-1n"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -201,9 +213,12 @@ function Packages() {
 
             <h6>₹24,900</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/delhi-haridwar-rishikesh"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>

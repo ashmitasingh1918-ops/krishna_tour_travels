@@ -1,0 +1,68 @@
+.package-hero {
+    background: linear-gradient(
+        rgba(11,46,107,0.85),
+        rgba(11,46,107,0.75)
+    );
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.package-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.package-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.package-price {
+    color: #f4c542;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.section-title {
+    color: #0b2e6b;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.package-image {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.package-overview {
+    padding-left: 20px;
+}
+
+.package-overview p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+}
+.highlights-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.highlights-list li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.highlights-list i {
+    color: #f4c542;
+    margin-right: 10px;
+}
+.info-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    height:100%;
+}
