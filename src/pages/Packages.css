@@ -18,22 +18,22 @@
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 600px;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: white;
-    line-height: 1.1;
-    margin-bottom: 25px;
+    line-height: 1.15;
+    margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     color: #ffd166;
-    line-height: 1.7;
-    margin-bottom: 0;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 .package-card {
   background: #fff;

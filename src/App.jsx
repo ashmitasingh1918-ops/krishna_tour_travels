@@ -6,6 +6,7 @@ import Fleet from "./pages/Fleet";
 import Contact from "./pages/Contact";
 import Packages from "./pages/Packages";
 import VehicleDetails from "./pages/VehicleDetails";
+import PackageDetails from "./pages/PackageDetails";
 
 import { Routes, Route } from "react-router-dom";
 
