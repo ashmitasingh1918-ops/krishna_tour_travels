@@ -1,4 +1,11 @@
 import "./Packages.css";
+import delhiTour from "../assets/images/delhi_tour.png";
+import agra from "../assets/images/agra.png";
+import delhi from "../assets/images/delhi.png";
+import triangle from "../assets/images/triangle.png";
+import jaipur from "../assets/images/jaipur.png";
+import hari from "../assets/images/hari.png";
+import { Link } from "react-router-dom";
 function Packages() {
   return (
     <>
@@ -45,7 +52,7 @@ function Packages() {
         <div className="package-card">
 
           <img
-            src="https://images.unsplash.com/photo-1564507592333-c60657eea523"
+            src={delhiTour}
             alt="Delhi Tour"
             className="img-fluid"
           />
@@ -57,9 +64,12 @@ function Packages() {
 
             <h6>₹2,500</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/delhi-local"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -69,7 +79,7 @@ function Packages() {
         <div className="package-card">
 
           <img
-            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da"
+            src={delhi}
             alt="Agra Tour"
             className="img-fluid"
           />
@@ -81,9 +91,12 @@ function Packages() {
 
             <h6>₹6,500</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/delhi-agra-delhi-2n"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -93,7 +106,7 @@ function Packages() {
         <div className="package-card">
 
           <img
-            src="https://images.unsplash.com/photo-1477587458883-47145ed94245"
+            src={triangle}
             alt="Golden Triangle"
             className="img-fluid"
           />
@@ -105,9 +118,12 @@ function Packages() {
 
             <h6>₹24,900</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/golden-triangle"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -131,7 +147,7 @@ function Packages() {
         <div className="package-card">
 
           <img
-            src="https://images.unsplash.com/photo-1564507592333-c60657eea523"
+            src={jaipur}
             alt="Delhi Tour"
             className="img-fluid"
           />
@@ -143,9 +159,12 @@ function Packages() {
 
             <h6>₹2,500</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+           <Link
+  to="/packages/delhi-agra-jaipur-delhi"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -155,7 +174,7 @@ function Packages() {
         <div className="package-card">
 
           <img
-            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da"
+            src={agra}
             alt="Agra Tour"
             className="img-fluid"
           />
@@ -167,9 +186,12 @@ function Packages() {
 
             <h6>₹6,500</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/delhi-agra-delhi-1n"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
@@ -179,7 +201,7 @@ function Packages() {
         <div className="package-card">
 
           <img
-            src="https://images.unsplash.com/photo-1477587458883-47145ed94245"
+            src={hari}
             alt="Golden Triangle"
             className="img-fluid"
           />
@@ -191,9 +213,12 @@ function Packages() {
 
             <h6>₹24,900</h6>
 
-            <button className="btn btn-primary">
-              View Details
-            </button>
+            <Link
+  to="/packages/delhi-haridwar-rishikesh"
+  className="btn btn-warning"
+>
+  View Details
+</Link>
           </div>
 
         </div>
