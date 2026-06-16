@@ -8,7 +8,7 @@ const packages = [
 
     price: "₹2,500",
 
-    image: "/src/assets/delhi_tour.png",
+    image: "/src/assets/images/delhi_tour.png",
 
     overview:
       "Explore the rich heritage of Old and New Delhi with guided sightseeing covering iconic landmarks and cultural attractions.",

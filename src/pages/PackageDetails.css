@@ -1,42 +1,64 @@
-.package-hero {
-    background: linear-gradient(
-        rgba(11,46,107,0.85),
-        rgba(11,46,107,0.75)
-    );
-    color: white;
-    padding: 60px 0;
-    text-align: center;
+/* Package Header */
+
+.package-header {
+    padding: 40px 0 20px;
 }
 
-.package-hero h1 {
-    font-size: 3rem;
+.package-header-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.package-title {
+    color: #0b2e6b;
+    font-size: 2.7rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.package-hero p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+.package-duration {
+    color: #666;
+    font-size: 1.15rem;
+    margin-bottom: 0;
 }
 
 .package-price {
     color: #f4c542;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-weight: 700;
+    margin-bottom: 0;
 }
+
+
+/* Overview Section */
+
 .section-title {
     color: #0b2e6b;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
 }
+
 .package-image {
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.package-image:hover {
+    transform: scale(1.02);
 }
 
 .package-overview {
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 .package-overview p {
@@ -44,25 +66,153 @@
     line-height: 1.8;
     color: #444;
 }
+
+
+/* Highlights */
+
 .highlights-list {
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0;
 }
 
 .highlights-list li {
-    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 14px;
     font-size: 1.05rem;
     color: #333;
 }
 
-.highlights-list i {
+.highlights-list li i {
     color: #f4c542;
-    margin-right: 10px;
+    font-size: 1rem;
+    flex-shrink: 0;
 }
-.info-card{
-    background:white;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
-    height:100%;
+
+
+/* Itinerary */
+
+.itinerary-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+
+    border-left: 5px solid #0b2e6b;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.itinerary-card h4 {
+    color: #0b2e6b;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.itinerary-card p {
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 0;
+}
+
+
+/* Included / Excluded */
+
+.info-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    height: 100%;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.info-card h3 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.included-card {
+    border-top: 5px solid #28a745;
+}
+
+.included-card h3 {
+    color: #28a745;
+}
+.excluded-card {
+    border-top: 5px solid #dc3545;
+}
+
+.excluded-card h3 {
+    color: #dc3545;
+}
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    font-size: 1rem;
+    color: #444;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+.included-icon {
+    color: #28a745;
+    font-size: 1.1rem;
+}
+
+.excluded-icon {
+    color: #dc3545;
+    font-size: 1.1rem;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .package-header-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .package-title {
+        font-size: 2rem;
+    }
+
+    .package-price {
+        font-size: 2rem;
+    }
+
+    .package-overview {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .section-title {
+        text-align: center;
+    }
 }

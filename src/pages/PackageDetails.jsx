@@ -132,51 +132,47 @@ function PackageDetails() {
 
         <div className="col-md-6">
 
-          <div className="info-card">
+          <div className="info-card included-card">
 
-            <h3 className="section-title">
-              Included
-            </h3>
+  <h3>Included</h3>
 
-            <ul className="highlights-list">
+  <ul className="info-list">
 
-              {packageData.included.map((item, index) => (
+    {packageData.included.map((item, index) => (
 
-                <li key={index}>
-                  <i className="bi bi-check-circle-fill"></i>
-                  {item}
-                </li>
+      <li key={index}>
+        <i className="bi bi-check-circle-fill included-icon"></i>
+        {item}
+      </li>
 
-              ))}
+    ))}
 
-            </ul>
+  </ul>
 
-          </div>
+</div>
 
         </div>
 
         <div className="col-md-6">
 
-          <div className="info-card">
+          <div className="info-card excluded-card">
 
-            <h3 className="section-title">
-              Not Included
-            </h3>
+  <h3>Not Included</h3>
 
-            <ul className="highlights-list">
+  <ul className="info-list">
 
-              {packageData.excluded.map((item, index) => (
+    {packageData.excluded.map((item, index) => (
 
-                <li key={index}>
-                  <i className="bi bi-x-circle-fill text-danger"></i>
-                  {item}
-                </li>
+      <li key={index}>
+        <i className="bi bi-x-circle-fill excluded-icon"></i>
+        {item}
+      </li>
 
-              ))}
+    ))}
 
-            </ul>
+  </ul>
 
-          </div>
+</div>
 
         </div>
 

@@ -1,10 +1,10 @@
 import "./Packages.css";
-import delhiTour from "../assets/delhi_tour.png";
-import agra from "../assets/agra.png";
-import delhi from "../assets/delhi.png";
-import triangle from "../assets/triangle.png";
-import jaipur from "../assets/jaipur.png";
-import hari from "../assets/hari.png";
+import delhiTour from "../assets/images/delhi_tour.png";
+import agra from "../assets/images/agra.png";
+import delhi from "../assets/images/delhi.png";
+import triangle from "../assets/images/triangle.png";
+import jaipur from "../assets/images/jaipur.png";
+import hari from "../assets/images/hari.png";
 import { Link } from "react-router-dom";
 function Packages() {
   return (
