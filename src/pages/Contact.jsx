@@ -114,35 +114,35 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label className="form-label-custom font-body">Name</label>
-              <input type="text" className="form-control-custom" placeholder="Your Full Name" required disabled={formState === 'submitting'} />
+              <input type="text" className="form-control-custom" placeholder="Your Full Name" name="name" required disabled={formState === 'submitting'} />
             </div>
             
             <div className="row mb-3">
               <div className="col-12 col-md-6 mb-3 mb-md-0">
                 <label className="form-label-custom font-body">Phone</label>
-                <input type="tel" className="form-control-custom" placeholder="+91 00000 00000" required disabled={formState === 'submitting'} />
+                <input type="tel" className="form-control-custom" placeholder="+91 00000 00000" name="phone" required disabled={formState === 'submitting'} />
               </div>
               <div className="col-12 col-md-6">
                 <label className="form-label-custom font-body">Email</label>
-                <input type="email" className="form-control-custom" placeholder="example@email.com" required disabled={formState === 'submitting'} />
+                <input type="email" className="form-control-custom" placeholder="example@email.com" name="email" required disabled={formState === 'submitting'} />
               </div>
             </div>
 
             <div className="row mb-3">
               <div className="col-12 col-md-6 mb-3 mb-md-0">
                 <label className="form-label-custom font-body">Pickup Location</label>
-                <input type="text" className="form-control-custom" placeholder="e.g. Airport or Hotel" disabled={formState === 'submitting'} />
+                <input type="text" className="form-control-custom" placeholder="e.g. Airport or Hotel" name="pickup_location" disabled={formState === 'submitting'} />
               </div>
               <div className="col-12 col-md-6">
                 <label className="form-label-custom font-body">Destination</label>
-                <input type="text" className="form-control-custom" placeholder="e.g. Ayodhya, Varanasi" disabled={formState === 'submitting'} />
+                <input type="text" className="form-control-custom" placeholder="e.g. Ayodhya, Varanasi" name="destination" disabled={formState === 'submitting'} />
               </div>
             </div>
 
             <div className="row mb-3">
               <div className="col-12 col-md-6 mb-3 mb-md-0">
                 <label className="form-label-custom font-body">Vehicle Type</label>
-                <select className="form-control-custom" disabled={formState === 'submitting'}>
+                <select className="form-control-custom" name="vehicle_type" disabled={formState === 'submitting'}>
                   <option value="">Select Vehicle</option>
                   <option value="innova">Toyota Innova Crysta (6+1)</option>
                   <option value="fortuner">Toyota Fortuner (Premium)</option>
@@ -152,13 +152,13 @@ const Contact = () => {
               </div>
               <div className="col-12 col-md-6">
                 <label className="form-label-custom font-body">Travel Date</label>
-                <input type="date" className="form-control-custom" required disabled={formState === 'submitting'} />
+                <input type="date" className="form-control-custom" name="travel_date" required disabled={formState === 'submitting'} />
               </div>
             </div>
 
             <div className="mb-4">
               <label className="form-label-custom font-body">Message</label>
-              <textarea className="form-control-custom" rows="4" placeholder="Any special requests or details about your journey..." disabled={formState === 'submitting'}></textarea>
+              <textarea className="form-control-custom" rows="4" placeholder="Any special requests or details about your journey..." name="message" disabled={formState === 'submitting'}></textarea>
             </div>
 
             <button 
