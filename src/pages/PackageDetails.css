@@ -48,9 +48,8 @@
 
 .package-image {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .package-image:hover {
@@ -112,8 +111,10 @@
 }
 
 .itinerary-card p {
-    line-height: 1.9;
-    color: #444;
+    line-height: 2;
+    color: #555;
+    font-size: 1rem;
+    white-space: pre-line;
     margin-bottom: 0;
 }
 
@@ -122,24 +123,24 @@
 
 .info-card {
     background: #fff;
-    border-radius: 16px;
-    padding: 30px;
-    height: 100%;
+    border-radius: 14px;
+    padding: 20px 25px;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 
     transition: all 0.3s ease;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .info-card h3 {
     text-align: center;
+    font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .included-card {
     border-top: 5px solid #28a745;
@@ -164,15 +165,13 @@
 .info-list li {
     display: flex;
     align-items: center;
+    gap: 10px;
 
-    gap: 12px;
-
-    padding: 12px 0;
+    padding: 8px 0;
 
     border-bottom: 1px solid #f1f1f1;
 
-    font-size: 1rem;
-    color: #444;
+    font-size: 0.95rem;
 }
 
 .info-list li:last-child {
@@ -215,4 +214,22 @@
     .section-title {
         text-align: center;
     }
+    .overview-card,
+.highlights-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.package-header {
+    margin-bottom: 20px;
+}
+
+.itinerary-card {
+    margin-top: 20px;
+}
+
+.info-card {
+    margin-top: 10px;
+}
 }
