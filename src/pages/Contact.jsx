@@ -7,19 +7,46 @@ const Contact = () => {
   const [formState, setFormState] = useState('idle'); // 'idle' | 'submitting' | 'success'
   const [openFaq, setOpenFaq] = useState(0);
 
-  const handleSubmit = (e) => {
+  // Handle form submission via Web3Forms API
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormState('submitting');
     
-    // Simulate API call
-    setTimeout(() => {
-      setFormState('success');
-      e.target.reset(); // Reset form fields
-      
-      setTimeout(() => {
+    // Create FormData object from the form elements
+    const formData = new FormData(e.target);
+    // Append Web3Forms access key securely from environment variables
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+
+    try {
+      // Submit data to Web3Forms endpoint
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Success handling: Show success message and reset form
+        setFormState('success');
+        e.target.reset(); // Reset form fields
+        
+        // Keep the success message visible for a few seconds
+        setTimeout(() => {
+          setFormState('idle');
+        }, 5000);
+      } else {
+        // Error handling from API response
+        console.error("Error submitting form", data);
         setFormState('idle');
-      }, 3000);
-    }, 1500);
+        alert("Failed to send inquiry. Please try again later.");
+      }
+    } catch (error) {
+      // Error handling for network issues
+      console.error("Error submitting form", error);
+      setFormState('idle');
+      alert("Failed to send inquiry. Please try again later.");
+    }
   };
 
   const toggleFaq = (index) => {
@@ -112,37 +139,41 @@ const Contact = () => {
           <div className="title-line"></div>
           
           <form onSubmit={handleSubmit}>
+            {/* Hidden fields for Web3Forms configuration */}
+            <input type="hidden" name="subject" value="🚖 New Krishna Tours Booking Inquiry" />
+            <input type="hidden" name="from_name" value="Krishna Tours & Travels Website" />
+
             <div className="mb-3">
               <label className="form-label-custom font-body">Name</label>
-              <input type="text" className="form-control-custom" placeholder="Your Full Name" required disabled={formState === 'submitting'} />
+              <input type="text" className="form-control-custom" placeholder="Your Full Name" name="Customer Name" required disabled={formState === 'submitting'} />
             </div>
             
             <div className="row mb-3">
               <div className="col-12 col-md-6 mb-3 mb-md-0">
                 <label className="form-label-custom font-body">Phone</label>
-                <input type="tel" className="form-control-custom" placeholder="+91 00000 00000" required disabled={formState === 'submitting'} />
+                <input type="tel" className="form-control-custom" placeholder="+91 00000 00000" name="Phone Number" required minLength="10" disabled={formState === 'submitting'} />
               </div>
               <div className="col-12 col-md-6">
                 <label className="form-label-custom font-body">Email</label>
-                <input type="email" className="form-control-custom" placeholder="example@email.com" required disabled={formState === 'submitting'} />
+                <input type="email" className="form-control-custom" placeholder="example@email.com" name="Email Address" required disabled={formState === 'submitting'} />
               </div>
             </div>
 
             <div className="row mb-3">
               <div className="col-12 col-md-6 mb-3 mb-md-0">
                 <label className="form-label-custom font-body">Pickup Location</label>
-                <input type="text" className="form-control-custom" placeholder="e.g. Airport or Hotel" disabled={formState === 'submitting'} />
+                <input type="text" className="form-control-custom" placeholder="e.g. Airport or Hotel" name="Pickup Location" required disabled={formState === 'submitting'} />
               </div>
               <div className="col-12 col-md-6">
                 <label className="form-label-custom font-body">Destination</label>
-                <input type="text" className="form-control-custom" placeholder="e.g. Ayodhya, Varanasi" disabled={formState === 'submitting'} />
+                <input type="text" className="form-control-custom" placeholder="e.g. Ayodhya, Varanasi" name="Destination" required disabled={formState === 'submitting'} />
               </div>
             </div>
 
             <div className="row mb-3">
               <div className="col-12 col-md-6 mb-3 mb-md-0">
                 <label className="form-label-custom font-body">Vehicle Type</label>
-                <select className="form-control-custom" disabled={formState === 'submitting'}>
+                <select className="form-control-custom" name="Vehicle Requested" required disabled={formState === 'submitting'}>
                   <option value="">Select Vehicle</option>
                   <option value="innova">Toyota Innova Crysta (6+1)</option>
                   <option value="fortuner">Toyota Fortuner (Premium)</option>
@@ -152,14 +183,21 @@ const Contact = () => {
               </div>
               <div className="col-12 col-md-6">
                 <label className="form-label-custom font-body">Travel Date</label>
-                <input type="date" className="form-control-custom" required disabled={formState === 'submitting'} />
+                <input type="date" className="form-control-custom" name="Journey Date" required disabled={formState === 'submitting'} />
               </div>
             </div>
 
             <div className="mb-4">
               <label className="form-label-custom font-body">Message</label>
-              <textarea className="form-control-custom" rows="4" placeholder="Any special requests or details about your journey..." disabled={formState === 'submitting'}></textarea>
+              <textarea className="form-control-custom" rows="4" placeholder="Any special requests or details about your journey..." name="Additional Message" disabled={formState === 'submitting'}></textarea>
             </div>
+
+            {/* Success Message Banner */}
+            {formState === 'success' && (
+              <div className="alert alert-success font-body mb-3" style={{ backgroundColor: '#d4edda', color: '#155724', padding: '10px', borderRadius: '5px', border: '1px solid #c3e6cb' }}>
+                ✅ Inquiry sent successfully. Our team will contact you shortly.
+              </div>
+            )}
 
             <button 
               type="submit" 
