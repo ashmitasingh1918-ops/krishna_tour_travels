@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import packages from "../data/packages";
+import "./PackageDetails.css";
 
 function PackageDetails() {
 
@@ -71,30 +72,30 @@ function PackageDetails() {
 
         <div className="col-lg-7 package-overview">
 
-          <h2 className="section-title">
-            Overview
-          </h2>
+  <h2 className="section-title">
+    Overview
+  </h2>
 
-          <p>{packageData.overview}</p>
+  <p>{packageData.overview}</p>
 
-          <h2 className="section-title mt-5">
-            Tour Highlights
-          </h2>
+  <h2 className="section-title mt-5">
+    Tour Highlights
+  </h2>
 
-          <ul className="highlights-list">
+  <ul className="highlights-list">
 
-            {packageData.highlights.map((item, index) => (
+    {packageData.highlights.map((item, index) => (
 
-              <li key={index}>
-                <i className="bi bi-check-circle-fill"></i>
-                {item}
-              </li>
+      <li key={index}>
+        <i className="bi bi-check-circle-fill"></i>
+        {item}
+      </li>
 
-            ))}
+    ))}
 
-          </ul>
+  </ul>
 
-        </div>
+</div>
 
       </div>
 
