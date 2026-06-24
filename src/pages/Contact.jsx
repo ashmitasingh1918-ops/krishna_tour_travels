@@ -82,55 +82,82 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 2. Contact Info Cards */}
-      <section className="contact-cards-section container-fluid">
-        <div className="row g-3 g-md-4">
-          <div className="col-12 col-md-6">
-            <a href="tel:+919876543210" className="contact-card">
-              <div className="icon-container icon-primary">
-                <MdPhone />
-              </div>
-              <div>
-                <p className="card-label font-body">Phone</p>
-                <p className="card-value">+91 98765 43210</p>
-              </div>
-            </a>
-          </div>
-          <div className="col-12 col-md-6">
-            <a href="#" className="contact-card">
-              <div className="icon-container icon-whatsapp">
-                <FaWhatsapp />
-              </div>
-              <div>
-                <p className="card-label font-body">WhatsApp</p>
-                <p className="card-value">Chat with an Expert</p>
-              </div>
-            </a>
-          </div>
-          <div className="col-12 col-md-6">
-            <a href="mailto:info@krishnatour.com" className="contact-card">
-              <div className="icon-container icon-primary">
-                <MdEmail />
-              </div>
-              <div>
-                <p className="card-label font-body">Email</p>
-                <p className="card-value">info@krishnatour.com</p>
-              </div>
-            </a>
-          </div>
-          <div className="col-12 col-md-6">
-            <div className="contact-card no-hover">
-              <div className="icon-container icon-primary">
-                <MdLocationOn />
-              </div>
-              <div>
-                <p className="card-label font-body">Office</p>
-                <p className="card-address">102, Heritage Plaza, Connaught Place, New Delhi - 110001</p>
-              </div>
-            </div>
-          </div>
+     {/* 2. Contact Info Cards */}
+<section className="contact-cards-section container-fluid">
+  <div className="row g-3 g-md-4">
+
+    {/* Phone */}
+    <div className="col-12 col-md-6">
+      <a
+        href="tel:+919644518922"
+        className="contact-card"
+      >
+        <div className="icon-container icon-primary">
+          <MdPhone />
         </div>
-      </section>
+
+        <div>
+          <p className="card-label font-body">Phone</p>
+          <p className="card-value">+91 9644518922</p>
+        </div>
+      </a>
+    </div>
+
+    {/* WhatsApp */}
+    <div className="col-12 col-md-6">
+      <a
+        href="https://wa.me/919644518922?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-card"
+      >
+        <div className="icon-container icon-whatsapp">
+          <FaWhatsapp />
+        </div>
+
+        <div>
+          <p className="card-label font-body">WhatsApp</p>
+          <p className="card-value">Chat with an Expert</p>
+        </div>
+      </a>
+    </div>
+
+    {/* Email */}
+    <div className="col-12 col-md-6">
+      <a
+        href="mailto:info@krishnatour.com"
+        className="contact-card"
+      >
+        <div className="icon-container icon-primary">
+          <MdEmail />
+        </div>
+
+        <div>
+          <p className="card-label font-body">Email</p>
+          <p className="card-value">info@krishnatour.com</p>
+        </div>
+      </a>
+    </div>
+
+    {/* Office */}
+    <div className="col-12 col-md-6">
+      <div className="contact-card no-hover">
+        <div className="icon-container icon-primary">
+          <MdLocationOn />
+        </div>
+
+        <div>
+          <p className="card-label font-body">Office</p>
+          <p className="card-address">
+            102, Heritage Plaza, Connaught Place,
+            New Delhi - 110001
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* 3. Inquiry Form */}
       <section className="inquiry-section">
