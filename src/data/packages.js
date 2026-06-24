@@ -1,8 +1,8 @@
-import n from "../assets/images/2n.png";
-import local from "../assets/images/local-tour.png";
-import tri from "../assets/images/tri.png";
-import jai from "../assets/images/jai.png";
-import harid from "../assets/images/harid.png";
+import n from "../assets/places/2n.png";
+import local from "../assets/places/local-tour.png";
+import tri from "../assets/places/tri.png";
+import jai from "../assets/places/jai.png";
+import harid from "../assets/places/harid.png";
 import taj from "../assets/places/taj.png";
 const packages = [
   {
