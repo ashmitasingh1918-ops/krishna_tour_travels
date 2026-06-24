@@ -169,8 +169,40 @@
   object-fit: cover;
 }
 .about-image {
-    width: 410px;
-    height: 500px;   /* increase from current size */
+    width: 100%;
+    max-width: 410px;
+    height: 500px;
     object-fit: cover;
     border-radius: 12px;
+}
+@media (max-width: 768px){
+
+    .about-hero{
+        height: 420px;
+    }
+
+    .hero-content h1{
+        font-size: 2.2rem;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .stats-section h3{
+        font-size: 2rem;
+    }
+
+    .stats-section .col-md-3{
+        margin-bottom: 20px;
+    }
+
+    .mission-card,
+    .vision-card{
+        margin-bottom: 15px;
+    }
+
+    .cta-section{
+        padding: 50px 20px;
+    }
 }

@@ -93,6 +93,7 @@ function About() {
   </section>
 
   {/* Expertise Section */}
+  <section className="container py-5">
   <div className="row g-4">
 
   <div className="col-md-4">
@@ -144,6 +145,8 @@ function About() {
   </div>
 
 </div>
+  
+</section>
 
   {/* Why Choose Us Section */}
   <section className="py-5 bg-light why-section">
