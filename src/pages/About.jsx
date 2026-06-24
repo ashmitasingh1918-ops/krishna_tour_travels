@@ -38,7 +38,7 @@ function About() {
         <div className="col-md-5">
           <img
             src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa"
-            className="img-fluid rounded"
+            className="about-image"
             alt="Office"
           />
         </div>
@@ -51,19 +51,11 @@ function About() {
           </p>
 
           <p>
-            On 2 July 2012 Krishna tours entered in travel industry with establishment of Krishna tours. A company is headed by Mr Ramprakash Gupta. Krishna tours having its head office in New Delhi, India. We are very much concerned about quality of our fleets and provides neat and clean and Young maintained Vehicles with well-trained chauffeurs.
-          </p>
-
-          <p>
-            KRISHNA TOURS is one of the cheap and best service provider company in Delhi which offering travel service from last 05 years. We have a team of experienced drivers which drive smoothly and comfortable. It is quality assured as well as Progressive and we are focusing on transportation.
-          </p>
-          <p>
-            So for any assistance you need for car hire , we are just a click away. You can also call or mail us to get best car rental services in Delhi.
-
-We are continuously delivering high-quality services to the travelers. "Customer service with a smile"
-
-We believe that Success is measured by the number of satisfied customers and that is always been our endeavor.
-          </p>
+            The Delhi based KRISHNA TOURS is established in grow from strength to strength. On 2 July 2012 Krishna tours entered in travel industry with establishment of Krishna tours. A company is headed by Mr Ramprakash Gupta. Krishna tours having its head office in New Delhi, India. We are very much concerned about quality of our fleets and provides neat and clean and Young maintained Vehicles with well-trained chauffeurs.</p>
+          <p>KRISHNA TOURS is one of the cheap and best service provider company in Delhi which offering travel service from last 13 years. We have a team of experienced drivers which drive smoothly and comfortable. It is quality assured as well as Progressive and we are focusing on transportation. </p>
+          <p>So for any assistance you need for car hire , we are just a click away. You can also call or mail us to get best car rental services in Delhi.</p>
+          <p>We are continuously delivering high-quality services to the travelers. “Customer service with a smile"</p>
+          <p>We believe that Success is measured by the number of satisfied customers and that is always been our endeavor.</p>
         </div>
 
       </div>

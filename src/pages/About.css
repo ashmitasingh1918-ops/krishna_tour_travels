@@ -168,3 +168,9 @@
   height: 220px;
   object-fit: cover;
 }
+.about-image {
+    width: 410px;
+    height: 500px;   /* increase from current size */
+    object-fit: cover;
+    border-radius: 12px;
+}

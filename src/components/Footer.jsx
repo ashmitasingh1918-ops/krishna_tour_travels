@@ -10,7 +10,9 @@ function Footer() {
           <div className="col-md-3">
             <h5>KRISHNA TOURS</h5>
             <p>
-              Premium car rental and travel services across India.
+              Trusted for quality service, professional drivers, and well-maintained vehicles, Krishna Tours & Travels makes every journey safe, comfortable, and memorable.
+
+
             </p>
           </div>
 
@@ -36,8 +38,9 @@ function Footer() {
           <div className="col-md-3">
             <h5>Contact</h5>
 
-            <p>+91 XXXXX XXXXX</p>
-            <p>info@krishnatours.com</p>
+            <p>+91 8800770603</p>
+            <p>+91 8920462315</p>
+            <p>info@krishnatourindia.com</p>
             <p>India</p>
           </div>
 

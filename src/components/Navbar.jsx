@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/final2.png";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark custom-navbar">
 
-      <div className="container-fluid">
+      <div className="container-fluid px-2">
 
         <Link className="navbar-brand d-flex align-items-center" to="/">
           
           <img
-            src={logo}
-            alt="Krishna Tours Logo"
-            className="logo-img"
-          />
-
-          <span className="brand-text">
+  src={logo}
+  alt="Krishna Tours Logo"
+  className="logo-img"
+  style={{
+    objectFit: "cover",
+    objectPosition: "left center"
+  }}
+/>
+          {/* <span className="brand-text">
             KRISHNA TOURS
-          </span>
+          </span> */}
 
         </Link>
 
