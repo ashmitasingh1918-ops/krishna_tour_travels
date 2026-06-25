@@ -5,6 +5,7 @@ import {
   MdAccessTime, MdCheckCircleOutline
 } from 'react-icons/md';
 import './Home.css';
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -23,7 +24,9 @@ const Home = () => {
             
             <div className="hero-buttons">
               <button className="btn btn-secondary-solid">Book Your Journey</button>
-              <button className="btn btn-primary-glass">Explore Fleet</button>
+              <Link to="/fleet" className="btn btn-primary-glass">
+  Explore Fleet
+</Link>
             </div>
             
             <div className="hero-trust">
@@ -38,9 +41,9 @@ const Home = () => {
           </div>
           
           <div className="hero-right">
-            <button className="btn btn-inquire">
-              Inquire Now <MdArrowForward style={{marginLeft: '8px'}}/>
-            </button>
+            <Link to="/contact#inquiry-form" className="btn btn-inquire">
+  Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
+</Link>
             <p className="inquire-subtext">CUSTOM LUXURY QUOTES</p>
           </div>
 

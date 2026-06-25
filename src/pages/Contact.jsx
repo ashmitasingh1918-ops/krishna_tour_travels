@@ -160,7 +160,7 @@ const Contact = () => {
 </section>
 
       {/* 3. Inquiry Form */}
-      <section className="inquiry-section">
+      <section className="inquiry-section" id="inquiry-form">
         <div className="inquiry-card">
           <h3 className="section-title">Request a Personalized Tour</h3>
           <div className="title-line"></div>
