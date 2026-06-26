@@ -96,7 +96,8 @@ const Home = () => {
             <span className="section-pretitle">OUR ELITE FLEET</span>
             <h2 className="section-title" style={{ marginBottom: 0 }}>Luxury on Wheels</h2>
           </div>
-          <a href="#fleet" className="view-all-link">View All Fleet <MdArrowForward /></a>
+          <a href="/fleet" className="view-all-link">View All Fleet <MdArrowForward />
+         </a>
         </div>
 
         <div className="fleet-grid">
@@ -190,7 +191,8 @@ const Home = () => {
             <span className="section-pretitle">CURATED EXPERIENCES</span>
             <h2 className="section-title" style={{ marginBottom: 0 }}>Featured Tour Packages</h2>
           </div>
-          <button className="btn btn-outline">All Packages</button>
+          <a href="/packages" className="view-all-link">all packages <MdArrowForward />
+         </a>
         </div>
 
         <div className="tours-grid">
