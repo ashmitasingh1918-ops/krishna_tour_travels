@@ -7,6 +7,13 @@ const Contact = () => {
   const [formState, setFormState] = useState('idle'); // 'idle' | 'submitting' | 'success'
   const [openFaq, setOpenFaq] = useState(0);
 
+  const officeLocation = {
+    address: "102, Heritage Plaza, Connaught Place, New Delhi - 110001",
+    latitude: 28.6304,
+    longitude: 77.2177,
+    googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.114827184633!2d77.2065322!3d28.6289016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xc46188cb2ce25d98!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+  };
+
   // Handle form submission via Web3Forms API
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -239,18 +246,33 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 4. Google Maps Placeholder */}
-      <section className="map-section">
-        <img 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCda_PUWrHj5YTuK6Y4qyYMYXs5MC2O8UiO5eFqZPnGvnVOtWlLdjCoEFa9IXo8emHTXTlHh6hGSmZw2XLcN6P2eVNnHcrLtooHPy1q9kheayvMql6o3JCHeaSRtNL_LhZpQHigyIAgy1iWKp5ILfYPcrCrnbYpuDUyAZVCd6CAvIIc6hSCk0jzYGt0hUMHSJD9dXrM7F3h92lwNsCo7mpN__PabU_sH1wOe-ZXiS2NaYq_jspAfdaFzpJpSfq-JkJvfT6x4a9b-e4" 
-          alt="Map of New Delhi" 
-          className="map-img"
-        />
-        <div className="map-overlay">
-          <div className="map-badge">
+      {/* 4. Google Maps Section */}
+      <section className="map-section interactive-map">
+        <iframe
+          src={officeLocation.googleMapsEmbedUrl}
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Office Location Map"
+          className="google-map-iframe"
+        ></iframe>
+        <div className="map-overlay interactive-overlay">
+          <div className="map-badge interactive-badge">
             <MdLocationOn className="icon" />
-            <p className="badge-label font-body">Our Head Office</p>
-            <p className="badge-value">New Delhi</p>
+            <p className="badge-label font-body">📍 Head Office</p>
+            <p className="badge-value">Krishna Tours & Travels</p>
+            <p className="badge-address font-body">{officeLocation.address}</p>
+            <a 
+              href={`https://www.google.com/maps/search/?api=1&query=${officeLocation.latitude},${officeLocation.longitude}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-map-link font-body"
+            >
+              Open in Google Maps
+            </a>
           </div>
         </div>
       </section>

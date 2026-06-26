@@ -5,7 +5,14 @@ import {
   MdAccessTime, MdCheckCircleOutline
 } from 'react-icons/md';
 import './Home.css';
+import './Packages.css';
+import './Fleet.css';
 import { Link } from "react-router-dom";
+import fleetData from "./Fleet_api";
+import VehicleCard from "./VehicleCard";
+import delhiTour from "../assets/images/delhi_tour.png";
+import delhi from "../assets/images/delhi.png";
+import triangle from "../assets/images/triangle.png";
 
 const Home = () => {
   return (
@@ -100,87 +107,12 @@ const Home = () => {
          </a>
         </div>
 
-        <div className="fleet-grid">
-          {/* Fleet Card 1 */}
-          <div className="fleet-card">
-            <div className="fleet-image-container">
-              <div className="badge-driver">
-                <MdVerifiedUser className="badge-icon" /> DRIVER INCLUDED
-              </div>
-              <img src="/images/innova.jpg" alt="Toyota Innova Crysta" className="fleet-image" />
-              <div className="badge-category premium">PREMIUM</div>
+        <div className="row g-4 mt-2">
+          {fleetData.slice(0, 3).map((vehicle) => (
+            <div className="col-12 col-md-6 col-lg-4" key={vehicle.id}>
+              <VehicleCard vehicle={vehicle} />
             </div>
-            <div className="fleet-content">
-              <h3 className="fleet-title">Toyota Innova Crysta</h3>
-              <div className="fleet-specs">
-                <span><MdPeople className="spec-icon" /> 7 Seater</span>
-                <span><MdAcUnit className="spec-icon" /> AC Available</span>
-              </div>
-              <div className="fleet-footer">
-                <div className="fleet-price">
-                  <span className="price-label">STARTING FROM</span>
-                  <div className="price-amount">₹3,500 <span className="price-unit">/day</span></div>
-                </div>
-                <button className="btn-icon">
-                  <MdCalendarToday />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Fleet Card 2 */}
-          <div className="fleet-card">
-            <div className="fleet-image-container">
-              <div className="badge-driver">
-                <MdVerifiedUser className="badge-icon" /> DRIVER INCLUDED
-              </div>
-              <img src="/images/swift-dzire.jpg" alt="Swift Dzire" className="fleet-image" />
-              <div className="badge-category luxury">SEDAN</div>
-            </div>
-            <div className="fleet-content">
-              <h3 className="fleet-title">Swift Dzire</h3>
-              <div className="fleet-specs">
-                <span><MdPeople className="spec-icon" /> 4 Seater</span>
-                <span><MdAcUnit className="spec-icon" /> Premium AC</span>
-              </div>
-              <div className="fleet-footer">
-                <div className="fleet-price">
-                  <span className="price-label">STARTING FROM</span>
-                  <div className="price-amount">₹12,000 <span className="price-unit">/day</span></div>
-                </div>
-                <button className="btn-icon">
-                  <MdCalendarToday />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Fleet Card 3 */}
-          <div className="fleet-card">
-            <div className="fleet-image-container">
-              <div className="badge-driver">
-                <MdVerifiedUser className="badge-icon" /> DRIVER INCLUDED
-              </div>
-              <img src="/images/tempo.jpg" alt="Tempo Traveller" className="fleet-image" />
-              <div className="badge-category group">GROUP</div>
-            </div>
-            <div className="fleet-content">
-              <h3 className="fleet-title">Tempo Traveller</h3>
-              <div className="fleet-specs">
-                <span><MdPeople className="spec-icon" /> 12 Seater</span>
-                <span><MdAcUnit className="spec-icon" /> Dual AC</span>
-              </div>
-              <div className="fleet-footer">
-                <div className="fleet-price">
-                  <span className="price-label">STARTING FROM</span>
-                  <div className="price-amount">₹6,500 <span className="price-unit">/day</span></div>
-                </div>
-                <button className="btn-icon">
-                  <MdCalendarToday />
-                </button>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -195,73 +127,64 @@ const Home = () => {
          </a>
         </div>
 
-        <div className="tours-grid">
+        <div className="row g-4 mt-2">
           {/* Tour Card 1 */}
-          <div className="tour-card">
-            <div className="tour-image-container">
-              <img src="/images/kashi.png" alt="Kashi Vishwanath" className="tour-image" />
-              <div className="badge-duration">
-                <MdAccessTime className="badge-icon" /> 3 DAYS / 2 NIGHTS
+          <div className="col-12 col-md-6 col-lg-4">
+            <div className="package-card">
+              <img
+                src={delhiTour}
+                alt="Delhi Tour"
+                className="img-fluid w-100"
+              />
+              <div className="package-content">
+                <h5>Delhi Local City Tour</h5>
+                <p>1 Night / 2 Days</p>
+                <h6>₹2,500</h6>
+                <p className="short-desc" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>Experience the rich heritage and culture with our exclusive local city tour tailored just for you.</p>
+                <Link to="/packages/delhi-local" className="btn btn-warning">
+                  View Details
+                </Link>
               </div>
-            </div>
-            <div className="tour-content">
-              <div className="tour-header">
-                <h3 className="tour-title">Kashi Vishwanath Spiritual Darshan</h3>
-                <div className="tour-price-box">
-                  <span className="price-label">FROM</span>
-                  <div className="tour-price">₹15,999</div>
-                </div>
-              </div>
-              <ul className="tour-highlights">
-                <li><MdCheckCircleOutline className="highlight-icon" /> Evening Ganga Aarti with VIP Seating</li>
-              </ul>
-              <button className="btn btn-full">View Details <MdArrowForward /></button>
             </div>
           </div>
 
           {/* Tour Card 2 */}
-          <div className="tour-card">
-            <div className="tour-image-container">
-              <img src="/images/Ayodhya.jpg" alt="Divine Ayodhya" className="tour-image" />
-              <div className="badge-duration">
-                <MdAccessTime className="badge-icon" /> 2 DAYS / 1 NIGHT
+          <div className="col-12 col-md-6 col-lg-4">
+            <div className="package-card">
+              <img
+                src={delhi}
+                alt="Delhi-Agra-Delhi"
+                className="img-fluid w-100"
+              />
+              <div className="package-content">
+                <h5>Delhi-Agra-Delhi</h5>
+                <p>2 Nights / 3 Days</p>
+                <h6>₹6,500</h6>
+                <p className="short-desc" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>A perfect short getaway to witness the majestic Taj Mahal and the historical wonders of Agra.</p>
+                <Link to="/packages/delhi-agra-delhi-2n" className="btn btn-warning">
+                  View Details
+                </Link>
               </div>
-            </div>
-            <div className="tour-content">
-              <div className="tour-header">
-                <h3 className="tour-title">Divine Ayodhya &amp; Ram Mandir Tour</h3>
-                <div className="tour-price-box">
-                  <span className="price-label">FROM</span>
-                  <div className="tour-price">₹8,499</div>
-                </div>
-              </div>
-              <ul className="tour-highlights">
-                <li><MdCheckCircleOutline className="highlight-icon" /> Ram Janmabhoomi VIP Darshan</li>
-              </ul>
-              <button className="btn btn-full">View Details <MdArrowForward /></button>
             </div>
           </div>
 
           {/* Tour Card 3 */}
-          <div className="tour-card">
-            <div className="tour-image-container">
-              <img src="/images/agra.jpg" alt="Royal Agra" className="tour-image" />
-              <div className="badge-duration">
-                <MdAccessTime className="badge-icon" /> 1 DAY EXPRESS
+          <div className="col-12 col-md-6 col-lg-4">
+            <div className="package-card">
+              <img
+                src={triangle}
+                alt="Golden Triangle Tour"
+                className="img-fluid w-100"
+              />
+              <div className="package-content">
+                <h5>Golden Triangle Tour</h5>
+                <p>6 Nights / 7 Days</p>
+                <h6>₹24,900</h6>
+                <p className="short-desc" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>Explore the vibrant culture of India by visiting the iconic cities of Delhi, Agra, and Jaipur.</p>
+                <Link to="/packages/golden-triangle" className="btn btn-warning">
+                  View Details
+                </Link>
               </div>
-            </div>
-            <div className="tour-content">
-              <div className="tour-header">
-                <h3 className="tour-title">Royal Agra &amp; Taj Mahal Experience</h3>
-                <div className="tour-price-box">
-                  <span className="price-label">FROM</span>
-                  <div className="tour-price">₹4,999</div>
-                </div>
-              </div>
-              <ul className="tour-highlights">
-                <li><MdCheckCircleOutline className="highlight-icon" /> Sunrise Visit to Taj Mahal</li>
-              </ul>
-              <button className="btn btn-full">View Details <MdArrowForward /></button>
             </div>
           </div>
         </div>
