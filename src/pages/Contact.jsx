@@ -8,17 +8,17 @@ const Contact = () => {
   const [openFaq, setOpenFaq] = useState(0);
 
   const officeLocation = {
-    address: "102, Heritage Plaza, Connaught Place, New Delhi - 110001",
-    latitude: 28.6304,
-    longitude: 77.2177,
-    googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.114827184633!2d77.2065322!3d28.6289016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xc46188cb2ce25d98!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+    address: "Rz-7/232 J-Block west sagarpur new delhi 110046 near Sakuntla hospital",
+    latitude: 28.5921,
+    longitude: 77.0863,
+    googleMapsEmbedUrl: "https://maps.google.com/maps?q=Rz-7/232%20J-Block%20west%20sagarpur%20new%20delhi%20110046&t=&z=14&ie=UTF8&iwloc=B&output=embed"
   };
 
   // Handle form submission via Web3Forms API
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormState('submitting');
-    
+
     // Create FormData object from the form elements
     const formData = new FormData(e.target);
     // Append Web3Forms access key securely from environment variables
@@ -37,7 +37,7 @@ const Contact = () => {
         // Success handling: Show success message and reset form
         setFormState('success');
         e.target.reset(); // Reset form fields
-        
+
         // Keep the success message visible for a few seconds
         setTimeout(() => {
           setFormState('idle');
@@ -79,8 +79,8 @@ const Contact = () => {
     <div className="contact-page">
       {/* 1. Hero Banner */}
       <section className="hero-banner">
-        <img 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA_sgoLWwOzWWttkuTAFeq1KADiNiMu7FB7El8M-bO41cS9GaxUOwgy4F_-zmipG77mqu6jvwjAhQy0RIGNs-JplD1RsAurnKt05_RaMUpryOF1mWM1duiWNBC9ZfcRJsWrnJTg9bNQBEc4TsNS6zHWkTDzYArxr2Szgq3Jpp9iuFoazdEG2p5lVZzq5ulJYqR-FhdE1pDPSWKrRIfWIzhD0Xeq7sbKgnkGOu0Pv1-rmZkSCzfIunPnlaMWiPJ6UndOvo7CwE6hew" 
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA_sgoLWwOzWWttkuTAFeq1KADiNiMu7FB7El8M-bO41cS9GaxUOwgy4F_-zmipG77mqu6jvwjAhQy0RIGNs-JplD1RsAurnKt05_RaMUpryOF1mWM1duiWNBC9ZfcRJsWrnJTg9bNQBEc4TsNS6zHWkTDzYArxr2Szgq3Jpp9iuFoazdEG2p5lVZzq5ulJYqR-FhdE1pDPSWKrRIfWIzhD0Xeq7sbKgnkGOu0Pv1-rmZkSCzfIunPnlaMWiPJ6UndOvo7CwE6hew"
           alt="Sunrise over ancient ghats of Varanasi"
         />
         <div className="hero-content">
@@ -89,89 +89,88 @@ const Contact = () => {
         </div>
       </section>
 
-     {/* 2. Contact Info Cards */}
-<section className="contact-cards-section container-fluid">
-  <div className="row g-3 g-md-4">
+      {/* 2. Contact Info Cards */}
+      <section className="contact-cards-section container-fluid">
+        <div className="row g-3 g-md-4">
 
-    {/* Phone */}
-    <div className="col-12 col-md-6">
-      <a
-        href="tel:+919644518922"
-        className="contact-card"
-      >
-        <div className="icon-container icon-primary">
-          <MdPhone />
+          {/* Phone */}
+          <div className="col-12 col-md-6">
+            <a
+              href="tel:+919644518922"
+              className="contact-card"
+            >
+              <div className="icon-container icon-primary">
+                <MdPhone />
+              </div>
+
+              <div>
+                <p className="card-label font-body">Phone</p>
+                <p className="card-value">+91 9644518922</p>
+              </div>
+            </a>
+          </div>
+
+          {/* WhatsApp */}
+          <div className="col-12 col-md-6">
+            <a
+              href="https://wa.me/919644518922?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card"
+            >
+              <div className="icon-container icon-whatsapp">
+                <FaWhatsapp />
+              </div>
+
+              <div>
+                <p className="card-label font-body">WhatsApp</p>
+                <p className="card-value">Chat with an Expert</p>
+              </div>
+            </a>
+          </div>
+
+          {/* Email */}
+          <div className="col-12 col-md-6">
+            <a
+              href="mailto:info@krishnatour.com"
+              className="contact-card"
+            >
+              <div className="icon-container icon-primary">
+                <MdEmail />
+              </div>
+
+              <div>
+                <p className="card-label font-body">Email</p>
+                <p className="card-value">info@krishnatour.com</p>
+              </div>
+            </a>
+          </div>
+
+          {/* Office */}
+          <div className="col-12 col-md-6">
+            <div className="contact-card no-hover">
+              <div className="icon-container icon-primary">
+                <MdLocationOn />
+              </div>
+
+              <div>
+                <p className="card-label font-body">Office</p>
+                <p className="card-address">
+                  {officeLocation.address}
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        <div>
-          <p className="card-label font-body">Phone</p>
-          <p className="card-value">+91 9644518922</p>
-        </div>
-      </a>
-    </div>
-
-    {/* WhatsApp */}
-    <div className="col-12 col-md-6">
-      <a
-        href="https://wa.me/919644518922?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="contact-card"
-      >
-        <div className="icon-container icon-whatsapp">
-          <FaWhatsapp />
-        </div>
-
-        <div>
-          <p className="card-label font-body">WhatsApp</p>
-          <p className="card-value">Chat with an Expert</p>
-        </div>
-      </a>
-    </div>
-
-    {/* Email */}
-    <div className="col-12 col-md-6">
-      <a
-        href="mailto:info@krishnatour.com"
-        className="contact-card"
-      >
-        <div className="icon-container icon-primary">
-          <MdEmail />
-        </div>
-
-        <div>
-          <p className="card-label font-body">Email</p>
-          <p className="card-value">info@krishnatour.com</p>
-        </div>
-      </a>
-    </div>
-
-    {/* Office */}
-    <div className="col-12 col-md-6">
-      <div className="contact-card no-hover">
-        <div className="icon-container icon-primary">
-          <MdLocationOn />
-        </div>
-
-        <div>
-          <p className="card-label font-body">Office</p>
-          <p className="card-address">
-            102, Heritage Plaza, Connaught Place,
-            New Delhi - 110001
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+      </section>
 
       {/* 3. Inquiry Form */}
       <section className="inquiry-section" id="inquiry-form">
         <div className="inquiry-card">
           <h3 className="section-title">Request a Personalized Tour</h3>
           <div className="title-line"></div>
-          
+
           <form onSubmit={handleSubmit}>
             {/* Hidden fields for Web3Forms configuration */}
             <input type="hidden" name="subject" value="🚖 New Krishna Tours Booking Inquiry" />
@@ -181,7 +180,7 @@ const Contact = () => {
               <label className="form-label-custom font-body">Name</label>
               <input type="text" className="form-control-custom" placeholder="Your Full Name" name="Customer Name" required disabled={formState === 'submitting'} />
             </div>
-            
+
             <div className="row mb-3">
               <div className="col-12 col-md-6 mb-3 mb-md-0">
                 <label className="form-label-custom font-body">Phone</label>
@@ -233,8 +232,8 @@ const Contact = () => {
               </div>
             )}
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className={`btn-submit ${formState === 'success' ? 'success' : ''}`}
               disabled={formState === 'submitting'}
             >
@@ -265,10 +264,10 @@ const Contact = () => {
             <p className="badge-label font-body">📍 Head Office</p>
             <p className="badge-value">Krishna Tours & Travels</p>
             <p className="badge-address font-body">{officeLocation.address}</p>
-            <a 
-              href={`https://www.google.com/maps/search/?api=1&query=${officeLocation.latitude},${officeLocation.longitude}`} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(officeLocation.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-map-link font-body"
             >
               Open in Google Maps
@@ -281,7 +280,7 @@ const Contact = () => {
       <section className="faq-section">
         <h3 className="section-title">Frequently Asked Questions</h3>
         <p className="faq-desc font-body">Common queries about your booking and tour experience.</p>
-        
+
         <div className="faq-list">
           {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
@@ -302,7 +301,7 @@ const Contact = () => {
         <div className="emergency-banner">
           <div className="bg-decorator-1"></div>
           <div className="bg-decorator-2"></div>
-          
+
           <div className="emergency-content">
             <div className="emergency-badge font-body">
               <div className="pulse-dot"></div>
@@ -311,7 +310,7 @@ const Contact = () => {
             <h3 className="emergency-title">24/7 Roadside Assistance</h3>
             <p className="emergency-desc font-body">Stuck on the road or need immediate support? We're always here.</p>
           </div>
-          
+
           <div className="emergency-action">
             <a href="tel:1800-000-0000" className="btn-emergency">
               <MdSupportAgent />
