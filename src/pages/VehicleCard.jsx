@@ -1,37 +1,38 @@
-import React from "react";
-import fleetApi from "./Fleet_api";
-const VehicleCard = ({ vehiclesData }) => {
+import { useNavigate } from "react-router-dom";
+
+const VehicleCard = ({ vehicle }) => {
+  const navigate = useNavigate();
+
   return (
-    <section className="vehicleCards">
-      {vehiclesData.map((vehicle) => (
-        <div className="vehicleCard" key={vehicle.id}>
-          <img src={vehicle.image} alt={vehicle.name} />
+    <div className="vehicleCard">
+      <img src={vehicle.image} alt={vehicle.name} />
 
-          <div className="cardContent">
-            <div className="cardHeader">
-              <div>
-                <h3>{vehicle.name}</h3>
-                <small>{vehicle.category}</small>
-              </div>
+      <div className="cardContent">
+        <div className="cardHeader">
+          <div>
+            <h3>{vehicle.name}</h3>
+            <small>{vehicle.category}</small>
+          </div>
 
-              <div className="price">
-                ₹{vehicle.price}
-              </div>
-            </div>
-
-            <div className="vehicleInfo">
-              <span>👥 {vehicle.seats} Seats</span>
-              <span>❄️ AC</span>
-              <span>🧳 {vehicle.luggage} Bags</span>
-            </div>
-
-            <button className="detailsBtn">
-              Details
-            </button>
+          <div className="price">
+            ₹{vehicle.price}
           </div>
         </div>
-      ))}
-    </section>
+
+        <div className="vehicleInfo">
+          <span>{vehicle.seats} Seats</span>
+          <span>{vehicle.luggage} Bags</span>
+          <span>{vehicle.ac ? "AC" : "Non AC"}</span>
+        </div>
+
+        <button
+          className="detailsBtn"
+          onClick={() => navigate(`/vehicle/${vehicle.id}`)}
+        >
+          Details
+        </button>
+      </div>
+    </div>
   );
 };
 

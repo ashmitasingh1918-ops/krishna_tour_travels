@@ -4,6 +4,7 @@ import "./Fleet.css";
 import VehicleCard from "./VehicleCard";
 import fleetData from "./Fleet_api";
 
+
 const Fleet = () => {
   const [vehiclesData, setVehiclesData] = useState(fleetApi);
 
@@ -61,7 +62,14 @@ const Fleet = () => {
 </section>
 
       {/* Vehicle Cards */}
-      <VehicleCard vehiclesData={vehiclesData} />
+    <div className="vehicleCards">
+  {vehiclesData.map((vehicle) => (
+    <VehicleCard
+      key={vehicle.id}
+      vehicle={vehicle}
+    />
+  ))}
+</div>
 
       {/* Package Advantages */}
       <section className="packageAdv">

@@ -3,68 +3,186 @@ const fleetData = [
     id: 1,
     name: "Swift Dzire",
     category: "Reliable City Sedan",
+    type: "Luxury",
+
     price: 2499,
+
     seats: 4,
     luggage: 3,
     ac: true,
+
+    transmission: "Manual",
+    fuel: "Petrol",
+
     image: "/images/swift-dzire.jpg",
-    type: "Luxury",
+    interior: "/images/swift-dzire-interior.jpg",
+
+    description:
+      "The Swift Dzire is a comfortable and fuel-efficient sedan, perfect for airport transfers, city rides, business travel, and family trips.",
+
+    features: [
+      "Air Conditioner",
+      "Music System",
+      "Mobile Charging",
+      "Comfortable Seats",
+      "Bottle Holder",
+      "Power Windows"
+    ]
   },
+
   {
     id: 2,
     name: "Maruti Ertiga",
     category: "Premium Family MPV",
-    price: 3200,
-    seats: 6,
-    luggage: 4,
-    ac: true,
-    image: "/images/ertiga.jpg",
     type: "GroupTravel",
-  },
-   {
-    id: 3,
-    name: "Toyota etios ",
-    category: "Premium Family MPV",
-    price: 6000,
-    seats: 6,
-    luggage: 4,
-    ac: true,
-    image: "/images/etios.jpg",
-    type: "Executive",
-  },
-   {
-    id: 4,
-    name: "Toyota innova",
-    category: "Premium Family MPV",
-    price: 6500,
-    seats: 6,
-    luggage: 4,
-    ac: true,
-    image: "/images/innova.jpg",
-    type:"GroupTravel" ,
-  },
-   {
-    id: 5,
-    name: "Toyota crysta",
-    category: "Premium Family MPV",
+
     price: 3200,
+
     seats: 6,
     luggage: 4,
     ac: true,
-    image: "/images/crysta.jpg",
-    type: "Luxury"
+
+    transmission: "Manual",
+    fuel: "Petrol",
+
+    image: "/images/ertiga.jpg",
+    interior: "/images/ertiga-interior.jpg",
+
+    description:
+      "Maruti Ertiga is an excellent choice for family tours, pilgrimages, and group travel with spacious seating and luggage capacity.",
+
+    features: [
+      "Rear AC",
+      "Music System",
+      "Charging Point",
+      "Comfortable Seats",
+      "Large Boot Space",
+      "Power Windows"
+    ]
   },
-   {
+
+  {
+    id: 3,
+    name: "Toyota Etios",
+    category: "Executive Sedan",
+    type: "Executive",
+
+    price: 6000,
+
+    seats: 4,
+    luggage: 3,
+    ac: true,
+
+    transmission: "Manual",
+    fuel: "Diesel",
+
+    image: "/images/etios.jpg",
+    interior: "/images/etios-interior.jpg",
+
+    description:
+      "Toyota Etios offers executive comfort with excellent ride quality, making it ideal for corporate and business travel.",
+
+    features: [
+      "Air Conditioner",
+      "Music System",
+      "Charging Point",
+      "Comfortable Seats",
+      "Power Windows"
+    ]
+  },
+
+  {
+    id: 4,
+    name: "Toyota Innova",
+    category: "Premium Family MPV",
+    type: "GroupTravel",
+
+    price: 6500,
+
+    seats: 7,
+    luggage: 5,
+    ac: true,
+
+    transmission: "Automatic",
+    fuel: "Diesel",
+
+    image: "/images/innova.jpg",
+    interior: "/images/innova-interior.jpg",
+
+    description:
+      "Toyota Innova is our premium MPV designed for long-distance journeys, family vacations, and luxury travel.",
+
+    features: [
+      "Rear AC",
+      "Captain Seats",
+      "Music System",
+      "Charging Point",
+      "Large Luggage Space",
+      "Power Windows"
+    ]
+  },
+
+  {
+    id: 5,
+    name: "Toyota Crysta",
+    category: "Luxury MPV",
+    type: "Luxury",
+
+    price: 3200,
+
+    seats: 7,
+    luggage: 5,
+    ac: true,
+
+    transmission: "Automatic",
+    fuel: "Diesel",
+
+    image: "/images/crysta.jpg",
+    interior: "/images/crysta-interior.jpg",
+
+    description:
+      "Toyota Crysta delivers unmatched luxury, comfort, and safety for VIP guests, corporate executives, and premium tours.",
+
+    features: [
+      "Luxury Seats",
+      "Rear AC",
+      "Music System",
+      "Charging Point",
+      "Premium Interior",
+      "Large Luggage Space"
+    ]
+  },
+
+  {
     id: 6,
     name: "Tempo Traveller",
-    category: "Premium Family MPV",
+    category: "Group Traveller",
+    type: "GroupTravel",
+
     price: 12000,
-    seats: 6,
-    luggage: 4,
+
+    seats: 12,
+    luggage: 10,
     ac: true,
+
+    transmission: "Manual",
+    fuel: "Diesel",
+
     image: "/images/tempo.jpg",
-    type: "GroupTravel"
-  },
+    interior: "/images/tempo-interior.jpg",
+
+    description:
+      "Tempo Traveller is ideal for large groups, religious tours, weddings, corporate events, and long-distance travel.",
+
+    features: [
+      "Pushback Seats",
+      "Full Air Conditioning",
+      "Music System",
+      "Charging Points",
+      "Large Luggage Space",
+      "Comfortable Legroom"
+    ]
+  }
 ];
 
 export default fleetData;
