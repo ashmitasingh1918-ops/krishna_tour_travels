@@ -14,8 +14,8 @@ const fleetData = [
     transmission: "Manual",
     fuel: "Petrol",
 
-    image: "/images/swift-dzire.jpg",
-    interior: "/images/swift-dzire-interior.jpg",
+    image: `${import.meta.env.BASE_URL}images/swift-dzire.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/swift-dzire-interior.jpg`,
 
     description:
       "The Swift Dzire is a comfortable and fuel-efficient sedan, perfect for airport transfers, city rides, business travel, and family trips.",
@@ -26,8 +26,8 @@ const fleetData = [
       "Mobile Charging",
       "Comfortable Seats",
       "Bottle Holder",
-      "Power Windows"
-    ]
+      "Power Windows",
+    ],
   },
 
   {
@@ -45,8 +45,8 @@ const fleetData = [
     transmission: "Manual",
     fuel: "Petrol",
 
-    image: "/images/ertiga.jpg",
-    interior: "/images/ertiga-interior.jpg",
+    image: `${import.meta.env.BASE_URL}images/ertiga.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/ertiga-interior.jpg`,
 
     description:
       "Maruti Ertiga is an excellent choice for family tours, pilgrimages, and group travel with spacious seating and luggage capacity.",
@@ -57,8 +57,8 @@ const fleetData = [
       "Charging Point",
       "Comfortable Seats",
       "Large Boot Space",
-      "Power Windows"
-    ]
+      "Power Windows",
+    ],
   },
 
   {
@@ -76,8 +76,8 @@ const fleetData = [
     transmission: "Manual",
     fuel: "Diesel",
 
-    image: "/images/etios.jpg",
-    interior: "/images/etios-interior.jpg",
+    image: `${import.meta.env.BASE_URL}images/etios.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/etios-interior.jpg`,
 
     description:
       "Toyota Etios offers executive comfort with excellent ride quality, making it ideal for corporate and business travel.",
@@ -87,8 +87,8 @@ const fleetData = [
       "Music System",
       "Charging Point",
       "Comfortable Seats",
-      "Power Windows"
-    ]
+      "Power Windows",
+    ],
   },
 
   {
@@ -106,8 +106,8 @@ const fleetData = [
     transmission: "Automatic",
     fuel: "Diesel",
 
-    image: "/images/innova.jpg",
-    interior: "/images/innova-interior.jpg",
+    image: `${import.meta.env.BASE_URL}images/innova.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/innova-interior.jpg`,
 
     description:
       "Toyota Innova is our premium MPV designed for long-distance journeys, family vacations, and luxury travel.",
@@ -118,8 +118,8 @@ const fleetData = [
       "Music System",
       "Charging Point",
       "Large Luggage Space",
-      "Power Windows"
-    ]
+      "Power Windows",
+    ],
   },
 
   {
@@ -137,8 +137,8 @@ const fleetData = [
     transmission: "Automatic",
     fuel: "Diesel",
 
-    image: "/images/crysta.jpg",
-    interior: "/images/crysta-interior.jpg",
+    image: `${import.meta.env.BASE_URL}images/crysta.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/crysta-interior.jpg`,
 
     description:
       "Toyota Crysta delivers unmatched luxury, comfort, and safety for VIP guests, corporate executives, and premium tours.",
@@ -149,8 +149,8 @@ const fleetData = [
       "Music System",
       "Charging Point",
       "Premium Interior",
-      "Large Luggage Space"
-    ]
+      "Large Luggage Space",
+    ],
   },
 
   {
@@ -168,8 +168,8 @@ const fleetData = [
     transmission: "Manual",
     fuel: "Diesel",
 
-    image: "/images/tempo.jpg",
-    interior: "/images/tempo-interior.jpg",
+    image: `${import.meta.env.BASE_URL}images/tempo.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/tempo-interior.jpg`,
 
     description:
       "Tempo Traveller is ideal for large groups, religious tours, weddings, corporate events, and long-distance travel.",
@@ -180,9 +180,9 @@ const fleetData = [
       "Music System",
       "Charging Points",
       "Large Luggage Space",
-      "Comfortable Legroom"
-    ]
-  }
+      "Comfortable Legroom",
+    ],
+  },
 ];
 
 export default fleetData;

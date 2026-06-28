@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
   MdVerifiedUser, MdSupportAgent, MdCleaningServices, MdPriceCheck,
   MdPeople, MdAcUnit, MdCalendarToday, MdArrowForward,
   MdAccessTime, MdCheckCircleOutline
@@ -20,22 +20,22 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container hero-content-wrapper">
-          
+
           <div className="hero-left">
             <h1 className="display-title">
-              Your Premier Travel Partner<br/>in <span className="text-highlight">North India</span>
+              Your Premier Travel Partner<br />in <span className="text-highlight">North India</span>
             </h1>
             <p className="body-large">
               Experience spiritual journeys and luxury travels across Varanasi, Ayodhya, and Prayagraj with our elite fleet and expert chauffeurs.
             </p>
-            
+
             <div className="hero-buttons">
               <button className="btn btn-secondary-solid">Book Your Journey</button>
               <Link to="/fleet" className="btn btn-primary-glass">
-  Explore Fleet
-</Link>
+                Explore Fleet
+              </Link>
             </div>
-            
+
             <div className="hero-trust">
               <div className="trust-avatars">
                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" className="avatar" />
@@ -46,11 +46,11 @@ const Home = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="hero-right">
             <Link to="/contact#inquiry-form" className="btn btn-inquire">
-  Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
-</Link>
+              Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
+            </Link>
             <p className="inquire-subtext">CUSTOM LUXURY QUOTES</p>
           </div>
 
@@ -103,8 +103,9 @@ const Home = () => {
             <span className="section-pretitle">OUR ELITE FLEET</span>
             <h2 className="section-title" style={{ marginBottom: 0 }}>Luxury on Wheels</h2>
           </div>
-          <a href="/fleet" className="view-all-link">View All Fleet <MdArrowForward />
-         </a>
+          <Link to="/fleet" className="view-all-link">
+            View All Fleet <MdArrowForward />
+          </Link>
         </div>
 
         <div className="row g-4 mt-2">
@@ -123,8 +124,9 @@ const Home = () => {
             <span className="section-pretitle">CURATED EXPERIENCES</span>
             <h2 className="section-title" style={{ marginBottom: 0 }}>Featured Tour Packages</h2>
           </div>
-          <a href="/packages" className="view-all-link">all packages <MdArrowForward />
-         </a>
+          <Link to="/packages" className="view-all-link">
+            All Packages <MdArrowForward />
+          </Link>
         </div>
 
         <div className="row g-4 mt-2">
