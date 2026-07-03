@@ -2,7 +2,7 @@ import React from 'react';
 import {
   MdVerifiedUser, MdSupportAgent, MdCleaningServices, MdPriceCheck,
   MdPeople, MdAcUnit, MdCalendarToday, MdArrowForward,
-  MdAccessTime, MdCheckCircleOutline
+  MdAccessTime, MdCheckCircleOutline, MdShield
 } from 'react-icons/md';
 import './Home.css';
 import './Packages.css';
@@ -17,43 +17,14 @@ import triangle from "../assets/images/triangle.png";
 const Home = () => {
   return (
     <div className="home-container">
-      {/* Hero Section */}
+      {/* Hero Section - Clean Image */}
       <section className="hero-section">
-        <div className="container hero-content-wrapper">
-
-          <div className="hero-left">
-            <h1 className="display-title">
-              Your Premier Travel Partner<br />in <span className="text-highlight">North India</span>
-            </h1>
-            <p className="body-large">
-              Experience spiritual journeys and luxury travels across Varanasi, Ayodhya, and Prayagraj with our elite fleet and expert chauffeurs.
-            </p>
-
-            <div className="hero-buttons">
-              <button className="btn btn-secondary-solid">Book Your Journey</button>
-              <Link to="/fleet" className="btn btn-primary-glass">
-                Explore Fleet
-              </Link>
-            </div>
-
-            <div className="hero-trust">
-              <div className="trust-avatars">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" className="avatar" />
-                <div className="avatar-count">+15k</div>
-              </div>
-              <p className="trust-text">
-                Trusted by <strong>15,000+</strong> happy pilgrims &amp; travelers
-              </p>
-            </div>
-          </div>
-
-          <div className="hero-right">
-            <Link to="/contact#inquiry-form" className="btn btn-inquire">
-              Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
-            </Link>
-            <p className="inquire-subtext">CUSTOM LUXURY QUOTES</p>
-          </div>
-
+        <div className="hero-corner-btns">
+          <button className="btn btn-secondary-solid">Book Your Journey</button>
+          <Link to="/fleet" className="btn btn-primary-glass">Explore Fleet</Link>
+          <Link to="/contact#inquiry-form" className="btn btn-inquire">
+            Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
+          </Link>
         </div>
       </section>
 

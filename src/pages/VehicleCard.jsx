@@ -14,9 +14,7 @@ const VehicleCard = ({ vehicle }) => {
             <small>{vehicle.category}</small>
           </div>
 
-          <div className="price">
-            ₹{vehicle.price}
-          </div>
+
         </div>
 
         <div className="vehicleInfo">
@@ -34,7 +32,7 @@ const VehicleCard = ({ vehicle }) => {
 
   <button
     className="tariffBtn"
-    onClick={() => navigate(`/vehicle/${vehicle.id}`)}
+    onClick={() => navigate(`/tariff/${vehicle.id}`)}
   >
     Tariff
   </button>
