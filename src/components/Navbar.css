@@ -29,10 +29,8 @@
 
 .logo-img {
     height: 75px;
-    width: 320px;
-    object-fit: cover;
-    object-position: left center;
-    max-width: none;
+    width: 300px;
+    object-fit: fill;
     display: block;
 }
 

@@ -151,15 +151,43 @@
   font-size: 14px;
 }
 
-.detailsBtn {
-  width: 100%;
-  border: none;
-  background: #0b2f75;
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
+.cardBtns {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.cardBtns .detailsBtn,
+.cardBtns .tariffBtn {
+    flex: 1 1 50%;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cardBtns .detailsBtn {
+    background: #0b2f75;
+    color: white;
+    border: none;
+}
+
+.cardBtns .tariffBtn {
+    background: white;
+    color: #0b2f75;
+    border: 2px solid #0b2f75;
+}
+
+.cardBtns .detailsBtn:hover {
+    background: #08245c;
+}
+
+.cardBtns .tariffBtn:hover {
+    background: #0b2f75;
+    color: white;
 }
 
 /* =========================
@@ -256,6 +284,7 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
 
 /* =========================
    RESPONSIVE

@@ -46,16 +46,14 @@ function About() {
         <div className="col-md-7">
           <h2>ABOUT KRISHNA TOURS</h2>
 
-          <p>
-            The Delhi based KRISHNA TOURS is established in grow from strength to strength.
-          </p>
+          <p><strong>Krishna Tours </strong>is a trusted car rental and transportation company based in <strong>New Delhi, India, </strong> serving customers with reliable travel solutions since <strong>2012. </strong> Founded under the leadership of <strong>Mr. Ramprakash Gupta and his son Gaurav Gupta</strong>, the company has grown steadily over the years, earning a reputation for quality, affordability, and customer satisfaction. </p>
+<p>For more than <strong>13 years</strong>, Krishna Tours has been providing safe, comfortable, and cost-effective transportation services for individuals, families, corporate clients, and tourists. Our commitment to excellence has helped us build lasting relationships with customers who value dependable and professional travel services. </p>
+<p>We take great pride in maintaining a fleet of clean, well-maintained, and modern vehicles to ensure a smooth and comfortable journey every time. Our experienced and courteous chauffeurs are professionally trained, ensuring safe driving and exceptional customer service. </p>
+<p>At Krishna Tours, we understand that every journey matters. Whether you need a car for local travel, airport transfers, business trips, sightseeing, or outstation travel, we are committed to delivering a <strong>hassle-free and enjoyable experience</strong>. </p>
+<p>Our focus has always been on providing high-quality transportation services at competitive prices while maintaining the highest standards of professionalism and reliability. We believe that our success is measured by the satisfaction of our customers, and we continuously strive to exceed their expectations. </p>
+<p>At <strong>Krishna Tours</strong>, customer satisfaction is at the heart of everything we do. Whether you book online, call us, or email us, our team is always ready to help you find the best travel solution for your needs. </p>
+<p><strong>"Customer Service with a Smile" </strong>is not just our tagline—it's our commitment to every journey we serve. </p>
 
-          <p>
-            The Delhi based KRISHNA TOURS is established in grow from strength to strength. On 2 July 2012 Krishna tours entered in travel industry with establishment of Krishna tours. A company is headed by Mr Ramprakash Gupta. Krishna tours having its head office in New Delhi, India. We are very much concerned about quality of our fleets and provides neat and clean and Young maintained Vehicles with well-trained chauffeurs.</p>
-          <p>KRISHNA TOURS is one of the cheap and best service provider company in Delhi which offering travel service from last 13 years. We have a team of experienced drivers which drive smoothly and comfortable. It is quality assured as well as Progressive and we are focusing on transportation. </p>
-          <p>So for any assistance you need for car hire , we are just a click away. You can also call or mail us to get best car rental services in Delhi.</p>
-          <p>We are continuously delivering high-quality services to the travelers. “Customer service with a smile"</p>
-          <p>We believe that Success is measured by the number of satisfied customers and that is always been our endeavor.</p>
         </div>
 
       </div>
