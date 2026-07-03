@@ -6,6 +6,7 @@ import Fleet from "./pages/Fleet";
 import Contact from "./pages/Contact";
 import Packages from "./pages/Packages";
 import VehicleDetails from "./pages/VehicleDetails";
+import VehicleTariff from "./pages/VehicleTariff";
 import PackageDetails from "./pages/PackageDetails";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/vehicle/:id" element={<VehicleDetails />} />
+        <Route path="/tariff/:id" element={<VehicleTariff />} />
 
         <Route
           path="/packages/:packageId"
