@@ -144,7 +144,6 @@ const Home = () => {
               <div className="package-content">
                 <h5>Delhi Local City Tour</h5>
                 <p>1 Night / 2 Days</p>
-                <h6>₹2,500</h6>
                 <p className="short-desc" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>Experience the rich heritage and culture with our exclusive local city tour tailored just for you.</p>
                 <Link to="/packages/delhi-local" className="btn btn-warning">
                   View Details
@@ -164,7 +163,6 @@ const Home = () => {
               <div className="package-content">
                 <h5>Delhi-Agra-Delhi</h5>
                 <p>2 Nights / 3 Days</p>
-                <h6>₹6,500</h6>
                 <p className="short-desc" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>A perfect short getaway to witness the majestic Taj Mahal and the historical wonders of Agra.</p>
                 <Link to="/packages/delhi-agra-delhi-2n" className="btn btn-warning">
                   View Details
@@ -184,7 +182,6 @@ const Home = () => {
               <div className="package-content">
                 <h5>Golden Triangle Tour</h5>
                 <p>6 Nights / 7 Days</p>
-                <h6>₹24,900</h6>
                 <p className="short-desc" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>Explore the vibrant culture of India by visiting the iconic cities of Delhi, Agra, and Jaipur.</p>
                 <Link to="/packages/golden-triangle" className="btn btn-warning">
                   View Details
