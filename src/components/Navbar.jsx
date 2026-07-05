@@ -4,7 +4,7 @@ import logo from "../assets/images/final.jpeg";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
 
       <div className="container-fluid">
 

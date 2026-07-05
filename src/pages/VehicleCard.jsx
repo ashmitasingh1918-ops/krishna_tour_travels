@@ -20,22 +20,22 @@ const VehicleCard = ({ vehicle }) => {
           <span>{vehicle.luggage} Bags</span>
           <span>{vehicle.ac ? "AC" : "Non AC"}</span>
         </div>
-<div className="cardBtns">
-  <button
-    className="detailsBtn"
-    onClick={() => navigate(`/vehicle/${vehicle.id}`)}
-  >
-    Details
-  </button>
 
-  <button
-    className="tariffBtn"
-    onClick={() => navigate(`/vehicle/${vehicle.id}`)}
-  >
-    Tariff
-  </button>
-</div>
-        
+        <div className="cardBtns">
+          <button
+            className="detailsBtn"
+            onClick={() => navigate(`/vehicle/${vehicle.id}`)}
+          >
+            Details
+          </button>
+
+          <button
+            className="tariffBtn"
+            onClick={() => navigate(`/tariff/${vehicle.id}`)}
+          >
+            Tariff
+          </button>
+        </div>
       </div>
     </div>
   );

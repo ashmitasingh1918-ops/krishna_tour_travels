@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MdVerifiedUser, MdSupportAgent, MdCleaningServices, MdPriceCheck,
   MdPeople, MdAcUnit, MdCalendarToday, MdArrowForward,
-  MdAccessTime, MdCheckCircleOutline
+  MdAccessTime, MdCheckCircleOutline, MdShield
 } from 'react-icons/md';
 import './Home.css';
 import './Packages.css';
@@ -15,45 +15,52 @@ import delhi from "../assets/images/delhi.png";
 import triangle from "../assets/images/triangle.png";
 
 const Home = () => {
+  const slides = [
+    '/newsite/images/home.png',
+    '/newsite/images/slide.png'
+  ];
+  
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="home-container">
-      {/* Hero Section */}
+      {/* Hero Section - Image Slideshow */}
       <section className="hero-section">
-        <div className="container hero-content-wrapper">
-
-          <div className="hero-left">
-            <h1 className="display-title">
-              Your Premier Travel Partner<br />in <span className="text-highlight">North India</span>
-            </h1>
-            <p className="body-large">
-              Experience spiritual journeys and luxury travels across Varanasi, Ayodhya, and Prayagraj with our elite fleet and expert chauffeurs.
-            </p>
-
-            <div className="hero-buttons">
-              <button className="btn btn-secondary-solid">Book Your Journey</button>
-              <Link to="/fleet" className="btn btn-primary-glass">
-                Explore Fleet
-              </Link>
-            </div>
-
-            <div className="hero-trust">
-              <div className="trust-avatars">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" className="avatar" />
-                <div className="avatar-count">+15k</div>
-              </div>
-              <p className="trust-text">
-                Trusted by <strong>15,000+</strong> happy pilgrims &amp; travelers
-              </p>
-            </div>
+        <div className="hero-slideshow">
+          <div 
+            className="hero-slides-track" 
+            style={{ 
+              transform: `translateX(-${(currentSlide * 100) / slides.length}%)`,
+              width: `${slides.length * 100}%`
+            }}
+          >
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
+                style={{ 
+                  backgroundImage: `url(${slide})`,
+                  width: `${100 / slides.length}%`
+                }}
+              />
+            ))}
           </div>
+          <div className="hero-overlay"></div>
+        </div>
 
-          <div className="hero-right">
-            <Link to="/contact#inquiry-form" className="btn btn-inquire">
-              Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
-            </Link>
-            <p className="inquire-subtext">CUSTOM LUXURY QUOTES</p>
-          </div>
-
+        <div className="hero-corner-btns">
+          <button className="btn btn-secondary-solid">Book Your Journey</button>
+          <Link to="/fleet" className="btn btn-primary-glass">Explore Fleet</Link>
+          <Link to="/contact#inquiry-form" className="btn btn-inquire">
+            Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
+          </Link>
         </div>
       </section>
 

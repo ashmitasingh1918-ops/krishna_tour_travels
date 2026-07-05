@@ -1,5 +1,5 @@
 .custom-navbar {
-    background-color: #032478;
+    background-color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -37,9 +37,9 @@
 /* Navigation */
 
 .nav-link {
-    color: white !important;
-    font-weight: 500;
-    font-size: 1rem;
+    color: #032478 !important;
+    font-weight: 600;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
 }
 
@@ -93,7 +93,7 @@
     .nav-item {
         text-align: center;
         padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .nav-link {
@@ -122,10 +122,11 @@
     }
 
     .navbar-collapse {
-        background: #032478;
+        background: #ffffff;
         margin-top: 10px;
         border-radius: 10px;
         padding: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .nav-link {
