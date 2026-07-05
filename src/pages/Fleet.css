@@ -53,7 +53,7 @@
 
 .filterContent h2 {
   font-size: 2rem;
-  color: #0b2f75;
+  color: #B0055B;
   margin-bottom: 5px;
 }
 
@@ -81,9 +81,9 @@
 
 .filterBtns button:hover,
 .filterBtns button.active {
-  background: #0b2f75;
+  background: #B0055B;
   color: white;
-  border-color: #0b2f75;
+  border-color: #B0055B;
 }
 
 /* =========================
@@ -137,12 +137,6 @@
   text-transform: uppercase;
 }
 
-.price {
-  color: #0b2f75;
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
 .vehicleInfo {
   display: flex;
   justify-content: space-between;
@@ -170,23 +164,23 @@
 }
 
 .cardBtns .detailsBtn {
-    background: #0b2f75;
+    background:#B0055B;
     color: white;
     border: none;
 }
 
 .cardBtns .tariffBtn {
     background: white;
-    color: #0b2f75;
-    border: 2px solid #0b2f75;
+    color: #B0055B;
+    border: 2px solid #B0055B;
 }
 
 .cardBtns .detailsBtn:hover {
-    background: #08245c;
+    background:#B0055B;
 }
 
 .cardBtns .tariffBtn:hover {
-    background: #0b2f75;
+    background: #B0055B;
     color: white;
 }
 
@@ -201,7 +195,7 @@
 }
 
 .packageAdv h2 {
-  color: #0b2f75;
+  color:#B0055B;
   margin-bottom: 10px;
 }
 

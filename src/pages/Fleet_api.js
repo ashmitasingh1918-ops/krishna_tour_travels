@@ -1,8 +1,8 @@
 const fleetData = [
   {
     id: 1,
-    name: "Swift Dzire",
-    category: "Reliable City Sedan",
+    name: "SIZUKI CIAZ",
+    category: "Reliable SIZUKI CIAZ",
     type: "Luxury",
 
     seats: 4,
@@ -12,11 +12,11 @@ const fleetData = [
     transmission: "Manual",
     fuel: "Petrol",
 
-    image: `${import.meta.env.BASE_URL}images/swift-dzire.jpg`,
-    interior: `${import.meta.env.BASE_URL}images/swift-dzire-interior.jpg`,
+    image: `${import.meta.env.BASE_URL}images/SIZUKI-CIAZ.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/SIZUKI-CIAZ-interior.jpg`,
 
     description:
-      "The Swift Dzire is a comfortable and fuel-efficient sedan, perfect for airport transfers, city rides, business travel, and family trips.",
+      "The Sizuki Ciaz is a comfortable and fuel-efficient sedan, perfect for airport transfers, city rides, business travel, and family trips.",
 
     features: [
       "Air Conditioner",
