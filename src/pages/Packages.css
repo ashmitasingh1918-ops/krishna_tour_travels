@@ -71,23 +71,24 @@
 }
 
 .package-content h6 {
-  color: #d4a017;
+  color: #B0055B;
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
 .package-content .btn {
-  background: #d4a017;
+  background: #B0055B;
   border: none;
   color: white;
   font-weight: 600;
   border-radius: 8px;
   padding: 8px 18px;
+  width:100%;
 }
 
 .package-content .btn:hover {
-  background: #b8860b;
+  background: #7913af;
 }
 .why-book-section {
     background: #f8f9fa;

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/images/final.jpeg";
+import logo from "../assets/images/ltp.png";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
+    <nav className="navbar navbar-expand-lg custom-navbar">
 
       <div className="container-fluid">
 

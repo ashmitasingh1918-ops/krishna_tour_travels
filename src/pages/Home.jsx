@@ -19,7 +19,7 @@ const Home = () => {
     '/newsite/images/home.png',
     '/newsite/images/slide.png'
   ];
-  
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -34,9 +34,9 @@ const Home = () => {
       {/* Hero Section - Image Slideshow */}
       <section className="hero-section">
         <div className="hero-slideshow">
-          <div 
-            className="hero-slides-track" 
-            style={{ 
+          <div
+            className="hero-slides-track"
+            style={{
               transform: `translateX(-${(currentSlide * 100) / slides.length}%)`,
               width: `${slides.length * 100}%`
             }}
@@ -45,7 +45,7 @@ const Home = () => {
               <div
                 key={index}
                 className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
-                style={{ 
+                style={{
                   backgroundImage: `url(${slide})`,
                   width: `${100 / slides.length}%`
                 }}
@@ -57,10 +57,6 @@ const Home = () => {
 
         <div className="hero-corner-btns">
           <button className="btn btn-secondary-solid">Book Your Journey</button>
-          <Link to="/fleet" className="btn btn-primary-glass">Explore Fleet</Link>
-          <Link to="/contact#inquiry-form" className="btn btn-inquire">
-            Inquire Now <MdArrowForward style={{ marginLeft: "8px" }} />
-          </Link>
         </div>
       </section>
 
