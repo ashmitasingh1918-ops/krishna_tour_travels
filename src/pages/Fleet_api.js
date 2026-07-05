@@ -30,52 +30,23 @@ const fleetData = [
 
   {
     id: 2,
-    name: "Maruti Ertiga",
-    category: "Premium Family MPV",
-    type: "GroupTravel",
-
-    seats: 6,
-    luggage: 4,
-    ac: true,
-
-    transmission: "Manual",
-    fuel: "Petrol",
-
-    image: `${import.meta.env.BASE_URL}images/ertiga.jpg`,
-    interior: `${import.meta.env.BASE_URL}images/ertiga-interior.jpg`,
-
-    description:
-      "Maruti Ertiga is an excellent choice for family tours, pilgrimages, and group travel with spacious seating and luggage capacity.",
-
-    features: [
-      "Rear AC",
-      "Music System",
-      "Charging Point",
-      "Comfortable Seats",
-      "Large Boot Space",
-      "Power Windows",
-    ],
-  },
-
-  {
-    id: 3,
-    name: "Toyota Etios",
-    category: "Executive Sedan",
+    name: "Maruti Swift Dzire",
+    category: "Comfortable Sedan",
     type: "Executive",
-
+ 
     seats: 4,
     luggage: 3,
     ac: true,
-
+ 
     transmission: "Manual",
-    fuel: "Diesel",
-
-    image: `${import.meta.env.BASE_URL}images/etios.jpg`,
-    interior: `${import.meta.env.BASE_URL}images/etios-interior.jpg`,
-
+    fuel: "Petrol",
+ 
+    image: `${import.meta.env.BASE_URL}images/swift-dzire.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/swift-dzire-interior.jpg`,
+ 
     description:
-      "Toyota Etios offers executive comfort with excellent ride quality, making it ideal for corporate and business travel.",
-
+      "Maruti Swift Dzire is a highly popular and comfortable sedan, ideal for small families, budget-friendly travel, and city rides.",
+ 
     features: [
       "Air Conditioner",
       "Music System",
@@ -86,8 +57,37 @@ const fleetData = [
   },
 
   {
+    id: 3,
+    name: "Kia Carens",
+    category: "Premium MPV",
+    type: "GroupTravel",
+ 
+    seats: 6,
+    luggage: 4,
+    ac: true,
+ 
+    transmission: "Automatic",
+    fuel: "Petrol",
+ 
+    image: `${import.meta.env.BASE_URL}images/kiaExterior.jpeg`,
+    interior: `${import.meta.env.BASE_URL}images/KiaInterior.jpeg`,
+ 
+    description:
+      "Kia Carens offers premium comfort, modern styling, and spacious seating, making it perfect for family trips and corporate travel.",
+ 
+    features: [
+      "Air Conditioner",
+      "Music System",
+      "Charging Point",
+      "Comfortable Seats",
+      "Large Boot Space",
+      "Power Windows",
+    ],
+  },
+
+  {
     id: 4,
-    name: "Toyota Innova",
+    name: "Toyota Innova Hycross",
     category: "Premium Family MPV",
     type: "GroupTravel",
      seats: 7,
@@ -101,7 +101,7 @@ const fleetData = [
     interior: `${import.meta.env.BASE_URL}images/innova-interior.jpg`,
 
     description:
-      "Toyota Innova is our premium MPV designed for long-distance journeys, family vacations, and luxury travel.",
+      "Toyota Innova Hycross is our premium MPV designed for long-distance journeys, family vacations, and luxury travel.",
 
     features: [
       "Rear AC",
@@ -143,21 +143,21 @@ const fleetData = [
 
   {
     id: 6,
-    name: "Tempo Traveller",
+    name: "Modified 10 Seater Force Urbania",
     category: "Group Traveller",
     type: "GroupTravel",
-    seats: 12,
+    seats: 10,
     luggage: 10,
     ac: true,
 
     transmission: "Manual",
     fuel: "Diesel",
 
-    image: `${import.meta.env.BASE_URL}images/tempo.jpg`,
-    interior: `${import.meta.env.BASE_URL}images/tempo-interior.jpg`,
+    image: `${import.meta.env.BASE_URL}images/urbano.jpg`,
+    interior: `${import.meta.env.BASE_URL}images/urbsno.jpg`,
 
     description:
-      "Tempo Traveller is ideal for large groups, religious tours, weddings, corporate events, and long-distance travel.",
+      "Modified 10 Seater Force Urbania is ideal for large groups, VIP travel, religious tours, weddings, corporate events, and long-distance travel.",
 
     features: [
       "Pushback Seats",
