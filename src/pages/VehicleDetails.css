@@ -1,8 +1,12 @@
 .vehicle-details {
     max-width: 1200px;
-    margin: 20px auto 60px; 
+    margin: 20px auto 60px;
     padding: 10px;
 }
+
+/* ===========================
+   Title
+=========================== */
 
 .vehicle-title {
     text-align: center;
@@ -11,6 +15,10 @@
     font-weight: 700;
     margin-bottom: 40px;
 }
+
+/* ===========================
+   Images
+=========================== */
 
 .vehicle-images {
     display: flex;
@@ -27,21 +35,19 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* ---------------- Card ---------------- */
+/* ===========================
+   Vehicle Card
+=========================== */
 
 .vehicle-card {
-    background: #ffffff;
-    height: 50%;
+    background: #fff;
     border-left: 6px solid #d62828;
     border-radius: 15px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     padding: 40px;
 }
 
-/* ---------------- Vehicle Info ---------------- */
-
 .vehicle-info {
-    font-size: 18px;
     color: #333;
 }
 
@@ -53,137 +59,165 @@
 
 .vehicle-info h3 {
     color: #0b2f75;
-    font-size: 34px;
-    margin-top: 35px;
-    margin-bottom: 18px;
+    font-size: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     border-top: 1px solid #e5e5e5;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 .vehicle-info p {
-    margin: 14px 0;
+    font-size: 17px;
     line-height: 1.8;
+    color: #555;
 }
 
-.vehicle-info strong {
-    color: #000;
+/* ===========================
+   Vehicle Details Table
+=========================== */
+
+.vehicle-details-table {
+    margin: 25px 0 35px;
 }
 
-.vehicle-info ul {
-    margin-top: 15px;
+.vehicle-details-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+}
+
+.vehicle-details-table th,
+.vehicle-details-table td {
+    padding: 18px 22px;
+    border: 1px solid #ececec;
+    font-size: 17px;
+}
+
+.vehicle-details-table th {
+    width: 35%;
+    background: #f8f9fc;
+    color: #0b2f75;
+    font-weight: 600;
+    text-align: left;
+}
+
+.vehicle-details-table td {
+    color: #444;
+    font-weight: 500;
+}
+
+.vehicle-details-table tr:hover {
+    background: #fafafa;
+}
+
+/* ===========================
+   Features
+=========================== */
+
+.feature-list {
+    margin-top: 20px;
     padding-left: 22px;
 }
 
-.vehicle-info li {
+.feature-list li {
     margin-bottom: 12px;
+    font-size: 17px;
     line-height: 1.8;
+    color: #555;
 }
 
-/* ---------------- Not Found ---------------- */
+/* ===========================
+   Similar Vehicles
+=========================== */
+
+.similar-vehicles {
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.similar-title {
+    font-size: 40px;
+    color: #0b2f75;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.similar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.similar-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.similar-card:hover {
+    transform: translateY(-8px);
+}
+
+.similar-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.similar-content {
+    padding: 25px;
+}
+
+.similar-content h3 {
+    color: #0b2f75;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.similar-content p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.similar-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #d62828;
+    color: #d62828;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.similar-btn:hover {
+    background: #d62828;
+    color: #fff;
+}
+
+/* ===========================
+   Not Found
+=========================== */
 
 .not-found {
     text-align: center;
     color: #0b2f75;
     margin-top: 100px;
 }
+
 /* ===========================
-   Similar Vehicles
+   Responsive
 =========================== */
 
-.similar-vehicles{
-    max-width:1200px;
-    margin:80px auto;
-}
+@media (max-width: 992px) {
 
-.similar-title{
-    font-size:40px;
-    color:#0b2f75;
-    font-weight:700;
-    margin-bottom:35px;
-}
-
-.similar-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-.similar-card{
-    background:#fff;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-    transition:.3s;
-}
-
-.similar-card:hover{
-    transform:translateY(-8px);
-}
-
-.similar-image{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
-
-.similar-content{
-    padding:25px;
-}
-
-.similar-content h3{
-    font-size:28px;
-    color:#0b2f75;
-    margin-bottom:15px;
-}
-
-.similar-content p{
-    color:#555;
-    line-height:1.7;
-    margin-bottom:25px;
-}
-
-.similar-btn{
-    display:inline-block;
-    padding:12px 30px;
-    border:2px solid #d62828;
-    color:#d62828;
-    text-decoration:none;
-    border-radius:6px;
-    transition:.3s;
-}
-
-.similar-btn:hover{
-    background:#d62828;
-    color:#fff;
-}
-
-@media(max-width:992px){
-
-.similar-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:768px){
-
-.similar-grid{
-    grid-template-columns:1fr;
-}
-
-.similar-title{
-    font-size:32px;
-    text-align:center;
-}
-
-}
-
-/* ---------------- Responsive ---------------- */
-
-@media (max-width: 768px) {
-
-    .vehicle-title {
-        font-size: 30px;
+    .similar-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 
     .vehicle-images {
@@ -192,15 +226,17 @@
 
     .vehicle-image {
         width: 100%;
-        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .vehicle-title {
+        font-size: 30px;
     }
 
     .vehicle-card {
         padding: 25px;
-    }
-
-    .vehicle-info {
-        font-size: 16px;
     }
 
     .vehicle-info h2 {
@@ -209,5 +245,24 @@
 
     .vehicle-info h3 {
         font-size: 24px;
+    }
+
+    .vehicle-details-table th,
+    .vehicle-details-table td {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .vehicle-details-table th {
+        width: 45%;
+    }
+
+    .similar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .similar-title {
+        font-size: 32px;
+        text-align: center;
     }
 }

@@ -5,16 +5,15 @@
 .fleetPage {
   height: 80vh;
   background: linear-gradient(
-      rgba(0, 33, 96, 0.65),
-      rgba(0, 33, 96, 0.65)
+      rgba(0, 34, 96, 0.2),
+      rgba(0, 33, 96, 0.2)
     ),
     url("https://assets.carandclassic.com/uploads/cars/land_rover/9218539.jpg?ar=16:9&auto=&fit=crop&h=1200&ixlib=php-4.1.0&q=80&w=1200&s=5c4223a0e0743422b29a8b5321400361");
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  padding: 0 8%;
-  color: rgb(234, 195, 43);
 }
 
 .fleetSection {
@@ -22,20 +21,26 @@
 }
 
 .fleetSection span {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 2px;
+  color: #032478;
 }
 
 .fleetSection h1 {
-  font-size: 3.5rem;
-    font-weight: 700;
-    color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #B0055B;
+  text-align: start;
+  margin-top: 20px;
 }
 
 .fleetSection p {
   font-size: 1rem;
   line-height: 1.8;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 4px;
 }
 
 /* FILTER SECTION */
