@@ -168,6 +168,117 @@ const fleetData = [
       "Comfortable Legroom",
     ],
   },
+  {
+  id: 7,
+  name: "Maruti Suzuki Dzire",
+  category: "Sedan",
+  type: "Sedan",
+  seats: 4,
+  luggage: 3,
+  ac: true,
+
+  transmission: "Manual",
+  fuel: "Petrol",
+
+  image: `${import.meta.env.BASE_URL}images/SIZUKI-CIAZ.jpg`,
+  interior: `${import.meta.env.BASE_URL}images/SIZUKI-CIAZ-interior.jpg`,
+
+  description:
+    "Maruti Suzuki Dzire offers a comfortable and fuel-efficient ride, making it an excellent choice for city travel, airport transfers, and outstation trips.",
+
+  features: [
+    "Air Conditioning",
+    "Comfortable Seats",
+    "Music System",
+    "Charging Port",
+    "Spacious Boot",
+    "Excellent Mileage",
+  ],
+},
+
+{
+  id: 8,
+  name: "Toyota Hyryder",
+  category: "SUV",
+  type: "SUV",
+  seats: 5,
+  luggage: 4,
+  ac: true,
+
+  transmission: "Automatic",
+  fuel: "Hybrid",
+
+  image: `${import.meta.env.BASE_URL}images/hr-cross.jpg`,
+  interior: `${import.meta.env.BASE_URL}images/hr-cross-interior.jpg`,
+
+  description:
+    "Toyota Hyryder combines premium comfort, advanced technology, and excellent fuel efficiency, making it ideal for family vacations and long-distance travel.",
+
+  features: [
+    "Automatic Climate Control",
+    "Touchscreen Infotainment",
+    "Rear AC Vents",
+    "Charging Ports",
+    "Large Boot Space",
+    "Premium Interiors",
+  ],
+},
+
+{
+  id: 9,
+  name: "Kia Carens",
+  category: "MUV",
+  type: "MUV",
+  seats: 6,
+  luggage: 5,
+  ac: true,
+
+  transmission: "Manual",
+  fuel: "Diesel",
+
+  image: `${import.meta.env.BASE_URL}images/kia-carens.jpg`,
+  interior: `${import.meta.env.BASE_URL}images/kia-carens-interior.jpg`,
+
+  description:
+    "Kia Carens is a spacious premium MPV designed for family trips, airport transfers, and long journeys with exceptional comfort.",
+
+  features: [
+    "6 Comfortable Seats",
+    "Rear AC Vents",
+    "Large Touchscreen",
+    "Charging Ports",
+    "Ample Luggage Space",
+    "Premium Cabin",
+  ],
+},
+
+{
+  id: 10,
+  name: "Force Urbania",
+  category: "Luxury Van",
+  type: "LuxuryVan",
+  seats: 17,
+  luggage: 12,
+  ac: true,
+
+  transmission: "Manual",
+  fuel: "Diesel",
+
+  image: `${import.meta.env.BASE_URL}images/force-urbania.jpg`,
+  interior: `${import.meta.env.BASE_URL}images/force-urbania-interior.jpg`,
+
+  description:
+    "Force Urbania is a premium luxury van offering superior comfort, ample space, and modern amenities for group tours, corporate travel, and family vacations.",
+
+  features: [
+    "Reclining Seats",
+    "Powerful Air Conditioning",
+    "LED Interior Lighting",
+    "Charging Ports",
+    "Large Luggage Space",
+    "Premium Luxury Cabin",
+  ],
+},
 ];
 
 export default fleetData;
