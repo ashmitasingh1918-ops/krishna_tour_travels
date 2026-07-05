@@ -206,14 +206,13 @@ body {
 
 .hero-corner-btns {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  bottom: 36px;
+  right: 36px;
   display: flex;
   flex-direction: row;
   gap: 16px;
   align-items: center;
   z-index: 2;
-  white-space: nowrap;
 }
 
 .hero-corner-btns .btn {
@@ -223,6 +222,15 @@ body {
   padding: 14px 28px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
+}
+
+.hero-corner-btns .btn-secondary-solid {
+  background-color: #B0055B;
+  color: white;
+}
+
+.hero-corner-btns .btn-secondary-solid:hover {
+  background-color: #92044b;
 }
 
 @media (max-width: 992px) {
