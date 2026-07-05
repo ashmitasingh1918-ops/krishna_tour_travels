@@ -59,7 +59,7 @@ const tariffs = {
       { desc: "Rate for Extra Hour", km: "", hours: "", price: 200 }
     ]
   },
-  6: { // Modified 10 Seater Force Urbania
+  7: { // Force Urbania
     airport: [
       { desc: "Transfer from airport to hotel or vice versa", km: 55, hours: 4, price: 6000 }
     ],

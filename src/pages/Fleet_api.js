@@ -273,55 +273,55 @@
 },
 {
   id: 6,
-  name: "Toyota Urban Cruiser Hyryder",
-  category: "Premium SUV",
-  type: "SUV",
-
-  seats: 5,
-  luggage: 4,
+  name: "Tempo Traveller",
+  category: "Group Traveller",
+  type: "GroupTravel",
+ 
+  seats: 12,
+  luggage: 10,
   ac: true,
-
-  transmission: "Automatic",
-  fuel: "Hybrid",
-
-  image: `${import.meta.env.BASE_URL}images/hr-cross.jpg`,
-  interior: `${import.meta.env.BASE_URL}images/hr-cross-interior.jpg`,
-
+ 
+  transmission: "Manual",
+  fuel: "Diesel",
+ 
+  image: `${import.meta.env.BASE_URL}images/tempo.png`,
+  interior: `${import.meta.env.BASE_URL}images/tempo-interior.png`,
+ 
   description:
-    "Toyota Urban Cruiser Hyryder is a stylish premium SUV with advanced hybrid technology, spacious interiors, and excellent fuel efficiency for city drives and long journeys.",
-
+    "Tempo Traveller is ideal for large groups, religious tours, weddings, corporate events, and long-distance travel.",
+ 
   features: [
-    "Panoramic Sunroof",
-    "Automatic Climate Control",
-    "Wireless Charger",
-    "Touchscreen Infotainment",
-    "Cruise Control",
-    "Premium Leather Seats",
+    "Pushback Seats",
+    "Full Air Conditioning",
+    "Music System",
+    "Charging Points",
+    "Large Luggage Space",
+    "Comfortable Legroom",
   ],
-
+ 
   specifications: {
     engine: {
-      type: "1.5L Strong Hybrid",
-      displacement: "1490 cc",
-      power: "114 bhp",
-      torque: "122 Nm",
+      type: "2.6L CR Turbo Diesel",
+      displacement: "2596 cc",
+      power: "115 hp",
+      torque: "350 Nm",
     },
-
+ 
     capacity: {
-      seating: "5",
-      luggage: "4 Bags",
-      fuelTank: "45 Litres",
+      seating: "12",
+      luggage: "10 Bags",
+      fuelTank: "70 Litres",
     },
-
+ 
     dimensions: {
-      length: "4365 mm",
-      width: "1795 mm",
-      height: "1645 mm",
-      wheelBase: "2600 mm",
+      length: "5915 mm",
+      width: "1975 mm",
+      height: "2450 mm",
+      wheelBase: "3350 mm",
     },
-
+ 
     fuel: {
-      fuelUsed: "Hybrid",
+      fuelUsed: "Diesel",
     },
   },
 },
