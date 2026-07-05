@@ -62,7 +62,7 @@ function Packages() {
 
             <p>1 Night / 2 Days</p>
 
-            <h6>₹2,500</h6>
+            {/* <h6>₹2,500</h6> */}
 
             <Link
   to="/packages/delhi-local"
@@ -89,7 +89,7 @@ function Packages() {
 
             <p>2 Nights / 3 Days</p>
 
-            <h6>₹6,500</h6>
+            {/* <h6>₹6,500</h6> */}
 
             <Link
   to="/packages/delhi-agra-delhi-2n"
@@ -116,7 +116,7 @@ function Packages() {
 
             <p>6 Nights / 7 Days</p>
 
-            <h6>₹24,900</h6>
+            {/* <h6>₹24,900</h6> */}
 
             <Link
   to="/packages/golden-triangle"
@@ -157,7 +157,7 @@ function Packages() {
 
             <p>3 Nights / 4 Days</p>
 
-            <h6>₹2,500</h6>
+            {/* <h6>₹2,500</h6> */}
 
            <Link
   to="/packages/delhi-agra-jaipur-delhi"
@@ -184,7 +184,7 @@ function Packages() {
 
             <p>1 Night / 2 Days</p>
 
-            <h6>₹6,500</h6>
+            {/* <h6>₹6,500</h6> */}
 
             <Link
   to="/packages/delhi-agra-delhi-1n"
@@ -211,7 +211,7 @@ function Packages() {
 
             <p>1 Night / 2 Days</p>
 
-            <h6>₹24,900</h6>
+            {/* <h6>₹24,900</h6> */}
 
             <Link
   to="/packages/delhi-haridwar-rishikesh"
