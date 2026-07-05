@@ -3,6 +3,87 @@ import { MdCheckCircleOutline } from "react-icons/md";
 import fleetData from "./Fleet_api";
 import "./VehicleTariff.css";
 
+const tariffs = {
+  1: { // Maruti Ciaz
+    airport: [
+      { desc: "Transfer from airport to hotel or vice versa", km: 55, hours: 4, price: 1900 }
+    ],
+    local: [
+      { desc: "Half Day", km: 40, hours: "", price: 1750 },
+      { desc: "Full Day", km: 80, hours: "", price: 2500 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 16 },
+      { desc: "Rate for Extra Hour", km: "", hours: "", price: 150 }
+    ]
+  },
+  2: { // Maruti Swift Dzire
+    airport: [
+      { desc: "Transfer from airport to hotel or vice versa", km: 55, hours: 4, price: 1300 }
+    ],
+    local: [
+      { desc: "Half Day", km: 40, hours: 4, price: 1200 },
+      { desc: "Full Day", km: 80, hours: 8, price: 1700 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 15 },
+      { desc: "Rate for Extra Hour", km: "", hours: "", price: 150 }
+    ]
+  },
+  3: { // Kia Carens
+    airport: [
+      { desc: "Transfer from airport to hotel or vice versa", km: 55, hours: 4, price: 2300 }
+    ],
+    local: [
+      { desc: "Half Day", km: 40, hours: "", price: 2000 },
+      { desc: "Full Day", km: 80, hours: "", price: 2500 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 16 },
+      { desc: "Rate for Extra Hour", km: "", hours: "", price: 150 }
+    ]
+  },
+  4: { // Toyota Innova Hycross
+    airport: [
+      { desc: "Transfer from airport to hotel or vice versa", km: 55, hours: 4, price: 2400 }
+    ],
+    local: [
+      { desc: "Half Day", km: 40, hours: 4, price: 2350 },
+      { desc: "Full Day", km: 80, hours: 8, price: 3150 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 25 },
+      { desc: "Rate for Extra Hour", km: "", hours: "", price: 250 }
+    ]
+  },
+  5: { // Toyota Innova Crysta
+    airport: [
+      { desc: "Transfer from airport to hotel or vice versa", km: 55, hours: 4, price: 2000 }
+    ],
+    local: [
+      { desc: "Half Day", km: 40, hours: 4, price: 1750 },
+      { desc: "Full Day", km: 80, hours: 8, price: 2800 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 21 },
+      { desc: "Rate for Extra Hour", km: "", hours: "", price: 200 }
+    ]
+  },
+  6: { // Modified 10 Seater Force Urbania
+    airport: [
+      { desc: "Transfer from airport to hotel or vice versa", km: 55, hours: 4, price: 6000 }
+    ],
+    local: [
+      { desc: "Full Day", km: 80, hours: 8, price: 9500 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 35 },
+      { desc: "Rate for Extra Hour", km: "", hours: "", price: 700 }
+    ]
+  },
+  default: { // Default Fallback
+    airport: [
+      { desc: "Transfer from Airport (Terminal 1) to Hotel or Vice versa", km: 40, hours: 4, price: 1250 },
+      { desc: "Transfer from Airport (Terminal 3) to Hotel or Vice versa", km: 55, hours: 4, price: 1450 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 19 }
+    ],
+    local: [
+      { desc: "Half Day", km: 40, hours: 4, price: 1325 },
+      { desc: "Full Day", km: 80, hours: 8, price: 1950 },
+      { desc: "Rate per K.M.", km: "", hours: "", price: 19 },
+      { desc: "Rate for Extra Hour", km: "", hours: "", price: 175 }
+    ]
+  }
+};
+
 const VehicleTariff = () => {
   const { id } = useParams();
 
@@ -13,6 +94,8 @@ const VehicleTariff = () => {
   if (!vehicle) {
     return <h2>Vehicle Not Found</h2>;
   }
+
+  const tariffInfo = tariffs[vehicle.id] || tariffs.default;
 
   return (
     <div className="vehicle-tariff">
@@ -48,52 +131,26 @@ const VehicleTariff = () => {
             <tr className="group-header">
               <td colSpan="4">Airport Transfer</td>
             </tr>
-            <tr>
-              <td>Transfer from Airport (Terminal 1) to Hotel or Vice versa</td>
-              <td>40</td>
-              <td>4</td>
-              <td>1250</td>
-            </tr>
-            <tr>
-              <td>Transfer from Airport (Terminal 3) to Hotel or Vice versa</td>
-              <td>55</td>
-              <td>4</td>
-              <td>1450</td>
-            </tr>
-            <tr>
-              <td>Rate per K.M.</td>
-              <td></td>
-              <td></td>
-              <td>19</td>
-            </tr>
+            {tariffInfo.airport.map((item, idx) => (
+              <tr key={`air-${idx}`}>
+                <td>{item.desc}</td>
+                <td>{item.km}</td>
+                <td>{item.hours}</td>
+                <td>{item.price}</td>
+              </tr>
+            ))}
 
             <tr className="group-header">
               <td colSpan="4">Local Use</td>
             </tr>
-            <tr>
-              <td>Half Day</td>
-              <td>40</td>
-              <td>4</td>
-              <td>1325</td>
-            </tr>
-            <tr>
-              <td>Full Day</td>
-              <td>80</td>
-              <td>8</td>
-              <td>1950</td>
-            </tr>
-            <tr>
-              <td>Rate per K.M.</td>
-              <td></td>
-              <td></td>
-              <td>19</td>
-            </tr>
-            <tr>
-              <td>Rate for Extra Hour</td>
-              <td></td>
-              <td></td>
-              <td>175</td>
-            </tr>
+            {tariffInfo.local.map((item, idx) => (
+              <tr key={`local-${idx}`}>
+                <td>{item.desc}</td>
+                <td>{item.km}</td>
+                <td>{item.hours}</td>
+                <td>{item.price}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
