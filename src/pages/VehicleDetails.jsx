@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import fleetData from "./Fleet_api";
 import "./VehicleDetails.css";
+import { Link } from "react-router-dom";
 
 const VehicleDetails = () => {
   const { id } = useParams();
@@ -10,18 +11,15 @@ const VehicleDetails = () => {
   );
 
   if (!vehicle) {
-    return <h2>Vehicle Not Found</h2>;
+    return <h2 className="not-found">Vehicle Not Found</h2>;
   }
 
   return (
     <div className="vehicle-details">
 
-      <h1 className="vehicle-title">
-        {vehicle.name}
-      </h1>
+      <h1 className="vehicle-title">{vehicle.name}</h1>
 
       <div className="vehicle-images">
-
         <img
           src={vehicle.image}
           alt={vehicle.name}
@@ -33,53 +31,87 @@ const VehicleDetails = () => {
           alt={`${vehicle.name} Interior`}
           className="vehicle-image"
         />
-
       </div>
 
-      <div className="vehicle-info">
+      <div className="vehicle-card">
 
-        <h2>{vehicle.category}</h2>
+        <div className="vehicle-info">
 
-        <p>
-          <strong>Price :</strong> ₹{vehicle.price}
-        </p>
+          <h2>{vehicle.category}</h2>
 
-        <p>
-          <strong>Seats :</strong> {vehicle.seats}
-        </p>
+          <p>
+            <strong>Seats :</strong> {vehicle.seats}
+          </p>
 
-        <p>
-          <strong>Luggage :</strong> {vehicle.luggage}
-        </p>
+          <p>
+            <strong>Luggage :</strong> {vehicle.luggage}
+          </p>
 
-        <p>
-          <strong>Air Conditioning :</strong>{" "}
-          {vehicle.ac ? "Available" : "Not Available"}
-        </p>
+          <p>
+            <strong>Air Conditioning :</strong>{" "}
+            {vehicle.ac ? "Available" : "Not Available"}
+          </p>
 
-        <p>
-          <strong>Transmission :</strong>{" "}
-          {vehicle.transmission}
-        </p>
+          <p>
+            <strong>Transmission :</strong> {vehicle.transmission}
+          </p>
 
-        <p>
-          <strong>Fuel :</strong>{" "}
-          {vehicle.fuel}
-        </p>
+          <p>
+            <strong>Fuel :</strong> {vehicle.fuel}
+          </p>
 
-        <h3>Description</h3>
+          <h3>Description</h3>
 
-        <p>{vehicle.description}</p>
+          <p>{vehicle.description}</p>
 
-        <h3>Features</h3>
+          <h3>Features</h3>
 
-        <ul>
-          {vehicle.features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))}
-        </ul>
+          <ul>
+            {vehicle.features.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+
+        </div>
 
       </div>
+      {/* Similar Vehicles */}
+<div className="similar-vehicles">
+
+  <h2 className="similar-title">Similar Vehicles</h2>
+
+  <div className="similar-grid">
+
+    {fleetData
+      .filter((item) => item.id !== vehicle.id)
+      .slice(0, 3)
+      .map((item) => (
+        <div className="similar-card" key={item.id}>
+
+          <img
+            src={item.image}
+            alt={item.name}
+            className="similar-image"
+          />
+
+          <div className="similar-content">
+            <h3>{item.name}</h3>
+
+            <p>{item.description.substring(0, 90)}...</p>
+
+            <Link
+              to={`/vehicle/${item.id}`}
+              className="similar-btn"
+            >
+              View More
+            </Link>
+
+          </div>
+
+        </div>
+      ))}
+  </div>
+</div>
 
     </div>
   );

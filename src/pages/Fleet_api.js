@@ -5,8 +5,6 @@ const fleetData = [
     category: "Reliable City Sedan",
     type: "Luxury",
 
-    price: 2499,
-
     seats: 4,
     luggage: 3,
     ac: true,
@@ -35,8 +33,6 @@ const fleetData = [
     name: "Maruti Ertiga",
     category: "Premium Family MPV",
     type: "GroupTravel",
-
-    price: 3200,
 
     seats: 6,
     luggage: 4,
@@ -67,8 +63,6 @@ const fleetData = [
     category: "Executive Sedan",
     type: "Executive",
 
-    price: 6000,
-
     seats: 4,
     luggage: 3,
     ac: true,
@@ -96,10 +90,7 @@ const fleetData = [
     name: "Toyota Innova",
     category: "Premium Family MPV",
     type: "GroupTravel",
-
-    price: 6500,
-
-    seats: 7,
+     seats: 7,
     luggage: 5,
     ac: true,
 
@@ -127,9 +118,6 @@ const fleetData = [
     name: "Toyota Crysta",
     category: "Luxury MPV",
     type: "Luxury",
-
-    price: 3200,
-
     seats: 7,
     luggage: 5,
     ac: true,
@@ -158,9 +146,6 @@ const fleetData = [
     name: "Tempo Traveller",
     category: "Group Traveller",
     type: "GroupTravel",
-
-    price: 12000,
-
     seats: 12,
     luggage: 10,
     ac: true,

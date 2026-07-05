@@ -13,10 +13,6 @@ const VehicleCard = ({ vehicle }) => {
             <h3>{vehicle.name}</h3>
             <small>{vehicle.category}</small>
           </div>
-
-          <div className="price">
-            ₹{vehicle.price}
-          </div>
         </div>
 
         <div className="vehicleInfo">

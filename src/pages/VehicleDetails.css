@@ -1,66 +1,213 @@
-.vehicle-details{
+.vehicle-details {
+    max-width: 1200px;
+    margin: 20px auto 60px; 
+    padding: 10px;
+}
+
+.vehicle-title {
+    text-align: center;
+    color: #0b2f75;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.vehicle-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.vehicle-image {
+    width: 48%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------- Card ---------------- */
+
+.vehicle-card {
+    background: #ffffff;
+    height: 50%;
+    border-left: 6px solid #d62828;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    padding: 40px;
+}
+
+/* ---------------- Vehicle Info ---------------- */
+
+.vehicle-info {
+    font-size: 18px;
+    color: #333;
+}
+
+.vehicle-info h2 {
+    color: #0b2f75;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.vehicle-info h3 {
+    color: #0b2f75;
+    font-size: 34px;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+}
+
+.vehicle-info p {
+    margin: 14px 0;
+    line-height: 1.8;
+}
+
+.vehicle-info strong {
+    color: #000;
+}
+
+.vehicle-info ul {
+    margin-top: 15px;
+    padding-left: 22px;
+}
+
+.vehicle-info li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+/* ---------------- Not Found ---------------- */
+
+.not-found {
+    text-align: center;
+    color: #0b2f75;
+    margin-top: 100px;
+}
+/* ===========================
+   Similar Vehicles
+=========================== */
+
+.similar-vehicles{
     max-width:1200px;
-    margin:50px auto;
-    padding:20px;
+    margin:80px auto;
 }
 
-.vehicle-title{
-    text-align:center;
+.similar-title{
+    font-size:40px;
     color:#0b2f75;
-    margin-bottom:30px;
+    font-weight:700;
+    margin-bottom:35px;
 }
 
-.vehicle-images{
-    display:flex;
-    justify-content:space-between;
+.similar-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
     gap:30px;
-    margin-bottom:40px;
 }
 
-.vehicle-image{
-    width:48%;
-    height:320px;
-    object-fit:cover;
+.similar-card{
+    background:#fff;
     border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    transition:.3s;
 }
 
-.vehicle-info{
-    font-size:18px;
+.similar-card:hover{
+    transform:translateY(-8px);
 }
 
-.vehicle-info h2{
+.similar-image{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.similar-content{
+    padding:25px;
+}
+
+.similar-content h3{
+    font-size:28px;
     color:#0b2f75;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.vehicle-info h3{
-    color:#0b2f75;
-    margin-top:30px;
-}
-
-.vehicle-info p{
-    margin:12px 0;
+.similar-content p{
+    color:#555;
     line-height:1.7;
+    margin-bottom:25px;
 }
 
-.vehicle-info ul{
-    margin-top:15px;
-    padding-left:20px;
+.similar-btn{
+    display:inline-block;
+    padding:12px 30px;
+    border:2px solid #d62828;
+    color:#d62828;
+    text-decoration:none;
+    border-radius:6px;
+    transition:.3s;
 }
 
-.vehicle-info li{
-    margin-bottom:10px;
+.similar-btn:hover{
+    background:#d62828;
+    color:#fff;
+}
+
+@media(max-width:992px){
+
+.similar-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
 }
 
 @media(max-width:768px){
 
-.vehicle-images{
-    flex-direction:column;
+.similar-grid{
+    grid-template-columns:1fr;
 }
 
-.vehicle-image{
-    width:100%;
+.similar-title{
+    font-size:32px;
+    text-align:center;
 }
 
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 768px) {
+
+    .vehicle-title {
+        font-size: 30px;
+    }
+
+    .vehicle-images {
+        flex-direction: column;
+    }
+
+    .vehicle-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .vehicle-card {
+        padding: 25px;
+    }
+
+    .vehicle-info {
+        font-size: 16px;
+    }
+
+    .vehicle-info h2 {
+        font-size: 28px;
+    }
+
+    .vehicle-info h3 {
+        font-size: 24px;
+    }
 }
