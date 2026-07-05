@@ -262,8 +262,8 @@
 
 .btn-submit {
   width: 100%;
-  background-color: var(--secondary-container);
-  color: var(--on-secondary-container);
+  background-color: #B0055B;
+  color: white;
   font-family: var(--font-heading);
   font-size: 20px;
   font-weight: 600;
@@ -276,7 +276,7 @@
 }
 
 .btn-submit:hover:not(:disabled) {
-  background-color: #E2A700;
+  background-color: #92044b;
   transform: scale(0.98);
 }
 
