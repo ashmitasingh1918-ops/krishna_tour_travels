@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   MdVerifiedUser, MdSupportAgent, MdCleaningServices, MdPriceCheck,
   MdPeople, MdAcUnit, MdCalendarToday, MdArrowForward,
@@ -15,10 +15,46 @@ import delhi from "../assets/images/delhi.png";
 import triangle from "../assets/images/triangle.png";
 
 const Home = () => {
+  const slides = [
+    '/newsite/images/home.png',
+    '/newsite/images/slide.png'
+  ];
+  
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="home-container">
-      {/* Hero Section - Clean Image */}
+      {/* Hero Section - Image Slideshow */}
       <section className="hero-section">
+        <div className="hero-slideshow">
+          <div 
+            className="hero-slides-track" 
+            style={{ 
+              transform: `translateX(-${(currentSlide * 100) / slides.length}%)`,
+              width: `${slides.length * 100}%`
+            }}
+          >
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
+                style={{ 
+                  backgroundImage: `url(${slide})`,
+                  width: `${100 / slides.length}%`
+                }}
+              />
+            ))}
+          </div>
+          <div className="hero-overlay"></div>
+        </div>
+
         <div className="hero-corner-btns">
           <button className="btn btn-secondary-solid">Book Your Journey</button>
           <Link to="/fleet" className="btn btn-primary-glass">Explore Fleet</Link>
