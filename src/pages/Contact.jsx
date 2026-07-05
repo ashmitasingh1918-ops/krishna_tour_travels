@@ -105,7 +105,7 @@ const Contact = () => {
 
               <div>
                 <p className="card-label font-body">Phone</p>
-                <p className="card-value">+91 9644518922</p>
+                <p className="card-value">+91 8920462315</p>
               </div>
             </a>
           </div>
@@ -113,7 +113,7 @@ const Contact = () => {
           {/* WhatsApp */}
           <div className="col-12 col-md-6">
             <a
-              href="https://wa.me/919644518922?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+              href="https://wa.me/8920462315?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="contact-card"
@@ -166,7 +166,7 @@ const Contact = () => {
       </section>
 
       {/* 3. Inquiry Form */}
-      <section className="inquiry-section" id="inquiry-form">
+      <section className="inquiry-section" id="contactForm">
         <div className="inquiry-card">
           <h3 className="section-title">Request a Personalized Tour</h3>
           <div className="title-line"></div>

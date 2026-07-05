@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import packages from "../data/packages";
 import "./PackageDetails.css";
+import { Link } from "react-router-dom";
 
 function PackageDetails() {
   const { packageId } = useParams();
@@ -36,11 +37,19 @@ function PackageDetails() {
               </p>
             </div>
 
-            <div>
-              <h2 className="package-price">
-                {packageData.price}
-              </h2>
-            </div>
+            <div className="package-action">
+
+  <h2 className="package-price">
+    {packageData.price}
+  </h2>
+
+  <Link to="/contact#contactForm">
+    <button className="quote-btn">
+      Get a Quote
+    </button>
+  </Link>
+
+</div>
 
           </div>
 

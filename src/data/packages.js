@@ -12,7 +12,7 @@ const packages = [
 
     duration: "1 Night / 2 Days",
 
-    price: "₹2,500",
+    // price: "₹2,500",
 
     gallery: local,
 
@@ -71,7 +71,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   duration: "2 Nights / 3 Days",
 
-  price: "₹6,500",
+  // price: "₹6,500",
 
   gallery: n,
 
@@ -140,7 +140,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     duration: "6 Nights / 7 Days",
 
-    price: "₹24,900",
+    // price: "₹24,900",
 
     gallery: tri,
 
@@ -241,7 +241,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   duration: "3 Nights / 4 Days",
 
-  price: "₹12,900",
+  // price: "₹12,900",
 
   gallery: jai,
 
@@ -319,7 +319,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   duration: "1 Night / 2 Days",
 
-  price: "₹5,500",
+  // price: "₹5,500",
 
   gallery: harid, // import your package image
 
@@ -379,7 +379,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   duration: "1 Night / 2 Days",
 
-  price: "₹4,500",
+  // price: "₹4,500",
 
   gallery: taj,
 

@@ -1,57 +1,103 @@
+import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer-exact">
       <div className="container">
-        <div className="row">
+        <div className="row g-4 justify-content-center">
+          {/* Column 1: Address & Logo */}
+          <div className="col-lg-3 footer-col first-col">
+            <h5 className="footer-title">KRISHNA TOUR INDIA</h5>
+            <div className="title-sep"></div>
 
-          <div className="col-md-3">
-            <h5>KRISHNA TOURS</h5>
-            <p>
-              Trusted for quality service, professional drivers, and well-maintained vehicles, Krishna Tours & Travels makes every journey safe, comfortable, and memorable.
+            <div className="contact-info-row d-flex align-items-start mb-2">
+              <i className="bi bi-geo-alt-fill me-3 title-magenta"></i>
+              <p className="address-text">
+                Rz-7/232 J-Block west sagarpur new delhi 110046 near Sakuntla hospital
+              </p>
+            </div>
 
-
-            </p>
+            <div className="footer-social-links mt-3">
+              <a href="#" className="social-icon facebook"><i className="bi bi-facebook"></i></a>
+              <a href="#" className="social-icon instagram"><i className="bi bi-instagram"></i></a>
+              <a href="#" className="social-icon twitter"><i className="bi bi-twitter-x"></i></a>
+            </div>
           </div>
 
-          <div className="col-md-3">
-            <h5>Quick Links</h5>
 
-            <Link to="/">Home</Link><br />
-            <Link to="/about">About Us</Link><br />
-            <Link to="/fleet">Our Fleet</Link><br />
-            <Link to="/packages">Tour Packages</Link><br />
-            <Link to="/contact">Contact Us</Link>
+          {/* Column 2: Quick Links */}
+          <div className="col-lg-3 footer-col border-left">
+            <h5 className="footer-title">QUICK LINKS</h5>
+            <div className="title-sep diamond"></div>
+
+            <ul className="footer-links-list">
+              <li><Link to="/"><i className="bi bi-chevron-right gold-chevron"></i> Home</Link></li>
+              <li><Link to="/about"><i className="bi bi-chevron-right gold-chevron"></i> About Us</Link></li>
+              <li><Link to="/fleet"><i className="bi bi-chevron-right gold-chevron"></i> Our Fleet</Link></li>
+              <li><Link to="/contact"><i className="bi bi-chevron-right gold-chevron"></i> Contact Us</Link></li>
+            </ul>
           </div>
 
-          <div className="col-md-3">
-            <h5>Services</h5>
+          {/* Column 3: Services */}
+          <div className="col-lg-3 footer-col border-left">
+            <h5 className="footer-title">SERVICES</h5>
+            <div className="title-sep diamond"></div>
 
-            <p>Car Rental</p>
-            <p>Airport Transfer</p>
-            <p>Corporate Travel</p>
-            <p>Tour Packages</p>
+            <div className="service-items-list">
+              <div className="service-row">
+                <i className="bi bi-car-front-fill gold-icon"></i>
+                <span>Car Rental</span>
+              </div>
+              <div className="service-row">
+                <i className="bi bi-airplane-fill gold-icon"></i>
+                <span>Airport Transfer</span>
+              </div>
+              <div className="service-row">
+                <i className="bi bi-briefcase-fill gold-icon"></i>
+                <span>Corporate Travel</span>
+              </div>
+              <div className="service-row">
+                <i className="bi bi-luggage-fill gold-icon"></i>
+                <span>Tour Packages</span>
+              </div>
+            </div>
           </div>
 
-          <div className="col-md-3">
-            <h5>Contact</h5>
+          {/* Column 4: Contact */}
+          <div className="col-lg-3 footer-col border-left last-col">
+            <h5 className="footer-title">CONTACT</h5>
+            <div className="title-sep diamond"></div>
 
-            <p>+91 8800770603</p>
-            <p>+91 8920462315</p>
-            <p>info@krishnatourindia.com</p>
-            <p>India</p>
+            <div className="contact-details-list">
+              <div className="contact-row">
+                <div className="icon-circle-blue">
+                  <i className="bi bi-telephone-fill"></i>
+                </div>
+                <span>+91 8800770603</span>
+              </div>
+              <div className="contact-row">
+                <div className="icon-circle-blue">
+                  <i className="bi bi-telephone-fill"></i>
+                </div>
+                <span>+91 8920462315</span>
+              </div>
+              <div className="contact-row">
+                <div className="icon-circle-blue">
+                  <i className="bi bi-envelope-fill"></i>
+                </div>
+                <span>info@krishnatourindia.com</span>
+              </div>
+              <div className="contact-row">
+                <div className="icon-circle-blue">
+                  <i className="bi bi-globe"></i>
+                </div>
+                <span>India</span>
+              </div>
+            </div>
           </div>
-
         </div>
-
-        <hr />
-
-        <div className="text-center">
-          © 2026 Krishna Tours. All Rights Reserved.
-        </div>
-
       </div>
     </footer>
   );

@@ -1,209 +1,406 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --primary-blue: #0b2e6b;
+  --accent-magenta: #b0055b;
+  --text-dark: #001d3d;
+  --text-muted: #555;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+}
+
+.about-page {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Hero Section */
 .about-hero {
-     height: 75vh;
-    min-height: 500px;
-
-    background-image:
-    linear-gradient(
-        rgba(11, 46, 107, 0.65),
-        rgba(11, 46, 107, 0.65)
-    ),
-
-     url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da");
-
-    background-size: cover;
-    background-position: bottom;
-
-    position: relative;
+  padding: 100px 0 60px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-overlay {
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.45);
-
-    display: flex;
-    align-items: center;
+.about-hero .container {
+  position: relative;
+  z-index: 2;
 }
 
-.hero-content {
-    color: white;
+.about-page .about-hero h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--text-dark) !important;
+  margin-bottom: 5px;
+  letter-spacing: -2px;
+  text-align: left;
+  margin-top: 0;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: white;
+.about-hero .tagline {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-magenta);
+  margin-bottom: 30px;
+  text-align: left;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-.stats-section {
-    background-color: #0B2E6B;
-    color: white;
-    padding: 50px 0;
+.about-hero .description {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 40px;
+  text-align: justify;
 }
 
-.stats-section h3 {
-    font-size: 3rem;
-    font-weight: 700;
+.hero-image-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.stats-section p {
-    margin-top: 10px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-.card {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 4px 4px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.card h5 {
-    margin-top: 15px;
-    color: #0B2E6B;
-    font-weight: 600;
-}
-.expertise-section{
-    margin-top: 50px;
-}
-
-.card p {
-    color: #555;
-}
-
-.bi {
-    color: #0B2E6B;
-    margin-bottom: 15px;
-}
-.legacy-section h2{
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-.advantage-list{
-    margin-top:20px;
-    padding-left:20px;
-}
-
-.advantage-list li{
-    margin-bottom:10px;
-}
-
-.mission-card{
-    background:#0B2E6B;
-    color:white;
-    border-radius:15px;
-}
-
-.vision-card{
-    background:white;
-    border-radius:15px;
-    box-shadow:0px 4px 15px rgba(0,0,0,0.1);
-}
-
-.core-values{
-    background:#f8f9fa;
-}
-
-.core-values i{
-    color:#0B2E6B;
-    margin-bottom:15px;
-}
-
-.cta-section{
-    background:#0B2E6B;
-    color:white;
-    padding:80px 0;
-}
-
-.cta-section p{
-    max-width:600px;
-    margin:auto;
-}
-.about-hero{
-    height: 80vh;
-
-    background-image:
-        linear-gradient(
-            rgba(11,46,107,0.55),
-            rgba(11,46,107,0.55)
-        ),
-        url("../assets/places/about.png");
-
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-}
-.hero-content{
-    color:white;
-}
-
-.hero-content h1{
-    font-size:4rem;
-    font-weight:700;
-}
-
-.hero-content p{
-    font-size:1.4rem;
-    color:#f4d27c;
-    margin-top:15px;
-}
-.why-section{
-    margin-top: 50px;
-}
-.vehicleImage {
+.hero-car-img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  max-width: 650px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
-.about-image {
+
+.hero-bg-palace {
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 100%;
+  height: 100%;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jal_Mahal_in_Man_Sagar_Lake.jpg/1280px-Jal_Mahal_in_Man_Sagar_Lake.jpg') no-repeat center right;
+  background-size: cover;
+  opacity: 0.15;
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+/* Feature Icons Row */
+.feature-icons-row {
+  padding: 60px 0;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon-wrapper {
+  width: 65px;
+  height: 65px;
+  background: #fdf2f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-magenta);
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.feature-text h6 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.feature-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Fleet & Stats Section */
+.fleet-stats-section {
+  padding: 100px 0;
+  background: #fdfdfd;
+}
+
+.fleet-info h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.fleet-info p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.btn-magenta {
+  background-color: var(--accent-magenta);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn-magenta:hover {
+  background-color: #90044a;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.fleet-card {
+  border: none;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.fleet-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.fleet-card:hover img {
+  transform: scale(1.1);
+}
+
+.fleet-card h5 {
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.fleet-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Journey Card */
+.journey-card {
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .journey-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .journey-card h3 {
+    margin-bottom: 30px;
+  }
+}
+
+.journey-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  flex-basis: 25%;
+}
+
+.journey-stats-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stat-number-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.stat-number-item:last-child {
+  margin-bottom: 0;
+}
+
+.stat-number-item i {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.stat-content h4 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stat-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Mission Section */
+.mission-row {
+  margin-top: 80px;
+  padding-top: 50px;
+  border-top: 1px solid #eee;
+}
+
+.mission-content h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.mission-content p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/* Bottom CTA */
+.bottom-cta-section {
+  padding: 40px 0 80px;
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .about-page .about-hero h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .about-hero .tagline,
+  .about-hero .description,
+  .fleet-info h2,
+  .fleet-info p,
+  .mission-content h4,
+  .mission-content p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-car-img {
     width: 100%;
-    max-width: 410px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
+    transform: none;
+    margin-top: 30px;
+  }
+
+  .bottom-cta-section {
+    text-align: center;
+  }
+
+  .journey-card {
+    margin-top: 40px;
+  }
 }
-@media (max-width: 768px){
 
-    .about-hero{
-        height: 420px;
-    }
+/* New Sections Styling */
+.section-title-alt {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
 
-    .hero-content h1{
-        font-size: 2.2rem;
-    }
+.section-title-alt::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-magenta);
+  border-radius: 2px;
+}
 
-    .hero-content p{
-        font-size: 1rem;
-    }
+.content-block p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.8;
+  text-align: justify;
+}
 
-    .stats-section h3{
-        font-size: 2rem;
-    }
+.tagline-quote {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--accent-magenta);
+  font-size: 1.3rem !important;
+  margin-top: 30px;
+  padding-left: 20px;
+  border-left: 4px solid var(--accent-magenta);
+}
 
-    .stats-section .col-md-3{
-        margin-bottom: 20px;
-    }
+.why-krishna-tours {
+  background: #fdf2f8;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #fce7f3;
+}
 
-    .mission-card,
-    .vision-card{
-        margin-bottom: 15px;
-    }
+.section-subtitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  margin-bottom: 25px;
+}
 
-    .cta-section{
-        padding: 50px 20px;
-    }
+.why-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.why-list li i {
+  color: var(--accent-magenta);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .why-list {
+    grid-template-columns: 1fr;
+  }
 }
