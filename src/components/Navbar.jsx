@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/images/ltp.png";
+import { MdCalendarToday } from "react-icons/md";
 
 function Navbar() {
   return (
@@ -35,7 +36,7 @@ function Navbar() {
           className="collapse navbar-collapse"
           id="navbarNav"
         >
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto align-items-center">
 
             <li className="nav-item">
               <Link className="nav-link" to="/">
@@ -64,6 +65,12 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
                 Contact Us
+              </Link>
+            </li>
+
+            <li className="nav-item nav-btn-item">
+              <Link className="nav-btn-book" to="/contact">
+                <MdCalendarToday className="nav-btn-icon" /> Book Your Journey
               </Link>
             </li>
 

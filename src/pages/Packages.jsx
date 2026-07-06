@@ -6,6 +6,7 @@ import triangle from "../assets/images/triangle.png";
 import jaipur from "../assets/images/jaipur.png";
 import hari from "../assets/images/hari.png";
 import { Link } from "react-router-dom";
+import { MdArrowForward } from "react-icons/md";
 function Packages() {
   return (
     <>
@@ -36,10 +37,8 @@ function Packages() {
   </section>
   {/* Packages Section */}
 <section className="packages-section py-5">
-
   <div className="container">
-
-    <div className="text-center mb-5">
+    <div className="section-header mb-5">
       <h2>Our Tour Packages</h2>
       <p>
         Discover India's most loved destinations with our carefully crafted tour experiences.
@@ -47,189 +46,163 @@ function Packages() {
     </div>
 
     <div className="row g-4">
-
-      <div className="col-md-4">
-        <div className="package-card">
-
-          <img
-            src={delhiTour}
-            alt="Delhi Tour"
-            className="img-fluid"
-          />
-
-          <div className="package-content">
-            <h5>Delhi Local City Tour</h5>
-
-            <p>1 Night / 2 Days</p>
-
-            {/* <h6>₹2,500</h6> */}
-
-            <Link
-  to="/packages/delhi-local"
-  className="btn btn-warning"
->
-  View Details
-</Link>
+      {/* Tour Card 1 */}
+      <div className="col-12 col-md-6 col-lg-4">
+        <div className="package-card-improved">
+          <div className="package-image-wrapper">
+            <div className="package-duration-badge">1N / 2D</div>
+            <img
+              src={delhiTour}
+              alt="Delhi Tour"
+              className="img-fluid w-100"
+            />
           </div>
-
+          <div className="package-card-content-improved">
+            <h5 className="package-title-improved">Delhi Local City Tour</h5>
+            <p className="package-duration-improved">📍 1 Night / 2 Days</p>
+            <p className="package-desc-improved">Experience the rich heritage and culture with our exclusive local city tour.</p>
+            <Link
+              to="/packages/delhi-local"
+              className="package-btn-improved"
+            >
+              View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="col-md-4">
-        <div className="package-card">
-
-          <img
-            src={delhi}
-            alt="Agra Tour"
-            className="img-fluid"
-          />
-
-          <div className="package-content">
-            <h5>Delhi-Agra-Delhi</h5>
-
-            <p>2 Nights / 3 Days</p>
-
-            {/* <h6>₹6,500</h6> */}
-
-            <Link
-  to="/packages/delhi-agra-delhi-2n"
-  className="btn btn-warning"
->
-  View Details
-</Link>
+      {/* Tour Card 2 */}
+      <div className="col-12 col-md-6 col-lg-4">
+        <div className="package-card-improved">
+          <div className="package-image-wrapper">
+            <div className="package-duration-badge">2N / 3D</div>
+            <img
+              src={delhi}
+              alt="Delhi-Agra-Delhi"
+              className="img-fluid w-100"
+            />
           </div>
-
+          <div className="package-card-content-improved">
+            <h5 className="package-title-improved">Delhi-Agra-Delhi</h5>
+            <p className="package-duration-improved">📍 2 Nights / 3 Days</p>
+            <p className="package-desc-improved">A perfect short getaway to witness the majestic Taj Mahal and historical wonders of Agra.</p>
+            <Link
+              to="/packages/delhi-agra-delhi-2n"
+              className="package-btn-improved"
+            >
+              View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="col-md-4">
-        <div className="package-card">
-
-          <img
-            src={triangle}
-            alt="Golden Triangle"
-            className="img-fluid"
-          />
-
-          <div className="package-content">
-            <h5>Golden Triangle Tour</h5>
-
-            <p>6 Nights / 7 Days</p>
-
-            {/* <h6>₹24,900</h6> */}
-
-            <Link
-  to="/packages/golden-triangle"
-  className="btn btn-warning"
->
-  View Details
-</Link>
+      {/* Tour Card 3 */}
+      <div className="col-12 col-md-6 col-lg-4">
+        <div className="package-card-improved">
+          <div className="package-image-wrapper">
+            <div className="package-duration-badge">6N / 7D</div>
+            <img
+              src={triangle}
+              alt="Golden Triangle Tour"
+              className="img-fluid w-100"
+            />
           </div>
-
+          <div className="package-card-content-improved">
+            <h5 className="package-title-improved">Golden Triangle Tour</h5>
+            <p className="package-duration-improved">📍 6 Nights / 7 Days</p>
+            <p className="package-desc-improved">Explore the vibrant culture of India by visiting the iconic cities of Delhi, Agra, and Jaipur.</p>
+            <Link
+              to="/packages/golden-triangle"
+              className="package-btn-improved"
+            >
+              View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+            </Link>
+          </div>
         </div>
       </div>
-
     </div>
-
   </div>
-
-
-
 </section>
 
 <section className="packages-section py-5">
-
   <div className="container">
-
     <div className="row g-4">
-
-      <div className="col-md-4">
-        <div className="package-card">
-
-          <img
-            src={jaipur}
-            alt="Delhi Tour"
-            className="img-fluid"
-          />
-
-          <div className="package-content">
-            <h5>Delhi-Agra-Jaipur-Delhi</h5>
-
-            <p>3 Nights / 4 Days</p>
-
-            {/* <h6>₹2,500</h6> */}
-
-           <Link
-  to="/packages/delhi-agra-jaipur-delhi"
-  className="btn btn-warning"
->
-  View Details
-</Link>
+      {/* Tour Card 4 */}
+      <div className="col-12 col-md-6 col-lg-4">
+        <div className="package-card-improved">
+          <div className="package-image-wrapper">
+            <div className="package-duration-badge">3N / 4D</div>
+            <img
+              src={jaipur}
+              alt="Delhi-Agra-Jaipur-Delhi"
+              className="img-fluid w-100"
+            />
           </div>
-
-        </div>
-      </div>
-
-      <div className="col-md-4">
-        <div className="package-card">
-
-          <img
-            src={agra}
-            alt="Agra Tour"
-            className="img-fluid"
-          />
-
-          <div className="package-content">
-            <h5>Delhi-Agra-Delhi</h5>
-
-            <p>1 Night / 2 Days</p>
-
-            {/* <h6>₹6,500</h6> */}
-
+          <div className="package-card-content-improved">
+            <h5 className="package-title-improved">Delhi-Agra-Jaipur-Delhi</h5>
+            <p className="package-duration-improved">📍 3 Nights / 4 Days</p>
+            <p className="package-desc-improved">Comprehensive golden triangle experience with extended exploration of Jaipur's pink city charm.</p>
             <Link
-  to="/packages/delhi-agra-delhi-1n"
-  className="btn btn-warning"
->
-  View Details
-</Link>
+              to="/packages/delhi-agra-jaipur-delhi"
+              className="package-btn-improved"
+            >
+              View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+            </Link>
           </div>
-
         </div>
       </div>
 
-      <div className="col-md-4">
-        <div className="package-card">
-
-          <img
-            src={hari}
-            alt="Golden Triangle"
-            className="img-fluid"
-          />
-
-          <div className="package-content">
-            <h5>Delhi-Haridwar-Rishikesh-Delhi</h5>
-
-            <p>1 Night / 2 Days</p>
-
-            {/* <h6>₹24,900</h6> */}
-
+      {/* Tour Card 5 */}
+      <div className="col-12 col-md-6 col-lg-4">
+        <div className="package-card-improved">
+          <div className="package-image-wrapper">
+            <div className="package-duration-badge">1N / 2D</div>
+            <img
+              src={agra}
+              alt="Delhi-Agra"
+              className="img-fluid w-100"
+            />
+          </div>
+          <div className="package-card-content-improved">
+            <h5 className="package-title-improved">Delhi-Agra-Delhi</h5>
+            <p className="package-duration-improved">📍 1 Night / 2 Days</p>
+            <p className="package-desc-improved">Quick escape to marvel at the Taj Mahal and the architectural splendor of Agra fort.</p>
             <Link
-  to="/packages/delhi-haridwar-rishikesh"
-  className="btn btn-warning"
->
-  View Details
-</Link>
+              to="/packages/delhi-agra-delhi-1n"
+              className="package-btn-improved"
+            >
+              View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+            </Link>
           </div>
-
         </div>
       </div>
 
+      {/* Tour Card 6 */}
+      <div className="col-12 col-md-6 col-lg-4">
+        <div className="package-card-improved">
+          <div className="package-image-wrapper">
+            <div className="package-duration-badge">1N / 2D</div>
+            <img
+              src={hari}
+              alt="Delhi-Haridwar-Rishikesh"
+              className="img-fluid w-100"
+            />
+          </div>
+          <div className="package-card-content-improved">
+            <h5 className="package-title-improved">Delhi-Haridwar-Rishikesh-Delhi</h5>
+            <p className="package-duration-improved">📍 1 Night / 2 Days</p>
+            <p className="package-desc-improved">Spiritual journey to holy destinations with river rafting and yoga experiences in Rishikesh.</p>
+            <Link
+              to="/packages/delhi-haridwar-rishikesh"
+              className="package-btn-improved"
+            >
+              View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
-
-
-
 </section>
 {/* Why Book With Us */}
 <section className="why-book-section py-5">

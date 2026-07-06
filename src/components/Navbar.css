@@ -3,8 +3,10 @@
 /* ========================= */
 
 .custom-navbar{
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     width: 100%;
 
@@ -135,4 +137,46 @@
 html,
 body{
     overflow-x:hidden;
+}
+
+/* Book Your Journey Button in Navbar */
+.nav-btn-book {
+    background-color: #B0055B;
+    color: #ffffff !important;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 12px rgba(176, 5, 91, 0.2);
+}
+
+.nav-btn-book:hover {
+    background-color: #92044b;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(176, 5, 91, 0.35);
+    color: #ffffff !important;
+}
+
+.nav-btn-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .nav-btn-item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .nav-btn-book {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
 }
