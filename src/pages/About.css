@@ -359,43 +359,27 @@
 }
 
 .content-block p {
-<<<<<<< HEAD
   font-size: 1.35rem;
   color: black;
   margin-bottom: 20px;
   line-height: 1.8;
   text-align: justify;
   font-family: poppins;
-=======
-  font-size: 1.05rem;
-  color: #333;
-  margin-bottom: 25px;
-  line-height: 1.7;
-  text-align: left;
 }
 
 .quote-wrapper {
   margin-top: 40px;
->>>>>>> 7536b77 (Updated About Us section with new hero image and layout)
 }
 
 .tagline-quote {
   font-family: var(--font-body);
   font-style: italic;
   font-weight: 700;
-<<<<<<< HEAD
   color: var(--accent-magenta);
   font-size: 1.35rem !important;
   margin-top: 30px;
   padding-left: 20px;
   border-left: 4px solid var(--accent-magenta);
-=======
-  color: #333;
-  font-size: 1.25rem !important;
-  line-height: 1.4;
-  padding-left: 25px;
-  border-left: 5px solid var(--accent-magenta);
-  margin: 0;
 }
 
 /* Premium Who We Are Section - Exact 48/52 Split */
@@ -664,7 +648,6 @@
     mask-image: none;
     border-radius: 20px;
   }
->>>>>>> 7536b77 (Updated About Us section with new hero image and layout)
 }
 
 .why-krishna-tours {
