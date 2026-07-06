@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { MdPhone, MdEmail, MdLocationOn, MdSupportAgent, MdExpandMore } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
@@ -6,6 +7,18 @@ import './Contact.css';
 const Contact = () => {
   const [formState, setFormState] = useState('idle'); // 'idle' | 'submitting' | 'success'
   const [openFaq, setOpenFaq] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const officeLocation = {
     address: "Rz-7/232 J-Block west sagarpur new delhi 110046 near Sakuntla hospital",

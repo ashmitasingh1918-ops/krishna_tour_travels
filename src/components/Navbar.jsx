@@ -46,7 +46,7 @@ function Navbar() {
 
             <li className="nav-item">
               <Link className="nav-link" to="/about">
-                About
+                About Us
               </Link>
             </li>
 
@@ -69,7 +69,7 @@ function Navbar() {
             </li>
 
             <li className="nav-item nav-btn-item">
-              <Link className="nav-btn-book" to="/contact">
+              <Link className="nav-btn-book" to="/contact#contactForm">
                 <MdCalendarToday className="nav-btn-icon" /> Book Your Journey
               </Link>
             </li>

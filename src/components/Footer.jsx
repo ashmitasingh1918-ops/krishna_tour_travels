@@ -21,6 +21,7 @@ function Footer() {
 
             <div className="footer-social-links mt-3">
               <a href="#" className="social-icon facebook"><i className="bi bi-facebook"></i></a>
+              <a href="https://wa.me/8920462315?text=Hello%20Krishna%20Tour%20India,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" className="social-icon whatsapp"><i className="bi bi-whatsapp"></i></a>
               <a href="#" className="social-icon instagram"><i className="bi bi-instagram"></i></a>
               <a href="#" className="social-icon twitter"><i className="bi bi-twitter-x"></i></a>
             </div>

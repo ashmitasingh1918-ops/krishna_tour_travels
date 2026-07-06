@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css";
 import sedanImg from "../assets/images/agra.png";
 import luxuryImg from "../assets/images/delhi.png";
+import aboutHero from "../assets/images/about_us.png";
 
 function About() {
   return (
@@ -83,24 +84,60 @@ function About() {
         </div>
       </section>
 
-      {/* Who We Are Section */}
-      <section className="who-we-are py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <h2 className="section-title-alt">WHO IS KRISHNA TOURS</h2>
-              <div className="content-block">
-                <p><strong>Krishna Tours </strong>is a trusted car rental and transportation company based in <strong>New Delhi, India, </strong> serving customers with reliable travel solutions since <strong>2012. </strong> Founded under the leadership of <strong>Mr. Ramprakash Gupta and his son Gaurav Gupta</strong>, the company has grown steadily over the years, earning a reputation for quality, affordability, and customer satisfaction. </p>
-                <p>For more than <strong>13 years</strong>, Krishna Tours has been providing safe, comfortable, and cost-effective transportation services for individuals, families, corporate clients, and tourists. Our commitment to excellence has helped us build lasting relationships with customers who value dependable and professional travel services. </p>
-                <p>We take great pride in maintaining a fleet of clean, well-maintained, and modern vehicles to ensure a smooth and comfortable journey every time. Our experienced and courteous chauffeurs are professionally trained, ensuring safe driving and exceptional customer service. </p>
-                <p>At Krishna Tours, we understand that every journey matters. Whether you need a car for local travel, airport transfers, business trips, sightseeing, or outstation travel, we are committed to delivering a <strong>hassle-free and enjoyable experience</strong>. </p>
-                <p>Our focus has always been on providing high-quality transportation services at competitive prices while maintaining the highest standards of professionalism and reliability. We believe that our success is measured by the satisfaction of our customers, and we continuously strive to exceed their expectations. </p>
-                <p>At <strong>Krishna Tours</strong>, customer satisfaction is at the heart of everything we do. Whether you book online, call us, or email us, our team is always ready to help you find the best travel solution for your needs. </p>
+      {/* Premium Who We Are Section */}
+      <section className="who-we-are-premium">
+        {/* Halftone Decorations */}
+        <div className="halftone top-left"></div>
+        <div className="halftone bottom-right"></div>
+        
+        <div className="content-wrapper-split">
+          {/* Left Panel - 45% */}
+          <div className="left-panel">
+            <h2 className="premium-heading">
+              WHO IS KRISHNA TOUR INDIA
+              <span className="maroon-bar"></span>
+            </h2>
+            
+            <div className="premium-body-text">
+              <p><strong>Krishna Tour India </strong>is a <strong>trusted car rental and transportation company </strong>based in <strong>New Delhi, India, </strong>serving customers with reliable travel solutions since <strong>2012. </strong>Founded under the leadership of <strong>Mr. Ramprakash Gupta and his son Gaurav Gupta</strong>, the company has grown steadily over the years, earning a reputation for quality, affordability, and customer satisfaction.</p>
+              
+              <p>For more than <strong>13 years</strong>, Krishna Tour India has been providing <strong>safe, comfortable, and cost-effective </strong>transportation services for individuals, families, corporate clients, and tourists. Our commitment to excellence has helped us build lasting relationships with customers who value dependable and professional travel services.</p>
+              
+              <p>We take great pride in maintaining a <strong>fleet of clean, well-maintained, and modern vehicles </strong>to ensure a smooth and comfortable journey every time. Our experienced and courteous chauffeurs are professionally trained, ensuring safe driving and exceptional customer service.</p>
+              
+              <p>At Krishna Tour India, we understand that <strong>every journey matters</strong>. Whether you need a car for local travel, airport transfers, business trips, sightseeing, or outstation travel, we are committed to delivering a <strong>hassle-free and enjoyable experience</strong>.</p>
+              
+              <p>Our focus has always been on providing <strong>high-quality transportation services </strong>at competitive prices while maintaining the highest standards of professionalism and reliability. We believe that our success is measured by the satisfaction of our customers, and we continuously strive to exceed their expectations.</p>
+              
+              <p>At <strong>Krishna Tour India</strong>, customer satisfaction is at the heart of everything we do. Whether you book online, call us, or email us, our team is always ready to help you find the best travel solution for your needs.</p>
+            </div>
 
-                <p className="tagline-quote">
-                  "Customer Service with a Smile" is not just our tagline—it's our commitment to every journey we serve.
-                </p>
+            <div className="premium-quote-card">
+              <div className="quote-flex-container">
+                <div className="quote-icon-side">
+                  <i className="bi bi-quote"></i>
+                </div>
+                <div className="quote-separator"></div>
+                <div className="quote-text-side">
+                  <p className="quote-text-italic">
+                    "Customer Service with a Smile" is not just our tagline—it's our commitment to every journey we serve.
+                  </p>
+                </div>
               </div>
+            </div>
+          </div>
+
+          {/* Right Panel - 55% */}
+          <div className="right-panel">
+            <div className="image-overlay-glow"></div>
+            <img 
+              src={aboutHero} 
+              alt="Krishna Tour India Luxury Fleet" 
+              className="premium-hero-img" 
+            />
+            <div className="brand-logo-watermark">
+              <h5 className="watermark-title">KRISHNA</h5>
+              <div className="watermark-line">TOUR INDIA</div>
             </div>
           </div>
         </div>
@@ -114,7 +151,7 @@ function About() {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="why-krishna-tours">
-                <h3 className="section-subtitle">WHY KRISHNA TOURS:-</h3>
+                <h3 className="section-subtitle">WHY KRISHNA TOUR INDIA:-</h3>
                 <ul className="why-list">
                   <li><i className="bi bi-check2-circle"></i> To provide Customer Delight and Comfort.</li>
                   <li><i className="bi bi-check2-circle"></i> Providing Professional and Timely Service.</li>

@@ -329,44 +329,342 @@
   }
 }
 
-/* New Sections Styling */
-.section-title-alt {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--primary-blue);
-  margin-bottom: 30px;
+.who-we-are {
   position: relative;
-  display: inline-block;
+  overflow: hidden;
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.section-title-alt {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--primary-blue);
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title-accent-bar {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: var(--accent-magenta);
 }
 
 .section-title-alt::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: var(--accent-magenta);
-  border-radius: 2px;
+  display: none;
 }
 
 .content-block p {
+<<<<<<< HEAD
   font-size: 1.35rem;
   color: black;
   margin-bottom: 20px;
   line-height: 1.8;
   text-align: justify;
   font-family: poppins;
+=======
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.quote-wrapper {
+  margin-top: 40px;
+>>>>>>> 7536b77 (Updated About Us section with new hero image and layout)
 }
 
 .tagline-quote {
+  font-family: var(--font-body);
   font-style: italic;
   font-weight: 700;
+<<<<<<< HEAD
   color: var(--accent-magenta);
   font-size: 1.35rem !important;
   margin-top: 30px;
   padding-left: 20px;
   border-left: 4px solid var(--accent-magenta);
+=======
+  color: #333;
+  font-size: 1.25rem !important;
+  line-height: 1.4;
+  padding-left: 25px;
+  border-left: 5px solid var(--accent-magenta);
+  margin: 0;
+}
+
+/* Premium Who We Are Section - Exact 48/52 Split */
+.who-we-are-premium {
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.content-wrapper-split {
+  display: flex;
+  width: 100%;
+  min-height: inherit;
+}
+
+/* Halftone Patterns */
+.halftone {
+  position: absolute;
+  background-image: radial-gradient(#d1d5db 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.halftone.top-left {
+  width: 150px;
+  height: 150px;
+  top: 20px;
+  left: 20px;
+}
+
+.halftone.bottom-right {
+  width: 300px;
+  height: 300px;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.2;
+}
+
+/* Left Panel - 48% content area */
+.left-panel {
+  flex: 0 0 48%;
+  padding: 80px 4% 80px 6%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.premium-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0F2E67; /* Specific Dark Navy */
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap; /* Keep on one line */
+}
+
+.maroon-bar {
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #800000;
+  margin-top: 5px;
+}
+
+.premium-body-text {
+  margin-top: 35px;
+}
+
+.premium-body-text p {
+  color: #2E2E2E;
+  font-size: 19px; /* Requested 18-20px */
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+}
+
+.premium-body-text strong {
+  font-weight: 700;
+  color: #111;
+}
+
+/* Quote Card - Light Pink Gradient */
+.premium-quote-card {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #fff1f2 0%, #fee2e2 100%);
+  padding: 25px 35px;
+  border-radius: 12px;
+  width: fit-content;
+  max-width: 650px;
+}
+
+.quote-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.quote-icon-side {
+  color: #800000;
+  font-size: 2.5rem;
+}
+
+.quote-separator {
+  width: 1px;
+  height: 45px;
+  background-color: #800000;
+  opacity: 0.2;
+}
+
+.quote-text-side {
+  flex: 1;
+}
+
+.quote-text-italic {
+  font-style: italic;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 1.2rem !important;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Right Panel - 52% */
+.right-panel {
+  flex: 0 0 52%;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center; /* Shifting further right to improve balance */
+}
+
+.image-overlay-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.6) 30%, transparent 100%);
+  z-index: 2;
+}
+
+/* Watermark/Logo Overlay */
+.brand-logo-watermark {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.watermark-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0b2e6b;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.watermark-line {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b0055b;
+  letter-spacing: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .premium-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .who-we-are-premium {
+    min-height: auto;
+  }
+  .content-wrapper-split {
+    flex-direction: column;
+  }
+  .left-panel, .right-panel {
+    flex: 0 0 100%;
+  }
+  .left-panel {
+    padding: 80px 5%;
+  }
+  .right-panel {
+    height: 500px;
+  }
+  .image-overlay-glow {
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to bottom, #ffffff 0%, transparent 100%);
+  }
+}
+
+@media (max-width: 991px) {
+  .who-image-col {
+    padding: 0;
+    margin-top: 50px;
+  }
+  .who-image-container {
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+  }
+  .who-side-img {
+    mask-image: none;
+    border-radius: 20px;
+  }
+}
+
+.dot-pattern {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-image: radial-gradient(#d1d5db 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.dot-pattern.top-left {
+  top: -40px;
+  left: -40px;
+}
+
+.dot-pattern.bottom-right {
+  bottom: -40px;
+  right: -40px;
+}
+
+@media (max-width: 991px) {
+  .who-image-col {
+    padding-left: 15px;
+    margin-top: 50px;
+  }
+  .who-image-container {
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+  }
+  .image-overlay-faded {
+    background: linear-gradient(to bottom, #ffffff 0%, transparent 30%);
+  }
+  .who-side-img {
+    mask-image: none;
+    border-radius: 20px;
+  }
+>>>>>>> 7536b77 (Updated About Us section with new hero image and layout)
 }
 
 .why-krishna-tours {

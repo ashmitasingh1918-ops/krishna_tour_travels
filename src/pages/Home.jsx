@@ -144,65 +144,113 @@ const Home = () => {
           <div className="section-header-centered">
             <span className="section-pretitle promise-pretitle">OUR PROMISE</span>
             <h2 className="section-title promise-section-title">
-              <GoldFlourish isLeft={true} />
-              Excellence in Every Journey
-              <GoldFlourish isLeft={false} />
+              Excellence in <span className="cursive-highlight">Every<span className="underline-brush"></span></span> Journey
             </h2>
             <p className="promise-subtitle">We don't just take you places, we create experiences</p>
-            <GoldDivider />
+            
+            <div className="promise-header-divider">
+              <span className="divider-dots"></span>
+              <div className="paper-plane-wrapper">
+                <svg className="paper-plane" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 2L11 13" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#ffc107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <div className="plane-trail"></div>
+              </div>
+            </div>
           </div>
 
-          <div className="promise-grid">
-            {/* Card 1 */}
-            <div className="promise-card">
-              <div className="card-accent top-left"></div>
-              <div className="card-accent top-right"></div>
-              <div className="card-accent bottom-left"></div>
-              <div className="card-accent bottom-right"></div>
-              <div className="promise-icon-wrapper">
-                <MdShield className="promise-icon" />
+          <div className="promise-grid-container">
+            <div className="promise-grid">
+              {/* Card 1 */}
+              <div className="promise-card-wrapper">
+                <div className="promise-card theme-blue">
+                  <div className="card-number">01</div>
+                  <div className="promise-icon-wrapper">
+                    <MdShield className="promise-icon" />
+                  </div>
+                  <h3 className="promise-title">Verified Drivers</h3>
+                  <p className="promise-desc">Background-checked, professional chauffeurs with deep route knowledge.</p>
+                  
+                  <div className="card-illustration blue-illustration">
+                    {/* Simplified SVG Illustration */}
+                    <svg viewBox="0 0 200 60" className="illustration-svg">
+                      <rect x="0" y="40" width="200" height="20" fill="rgba(8, 62, 158, 0.05)" />
+                      <circle cx="30" cy="35" r="15" fill="rgba(8, 62, 158, 0.1)" />
+                      <rect x="60" y="20" width="40" height="30" fill="rgba(8, 62, 158, 0.08)" />
+                      <rect x="110" y="10" width="30" height="40" fill="rgba(8, 62, 158, 0.06)" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="promise-arrow">
+                  <MdArrowForward />
+                </div>
               </div>
-              <h3 className="promise-title">Verified Drivers</h3>
-              <p className="promise-desc">Background-checked, professional chauffeurs with deep route knowledge.</p>
-            </div>
 
-            {/* Card 2 */}
-            <div className="promise-card">
-              <div className="card-accent top-left"></div>
-              <div className="card-accent top-right"></div>
-              <div className="card-accent bottom-left"></div>
-              <div className="card-accent bottom-right"></div>
-              <div className="promise-icon-wrapper">
-                <MdSupportAgent className="promise-icon" />
+              {/* Card 2 */}
+              <div className="promise-card-wrapper">
+                <div className="promise-card theme-green">
+                  <div className="card-number">02</div>
+                  <div className="promise-icon-wrapper">
+                    <MdSupportAgent className="promise-icon" />
+                  </div>
+                  <h3 className="promise-title">24/7 Support</h3>
+                  <p className="promise-desc">Dedicated concierge team available around the clock for any assistance.</p>
+                  
+                  <div className="card-illustration green-illustration">
+                    <svg viewBox="0 0 200 60" className="illustration-svg">
+                      <rect x="0" y="40" width="200" height="20" fill="rgba(40, 167, 69, 0.05)" />
+                      <circle cx="170" cy="30" r="20" fill="rgba(40, 167, 69, 0.1)" />
+                      <rect x="20" y="15" width="25" height="35" fill="rgba(40, 167, 69, 0.08)" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="promise-arrow">
+                  <MdArrowForward />
+                </div>
               </div>
-              <h3 className="promise-title">24/7 Support</h3>
-              <p className="promise-desc">Dedicated concierge team available around the clock for any assistance.</p>
-            </div>
 
-            {/* Card 3 */}
-            <div className="promise-card">
-              <div className="card-accent top-left"></div>
-              <div className="card-accent top-right"></div>
-              <div className="card-accent bottom-left"></div>
-              <div className="card-accent bottom-right"></div>
-              <div className="promise-icon-wrapper">
-                <MdCleaningServices className="promise-icon" />
+              {/* Card 3 */}
+              <div className="promise-card-wrapper">
+                <div className="promise-card theme-purple">
+                  <div className="card-number">03</div>
+                  <div className="promise-icon-wrapper">
+                    <MdCleaningServices className="promise-icon" />
+                  </div>
+                  <h3 className="promise-title">Clean Vehicles</h3>
+                  <p className="promise-desc">Immaculate, sanitized interiors with premium amenities for every ride.</p>
+                  
+                  <div className="card-illustration purple-illustration">
+                    <svg viewBox="0 0 200 60" className="illustration-svg">
+                      <rect x="0" y="40" width="200" height="20" fill="rgba(111, 66, 193, 0.05)" />
+                      <path d="M20 50 Q100 0 180 50" stroke="rgba(111, 66, 193, 0.1)" fill="none" strokeWidth="2" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="promise-arrow">
+                  <MdArrowForward />
+                </div>
               </div>
-              <h3 className="promise-title">Clean Vehicles</h3>
-              <p className="promise-desc">Immaculate, sanitized interiors with premium amenities for every ride.</p>
-            </div>
 
-            {/* Card 4 */}
-            <div className="promise-card">
-              <div className="card-accent top-left"></div>
-              <div className="card-accent top-right"></div>
-              <div className="card-accent bottom-left"></div>
-              <div className="card-accent bottom-right"></div>
-              <div className="promise-icon-wrapper">
-                <span className="promise-rupee-icon">₹</span>
+              {/* Card 4 */}
+              <div className="promise-card-wrapper">
+                <div className="promise-card theme-orange">
+                  <div className="card-number">04</div>
+                  <div className="promise-icon-wrapper">
+                    <span className="promise-rupee-icon">₹</span>
+                  </div>
+                  <h3 className="promise-title">Transparent Pricing</h3>
+                  <p className="promise-desc">No hidden costs. Upfront quotes with detailed expense breakdowns.</p>
+                  
+                  <div className="card-illustration orange-illustration">
+                    <svg viewBox="0 0 200 60" className="illustration-svg">
+                      <rect x="0" y="40" width="200" height="20" fill="rgba(253, 126, 20, 0.05)" />
+                      <circle cx="50" cy="25" r="10" fill="rgba(253, 126, 20, 0.1)" />
+                      <circle cx="150" cy="25" r="12" fill="rgba(253, 126, 20, 0.08)" />
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <h3 className="promise-title">Transparent Pricing</h3>
-              <p className="promise-desc">No hidden costs. Upfront quotes with detailed expense breakdowns.</p>
             </div>
           </div>
         </div>

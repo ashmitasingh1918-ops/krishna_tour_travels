@@ -237,3 +237,8 @@
   background-color: #000;
   border-color: #000;
 }
+
+.social-icon.whatsapp:hover {
+  background-color: #25d366;
+  border-color: #25d366;
+}
