@@ -73,7 +73,7 @@ function About() {
                 <div className="feature-icon-wrapper">
                   <i className="bi bi-headset"></i>
                 </div>
-                <div className="feature-text">
+                <div className="feature-text" >
                   <h6>24/7 Customer Support</h6>
                   <p>Our support team is available round the clock.</p>
                 </div>

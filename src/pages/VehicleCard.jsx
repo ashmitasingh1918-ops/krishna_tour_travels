@@ -9,7 +9,9 @@ const VehicleCard = ({ vehicle }) => {
       <div className="vehicle-card-image-wrapper">
         <div className="vehicle-category-badge">{vehicle.category.toUpperCase()}</div>
         <img src={vehicle.image} alt={vehicle.name} className="vehicle-card-image" />
+
       </div>
+ 
 
       <div className="vehicle-card-content">
         <h3 className="vehicle-card-name">{vehicle.name}</h3>

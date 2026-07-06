@@ -285,7 +285,7 @@ const Home = () => {
               <div className="package-card-content-improved">
                 <h5 className="package-title-improved">Delhi Local City Tour</h5>
                 <p className="package-duration-improved">📍 1 Night / 2 Days</p>
-                <p className="package-desc-improved">Experience the rich heritage and culture with our exclusive local city tour tailored just for you.</p>
+                <p className="package-desc-improved" >Experience the rich heritage and culture with our exclusive local city tour tailored just for you.</p>
                 <Link to="/packages/delhi-local" className="package-btn-improved">
                   View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
                 </Link>

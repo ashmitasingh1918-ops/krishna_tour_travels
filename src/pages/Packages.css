@@ -166,11 +166,12 @@
 }
 
 .package-desc-improved {
-  font-size: 14px;
-  color: #666;
+  font-size: 1.35rem;
+  color: #000;
   line-height: 1.6;
   margin: 0 0 16px 0;
   flex: 1;
+  font-family: poppins;
 }
 
 .package-btn-improved {

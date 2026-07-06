@@ -79,13 +79,14 @@
 }
 
 .section-pretitle {
-  font-size: 14px;
+  font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: #032478;
   text-transform: uppercase;
   display: block;
   margin-bottom: 8px;
+  font-family: sans-serif;
 }
 
 .fleet-filter-title {
@@ -190,6 +191,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  object-fit: contain;
 }
 
 .vehicleCard:hover .vehicle-card-image {

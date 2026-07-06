@@ -12,8 +12,6 @@ const packages = [
 
     duration: "1 Night / 2 Days",
 
-    // price: "₹2,500",
-
     gallery: local,
 
     overview:

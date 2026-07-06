@@ -56,12 +56,13 @@ body {
 
 .section-pretitle {
   display: block;
-  font-size: 11px;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #c2941b;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 8px;
+  font-family: sans-serif;
 }
 
 .body-large {
@@ -120,8 +121,8 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  margin-bottom: 50px;
-  padding-bottom: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -152,11 +153,12 @@ body {
 }
 
 .fleet-header-desc {
-  font-size: 1.05rem;
-  color: #666;
+  font-size: 1.25rem;
+  color: #000;
   font-weight: 500;
   line-height: 1.6;
-  margin: 12px 0 0 0;
+  margin: 10px;
+  font-family: poppins;
 }
 
 .fleet-view-link {
@@ -218,11 +220,6 @@ body {
   display: flex;
   transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
-.fleet-carousel-track.animating {
-  /* Animation is handled by transform in parent */
-}
-
 .fleet-carousel-item {
   flex: 0 0 calc(33.333% - 11px);
   animation: slideInFleet 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -245,8 +242,8 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  margin-bottom: 50px;
-  padding-bottom: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -277,8 +274,9 @@ body {
 }
 
 .packages-header-desc {
-  font-size: 1.05rem;
-  color: #666;
+  font-size: 1.35rem;
+  color: #000;
+  font-family: poppins;
   font-weight: 500;
   line-height: 1.6;
   margin: 12px 0 0 0;
@@ -364,8 +362,9 @@ body {
 }
 
 .package-desc-improved {
-  font-size: 14px;
-  color: #666;
+  font-size: 1.35rem;
+  font-family: poppins;
+  color: #000;
   line-height: 1.6;
   margin: 0 0 16px 0;
   flex: 1;
@@ -727,8 +726,8 @@ body {
 
 .promise-subtitle {
   font-style: italic;
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.2rem;
+  color: #000;
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -832,17 +831,17 @@ body {
 }
 
 .promise-title {
-  font-family: var(--font-heading);
-  font-size: 1.12rem;
+  font-family: sans-serif;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #030751;
   margin: 0 0 12px 0;
 }
 
 .promise-desc {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: var(--on-surface-variant);
+  font-family: poppins;
+  font-size: 1.2rem;
+  color: black;
   line-height: 1.6;
   margin: 0;
 }
