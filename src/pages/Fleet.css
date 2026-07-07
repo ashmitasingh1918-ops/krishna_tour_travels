@@ -9,6 +9,7 @@
       rgba(0, 33, 96, 0.2)
     ),
     url("/images/fleet-hero.jpg");
+  margin-top: 30px;
   background-position: center;
   display: flex;
   flex-direction: row-reverse;
