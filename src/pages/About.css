@@ -538,33 +538,7 @@
   z-index: 2;
 }
 
-/* Watermark/Logo Overlay */
-.brand-logo-watermark {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  text-align: right;
-  z-index: 10;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 10px 20px;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
 
-.watermark-title {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #0b2e6b;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-.watermark-line {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #b0055b;
-  letter-spacing: 4px;
-}
 
 /* Responsive */
 @media (max-width: 1200px) {

@@ -136,10 +136,7 @@ function About() {
               alt="Krishna Tour India Luxury Fleet" 
               className="premium-hero-img" 
             />
-            <div className="brand-logo-watermark">
-              <h5 className="watermark-title">KRISHNA</h5>
-              <div className="watermark-line">TOUR INDIA</div>
-            </div>
+
           </div>
         </div>
       </section>
