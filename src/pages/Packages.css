@@ -367,3 +367,93 @@
         font-size: 13px;
     }
 }
+
+/* Featured Tour Packages Slider Styles */
+.packages-slider-container {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+}
+
+.packages-slider-viewport {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 16px;
+  padding: 15px 0; /* Add top/bottom padding so that card translate hover and box-shadow is not clipped */
+  margin: -15px 0; /* Offset the padding to maintain vertical alignment */
+}
+
+.packages-slider-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.packages-slider-item {
+  flex: 0 0 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .packages-slider-item {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .packages-slider-item {
+    flex: 0 0 33.333333%;
+  }
+}
+
+/* Slider Navigation Buttons */
+.packages-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  color: #B0055B;
+  font-size: 28px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.packages-slider-arrow:hover {
+  background-color: #B0055B;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(176, 5, 91, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.packages-slider-arrow.arrow-left {
+  left: -25px;
+}
+
+.packages-slider-arrow.arrow-right {
+  right: -25px;
+}
+
+@media (max-width: 768px) {
+  .packages-slider-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+  }
+  .packages-slider-arrow.arrow-left {
+    left: -15px;
+  }
+  .packages-slider-arrow.arrow-right {
+    right: -15px;
+  }
+}
