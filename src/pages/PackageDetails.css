@@ -44,6 +44,8 @@
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
+    font-family: sans-serif;
+    font-size: 1.8rem;
 }
 
 .package-image {
@@ -57,6 +59,8 @@
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    font-family: poppins;
+    font-size: 1.35rem;
 }
 
 .highlights-card {
@@ -120,8 +124,9 @@
 
     padding-bottom: 12px;
     border-bottom: 1px solid #eee;
-
-    font-size: 17px;
+    font-family: poppins;
+    font-size: 1.35rem;
+    
 }
 
 .highlight-item i {
@@ -176,10 +181,11 @@
 
 .itinerary-card p {
     line-height: 2;
-    color: #555;
-    font-size: 1rem;
+    color: #000;
+    font-size: 1.25rem;
     white-space: pre-line;
     margin-bottom: 0;
+    font-family: poppins;
 }
 
 
@@ -236,7 +242,8 @@
 
     border-bottom: 1px solid #f1f1f1;
 
-    font-size: 0.95rem;
+    font-size: 1.1rem;
+    font-family: poopins;
 }
 
 .info-list li:last-child {
@@ -278,6 +285,7 @@
 
     .section-title {
         text-align: center;
+
     }
     .overview-card,
 .highlights-card {
@@ -285,6 +293,8 @@
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    font-family: poppins;
+    font-size: 1.8rem;
 }
 .package-header {
     margin-bottom: 20px;

@@ -577,15 +577,18 @@
 }
 
 .emergency-title {
-  font-family: var(--font-heading);
-  font-size: 28px;
+  font-family: poppins;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+
 }
 
 .emergency-desc {
   color: var(--on-primary-container);
   margin: 0;
+  font-family: poppins;
+  font-size: 1.25rem;
 }
 
 .emergency-action {
