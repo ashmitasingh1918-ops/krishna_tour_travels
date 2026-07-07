@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {
   MdVerifiedUser, MdSupportAgent, MdCleaningServices, MdPriceCheck,
   MdPeople, MdAcUnit, MdCalendarToday, MdArrowForward,
-  MdAccessTime, MdCheckCircleOutline, MdShield, MdWeekend, MdVerified
+  MdAccessTime, MdCheckCircleOutline, MdShield, MdWeekend, MdVerified,
+  MdChevronLeft, MdChevronRight
 } from 'react-icons/md';
 import './Home.css';
 import './Packages.css';
@@ -68,28 +69,50 @@ const Home = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [fleetPage, setFleetPage] = useState(0);
-  const [packagePage, setPackagePage] = useState(0); // Added for packages carousel
-  const [isFleetAnimating, setIsFleetAnimating] = useState(false);
-  const [isPackageAnimating, setIsPackageAnimating] = useState(false); // Added for packages carousel
+  const [packageIndex, setPackageIndex] = useState(0);
+  const [fleetIndex, setFleetIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(3);
 
-  // Calculate total packages pages (3 packages per page)
-  // Calculate total packages pages (3 packages per page)
-  const packagesPerPage = 3;
-  const totalPackagePages = Math.ceil(packagesData.length / packagesPerPage);
-  const currentPackages = packagesData.slice(
-    packagePage * packagesPerPage,
-    (packagePage + 1) * packagesPerPage
-  );
-  // Fleet carousel calculations
-  const vehiclesPerPage = 3;
+  const getBadge = (duration) => {
+    const parts = duration.split('/');
+    return parts.map(p => {
+      const match = p.trim().match(/(\d+)\s+(\w)/);
+      return match ? `${match[1]}${match[2].toUpperCase()}` : p;
+    }).join(' / ');
+  };
 
-  const totalFleetPages = Math.ceil(fleetData.length / vehiclesPerPage);
+  useEffect(() => {
+    const handleResize = () => {
+      let cards = 3;
+      if (window.innerWidth < 768) {
+        cards = 1;
+      } else if (window.innerWidth < 992) {
+        cards = 2;
+      }
+      setVisibleCards(cards);
+      setPackageIndex((prev) => Math.min(prev, packagesData.length - cards));
+      setFleetIndex((prev) => Math.min(prev, fleetData.length - cards));
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  const currentFleetVehicles = fleetData.slice(
-    fleetPage * vehiclesPerPage,
-    (fleetPage + 1) * vehiclesPerPage
-  );
+  const handleNextPackages = () => {
+    setPackageIndex((prev) => Math.min(prev + visibleCards, packagesData.length - visibleCards));
+  };
+
+  const handlePrevPackages = () => {
+    setPackageIndex((prev) => Math.max(prev - visibleCards, 0));
+  };
+
+  const handleNextFleet = () => {
+    setFleetIndex((prev) => Math.min(prev + visibleCards, fleetData.length - visibleCards));
+  };
+
+  const handlePreviousFleet = () => {
+    setFleetIndex((prev) => Math.max(prev - visibleCards, 0));
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -97,48 +120,6 @@ const Home = () => {
     }, 4000);
     return () => clearInterval(timer);
   }, []);
-
-  // Fleet carousel handlers
-  const handleNextFleet = () => {
-    if (!isFleetAnimating && fleetPage < totalFleetPages - 1) {
-      setIsFleetAnimating(true);
-      setTimeout(() => {
-        setFleetPage((prev) => prev + 1);
-        setIsFleetAnimating(false);
-      }, 600); // Match CSS transition duration
-    }
-  };
-
-  const handlePreviousFleet = () => {
-    if (!isFleetAnimating && fleetPage > 0) {
-      setIsFleetAnimating(true);
-      setTimeout(() => {
-        setFleetPage((prev) => prev - 1);
-        setIsFleetAnimating(false);
-      }, 600); // Match CSS transition duration
-    }
-  };
-
-  // Package carousel handlers
-  const handleNextPackage = () => {
-    if (!isPackageAnimating && packagePage < totalPackagePages - 1) {
-      setIsPackageAnimating(true);
-      setTimeout(() => {
-        setPackagePage((prev) => prev + 1);
-        setIsPackageAnimating(false);
-      }, 600);
-    }
-  };
-
-  const handlePreviousPackage = () => {
-    if (!isPackageAnimating && packagePage > 0) {
-      setIsPackageAnimating(true);
-      setTimeout(() => {
-        setPackagePage((prev) => prev - 1);
-        setIsPackageAnimating(false);
-      }, 600);
-    }
-  };
 
   return (
     <div className="home-container">
@@ -304,41 +285,47 @@ const Home = () => {
             </h2>
             <p className="fleet-header-desc">Premium cars. Perfect comfort. Memorable journeys.</p>
           </div>
-          <div className="fleet-nav-controls">
-            {fleetPage > 0 && (
-              <button
-                className="nav-btn nav-btn-prev"
-                onClick={handlePreviousFleet}
-                disabled={isFleetAnimating}
-                title="Show Previous Fleet"
-              >
-                ← Previous
-              </button>
-            )}
-            {fleetPage < totalFleetPages - 1 ? (
-              <button
-                className="nav-btn nav-btn-next"
-                onClick={handleNextFleet}
-                disabled={isFleetAnimating}
-                title="Show Next Fleet"
-              >
-                Next → <MdArrowForward />
-              </button>
-            ) : (
-              <Link to="/fleet" className="view-all-link fleet-view-link">
-                View All Fleet <MdArrowForward />
-              </Link>
-            )}
-          </div>
+          <Link to="/fleet" className="view-all-link fleet-view-link">
+            All Fleet <MdArrowForward />
+          </Link>
         </div>
 
-        <div className={`fleet-carousel-wrapper ${isFleetAnimating ? 'animating' : ''}`}>
-          <div className="row g-4 mt-5 fleet-carousel-track">
-            {currentFleetVehicles.map((vehicle) => (
-              <div className="col-12 col-md-6 col-lg-4 fleet-carousel-item" key={vehicle.id}>
-                <VehicleCard vehicle={vehicle} />
-              </div>
-            ))}
+        <div className="fleet-slider-container">
+          {/* Left Arrow */}
+          {fleetIndex > 0 && (
+            <button 
+              className="fleet-slider-arrow arrow-left" 
+              onClick={handlePreviousFleet}
+              aria-label="Previous vehicles"
+            >
+              <MdChevronLeft />
+            </button>
+          )}
+
+          {/* Right Arrow */}
+          {fleetIndex < fleetData.length - visibleCards && (
+            <button 
+              className="fleet-slider-arrow arrow-right" 
+              onClick={handleNextFleet}
+              aria-label="Next vehicles"
+            >
+              <MdChevronRight />
+            </button>
+          )}
+
+          <div className="fleet-slider-viewport">
+            <div 
+              className="fleet-slider-track"
+              style={{
+                transform: `translateX(-${(fleetIndex * 100) / visibleCards}%)`
+              }}
+            >
+              {fleetData.map((vehicle) => (
+                <div key={vehicle.id} className="fleet-slider-item">
+                  <VehicleCard vehicle={vehicle} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -359,58 +346,54 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="row g-4 mt-5">
-          {/* Tour Card 1 */}
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="package-card-improved">
-              <div className="package-image-wrapper">
-                <div className="package-duration-badge">1N / 2D</div>
-                <img src={delhiTour} alt="Delhi Tour" className="img-fluid w-100" />
-              </div>
-              <div className="package-card-content-improved">
-                <h5 className="package-title-improved">Delhi Local City Tour</h5>
-                <p className="package-duration-improved">📍 1 Night / 2 Days</p>
-                <p className="package-desc-improved" >Experience the rich heritage and culture with our exclusive local city tour tailored just for you.</p>
-                <Link to="/packages/delhi-local" className="package-btn-improved">
-                  View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className="packages-slider-container">
+          {/* Left Arrow */}
+          {packageIndex > 0 && (
+            <button 
+              className="packages-slider-arrow arrow-left" 
+              onClick={handlePrevPackages}
+              aria-label="Previous packages"
+            >
+              <MdChevronLeft />
+            </button>
+          )}
 
-          {/* Tour Card 2 */}
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="package-card-improved">
-              <div className="package-image-wrapper">
-                <div className="package-duration-badge">2N / 3D</div>
-                <img src={delhi} alt="Delhi-Agra-Delhi" className="img-fluid w-100" />
-              </div>
-              <div className="package-card-content-improved">
-                <h5 className="package-title-improved">Delhi-Agra-Delhi</h5>
-                <p className="package-duration-improved">📍 2 Nights / 3 Days</p>
-                <p className="package-desc-improved">A perfect short getaway to witness the majestic Taj Mahal and the historical wonders of Agra.</p>
-                <Link to="/packages/delhi-agra-delhi-2n" className="package-btn-improved">
-                  View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
-                </Link>
-              </div>
-            </div>
-          </div>
+          {/* Right Arrow */}
+          {packageIndex < packagesData.length - visibleCards && (
+            <button 
+              className="packages-slider-arrow arrow-right" 
+              onClick={handleNextPackages}
+              aria-label="Next packages"
+            >
+              <MdChevronRight />
+            </button>
+          )}
 
-          {/* Tour Card 3 */}
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="package-card-improved">
-              <div className="package-image-wrapper">
-                <div className="package-duration-badge">6N / 7D</div>
-                <img src={triangle} alt="Golden Triangle Tour" className="img-fluid w-100" />
-              </div>
-              <div className="package-card-content-improved">
-                <h5 className="package-title-improved">Golden Triangle Tour</h5>
-                <p className="package-duration-improved">📍 6 Nights / 7 Days</p>
-                <p className="package-desc-improved">Explore the vibrant culture of India by visiting the iconic cities of Delhi, Agra, and Jaipur.</p>
-                <Link to="/packages/golden-triangle" className="package-btn-improved">
-                  View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
-                </Link>
-              </div>
+          <div className="packages-slider-viewport">
+            <div 
+              className="packages-slider-track"
+              style={{
+                transform: `translateX(-${(packageIndex * 100) / visibleCards}%)`
+              }}
+            >
+              {packagesData.map((pkg) => (
+                <div key={pkg.id} className="packages-slider-item">
+                  <div className="package-card-improved">
+                    <div className="package-image-wrapper">
+                      <div className="package-duration-badge">{getBadge(pkg.duration)}</div>
+                      <img src={pkg.gallery} alt={pkg.title} className="img-fluid w-100" />
+                    </div>
+                    <div className="package-card-content-improved">
+                      <h5 className="package-title-improved">{pkg.title}</h5>
+                      <p className="package-duration-improved">📍 {pkg.duration}</p>
+                      <p className="package-desc-improved">{pkg.overview}</p>
+                      <Link to={`/packages/${pkg.id}`} className="package-btn-improved">
+                        View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
