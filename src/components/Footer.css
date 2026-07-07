@@ -65,10 +65,11 @@
 }
 
 .address-text {
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   color: #1a1a1a;
   line-height: 1.5;
   margin: 0;
+  font-family: poppins;
 }
 
 .footer-logo-main {
@@ -108,6 +109,7 @@
   margin: 0;
   display: inline-block;
   text-align: left;
+
 }
 
 .footer-links-list li {
@@ -118,10 +120,11 @@
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.35rem;
   display: flex;
   align-items: center;
   transition: 0.3s;
+  font-family: poppins;
 }
 
 .gold-chevron {
@@ -146,6 +149,8 @@
   margin-bottom: 15px;
   font-weight: 600;
   color: #1a1a1a;
+  font-family: poppins;
+  font-size: 1.25rem;
 }
 
 .gold-icon {
@@ -165,7 +170,10 @@
   margin-bottom: 12px;
   font-weight: 600;
   color: #1a1a1a;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
+  font-family: poppins;
+  font-size: 1.25rem;
+  padding-left: 3rem;
 }
 
 .icon-circle-blue {
@@ -179,6 +187,7 @@
   color: #fff;
   margin-right: 12px;
   flex-shrink: 0;
+
 }
 
 .icon-circle-blue i {

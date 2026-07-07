@@ -67,9 +67,10 @@
 }
 
 .vehicle-info p {
-    font-size: 17px;
+    font-size: 1.35rem;
     line-height: 1.8;
-    color: #555;
+    color: #000;
+    font-family: poppins;
 }
 
 /* ===========================
@@ -93,7 +94,9 @@
 .vehicle-details-table td {
     padding: 18px 22px;
     border: 1px solid #ececec;
-    font-size: 17px;
+    font-size: 1.35rem;
+    font-family: poppins;
+    color: #000;
 }
 
 .vehicle-details-table th {
@@ -105,7 +108,7 @@
 }
 
 .vehicle-details-table td {
-    color: #444;
+    color: #000;
     font-weight: 500;
 }
 
@@ -123,10 +126,12 @@
 }
 
 .feature-list li {
-    margin-bottom: 12px;
-    font-size: 17px;
+    margin-bottom: 1x;
+    font-size: 1.35rem;
     line-height: 1.8;
-    color: #555;
+    color: #000;
+    font-family: poppins;
+
 }
 
 /* ===========================
@@ -180,9 +185,11 @@
 }
 
 .similar-content p {
-    color: #555;
+    color: #000;
     line-height: 1.7;
     margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-family: poppins;
 }
 
 .similar-btn {

@@ -21,7 +21,7 @@
 }
 
 .fleetSection span {
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   color: #032478;
@@ -33,6 +33,7 @@
   color: #B0055B;
   text-align: start;
   margin-top: 20px;
+  font-family: sans-serif;
 }
 
 .fleetSection p {
@@ -40,7 +41,9 @@
   line-height: 1.8;
   font-weight: 700;
   color: white;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+  font-family: poppins;
+
 }
 
 /* FILTER SECTION */
@@ -105,11 +108,12 @@
 }
 
 .fleet-filter-desc {
-  font-size: 1.05rem;
-  color: #666;
+  font-size: 1.35rem;
+  color: #000;
   font-weight: 500;
   line-height: 1.6;
   margin: 12px 0 0 0;
+  font-family: poppins;
 }
 
 .filterBtns {
@@ -128,6 +132,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: poppins;
 }
 
 .filterBtns button:hover,
@@ -208,7 +213,8 @@
   color: #032478;
   margin: 0 0 20px 0;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
+  font-size: poppins;
 }
 
 .vehicle-card-specs {

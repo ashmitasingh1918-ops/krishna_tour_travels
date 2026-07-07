@@ -30,10 +30,11 @@
 }
 
 .hero-content p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: #ffd166;
     line-height: 1.8;
     margin-bottom: 30px;
+    font-family: poppins;
 }
 .package-card {
   background: #fff;
@@ -213,10 +214,11 @@
 }
 
 .section-header p {
-  font-size: 1.05rem;
-  color: #666;
+  font-size: 1.35rem;
+  color: #000;
   max-width: 600px;
   margin: 0 auto;
+  font-family: poppins;
 }
 .why-book-section {
     background: #f8f9fa;
@@ -225,10 +227,14 @@
 .why-book-section h2 {
     color: #0b2f7a;
     font-weight: 700;
+    font-family: sans-serif;
+    font-size: 1.8rem;
 }
 
 .why-book-section p {
-    color: #555;
+    color: #000;
+    font-size: 1.35rem;
+    font-family: poppins;
 }
 
 .why-card {
@@ -266,8 +272,10 @@
 }
 
 .why-card p {
-    color: #555;
+    color: #000;
     line-height: 1.7;
+    font-family: poppins;
+    font-size: 1.35rem;
 }
 .itinerary-card {
     background: white;
