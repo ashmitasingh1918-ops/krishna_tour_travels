@@ -17,6 +17,8 @@ const packages = [
     overview:
       "Explore the rich heritage of Old and New Delhi with guided sightseeing covering iconic landmarks and cultural attractions.",
 
+    shortDesc: "Experience the rich heritage and culture with our exclusive local city tour.",
+
     highlights: [
       "Qutub Minar",
       "Humayun's Tomb",
@@ -75,6 +77,8 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   overview:
     "Discover the perfect blend of history, culture, and architecture with this Delhi-Agra-Delhi tour. Explore the iconic landmarks of Delhi and witness the timeless beauty of the Taj Mahal and Agra Fort, two of India's most celebrated heritage sites.",
+
+  shortDesc: "A perfect short getaway to witness the majestic Taj Mahal and historical wonders of Agra.",
 
   highlights: [
     "Qutub Minar",
@@ -144,6 +148,8 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     overview:
 "Discover India's most iconic destinations on the Golden Triangle Tour covering Delhi, Agra, Jaipur, and Mandawa. Experience magnificent Mughal monuments, royal palaces, historic forts, colorful markets, and the rich cultural heritage of North India.",
+
+    shortDesc: "Explore the vibrant culture of India by visiting the iconic cities of Delhi, Agra, and Jaipur.",
 
     highlights: [
   "India Gate",
@@ -246,6 +252,8 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
   overview:
     "Experience the famous Golden Triangle circuit covering Delhi, Agra, and Jaipur. Visit iconic Mughal monuments, majestic forts, royal palaces, and discover the rich heritage and culture of North India.",
 
+  shortDesc: "Comprehensive golden triangle experience with extended exploration of Jaipur's pink city charm.",
+
   highlights: [
     "Qutub Minar",
     "India Gate",
@@ -324,6 +332,8 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
   overview:
     "Experience a spiritual journey to Haridwar and Rishikesh, two of India's most sacred destinations. Witness the divine Ganga Aarti, visit famous temples, explore ashrams, and enjoy the peaceful atmosphere of the holy Ganges.",
 
+  shortDesc: "Spiritual journey to holy destinations with river rafting and yoga experiences in Rishikesh.",
+
   highlights: [
     "Har Ki Pauri",
     "Ganga Aarti",
@@ -383,6 +393,8 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   overview:
     "Experience the timeless beauty of Agra with a comfortable trip from Delhi. Visit the majestic Agra Fort and witness the breathtaking Taj Mahal, one of the Seven Wonders of the World.",
+
+  shortDesc: "Quick escape to marvel at the Taj Mahal and the architectural splendor of Agra fort.",
 
   highlights: [
     "Taj Mahal",
