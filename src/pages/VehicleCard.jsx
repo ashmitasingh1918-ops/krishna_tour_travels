@@ -36,7 +36,7 @@ const VehicleCard = ({ vehicle }) => {
             className="vehicle-card-btn details-btn"
             onClick={() => navigate(`/vehicle/${vehicle.id}`)}
           >
-            <MdCheckCircle className="btn-icon" />
+            
             Details
           </button>
 
@@ -45,7 +45,7 @@ const VehicleCard = ({ vehicle }) => {
             onClick={() => navigate(`/tariff/${vehicle.id}`)}
           >
             Tariff
-            <MdArrowForward className="btn-icon" />
+            
           </button>
         </div>
       </div>

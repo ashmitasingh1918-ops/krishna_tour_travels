@@ -472,7 +472,7 @@
     min-height: 500px;
 /* 
     background-image: url("https://www.tripsavvy.com/thmb/y2p7m2dqW3HGhYq8yiEYeJl1jeo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-673530462-591c41cc5f9b58f4c05ef4d3.jpg"); */
-
+   
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -817,4 +817,218 @@
         font-size: 13px;
     }
 }
+/* ============================= */
+/* WHY BOOK WITH US SECTION */
+/* ============================= */
 
+.why-book-section{
+    background:#FCFBF8;
+    padding:80px 0;
+}
+
+.section-tag{
+    display:inline-block;
+    color:#B0055B;
+    font-size:0.9rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-divider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.section-divider span{
+    width:70px;
+    height:2px;
+    background:#C2941B;
+    border-radius:10px;
+}
+
+.section-divider i{
+    color:#C2941B;
+    font-size:1rem;
+}
+
+.why-book-section h2{
+    color:#032478;
+    font-size:2.6rem;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.why-book-section > .container > .section-header p{
+    color:#666;
+    font-size:1.1rem;
+    max-width:650px;
+    margin:0 auto;
+    line-height:1.8;
+}
+
+/* ============================= */
+/* Cards */
+/* ============================= */
+
+.why-card{
+    background:#fff;
+    border-radius:18px;
+    padding:32px 24px;
+    max-width:350px;
+    margin:0 auto;
+
+    border:1px solid rgba(194,148,27,.18);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    transition:all .35s ease;
+
+    position:relative;
+    overflow:hidden;
+
+    min-height:310px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.why-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(
+        90deg,
+        #032478,
+        #B0055B,
+        #C2941B
+    );
+
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.35s;
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+}
+
+.why-card:hover::before{
+    transform:scaleX(1);
+}
+
+/* ============================= */
+/* Icon */
+/* ============================= */
+
+.icon-circle{
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:#FFF8EC;
+
+    border:2px solid #C2941B;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    color:#032478;
+
+    font-size:1.8rem;
+
+    transition:.35s;
+}
+
+.why-card:hover .icon-circle{
+    background:#032478;
+    color:#fff;
+    border-color:#032478;
+}
+
+/* ============================= */
+/* Divider */
+/* ============================= */
+
+.mini-divider{
+    width:50px;
+    height:2px;
+    background:#C2941B;
+    margin-bottom:18px;
+    border-radius:10px;
+}
+
+/* ============================= */
+/* Text */
+/* ============================= */
+
+.why-card h4{
+    color:#032478;
+    font-size:1.8rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#555;
+    font-size:1.05rem;
+    line-height:1.8;
+    margin:0;
+}
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width:991px){
+
+    .why-card{
+        max-width:100%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .why-book-section{
+        padding:60px 0;
+    }
+
+    .why-book-section h2{
+        font-size:2.2rem;
+    }
+
+    .why-card{
+        padding:28px 20px;
+        min-height:auto;
+    }
+
+    .icon-circle{
+        width:65px;
+        height:65px;
+        font-size:1.6rem;
+    }
+
+    .why-card h4{
+        font-size:1.5rem;
+    }
+
+    .why-card p{
+        font-size:1rem;
+    }
+
+}

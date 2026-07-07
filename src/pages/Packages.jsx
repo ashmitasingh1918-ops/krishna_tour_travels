@@ -205,69 +205,87 @@ function Packages() {
   </div>
 </section>
 {/* Why Book With Us */}
+{/* Why Book With Us */}
 <section className="why-book-section py-5">
 
   <div className="container">
 
-    <div className="text-center mb-5">
+    <div className="section-header text-center mb-5">
+
+      <span className="section-tag">WHY CHOOSE KRISHNA TOUR INDIA</span>
+
+      <div className="section-divider">
+        <span></span>
+        <i className="bi bi-flower1"></i>
+        <span></span>
+      </div>
 
       <h2>Why Book With Us</h2>
 
       <p>
-        Elite service standards designed for travelers who value tradition,
-        comfort, and reliability.
+        Elite service standards designed for travelers who value
+        tradition, comfort, and reliability.
       </p>
 
     </div>
 
     <div className="row g-4">
 
-      <div className="col-md-4">
+      {/* Card 1 */}
+      <div className="col-lg-4 col-md-6">
         <div className="why-card text-center">
 
           <div className="icon-circle">
             <i className="bi bi-patch-check"></i>
           </div>
 
+          <div className="mini-divider"></div>
+
           <h4>Local Expertise</h4>
 
           <p>
-            Our guides are historians and locals who know the pulse of every
-            ancient monument.
+            Our experienced local guides bring every destination to life
+            with authentic stories and deep cultural knowledge.
           </p>
 
         </div>
       </div>
 
-      <div className="col-md-4">
+      {/* Card 2 */}
+      <div className="col-lg-4 col-md-6">
         <div className="why-card text-center">
 
           <div className="icon-circle">
             <i className="bi bi-car-front"></i>
           </div>
 
+          <div className="mini-divider"></div>
+
           <h4>Premium Fleet</h4>
 
           <p>
-            Travel in sanitised, high-end sedans and SUVs with professional
-            uniformed chauffeurs.
+            Travel in impeccably maintained sedans, SUVs and luxury
+            vehicles driven by courteous professional chauffeurs.
           </p>
 
         </div>
       </div>
 
-      <div className="col-md-4">
+      {/* Card 3 */}
+      <div className="col-lg-4 col-md-6 mx-md-auto">
         <div className="why-card text-center">
 
           <div className="icon-circle">
             <i className="bi bi-headset"></i>
           </div>
 
+          <div className="mini-divider"></div>
+
           <h4>24/7 Support</h4>
 
           <p>
-            Dedicated concierge team available round the clock for your safety
-            and convenience.
+            Our dedicated travel assistance team is available around the
+            clock to ensure a seamless journey from start to finish.
           </p>
 
         </div>
