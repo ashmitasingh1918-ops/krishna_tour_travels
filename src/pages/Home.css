@@ -126,6 +126,11 @@ body {
   border-bottom: 1px solid #f0f0f0;
 }
 
+/* Align the All Fleet button with the h2 heading (offset = pretitle + divider height) */
+.fleet-header-wrapper .view-all-link {
+  margin-top: 58px;
+}
+
 .fleet-header-left {
   flex: 1;
   max-width: 700px;
@@ -315,6 +320,12 @@ body {
   flex: 1;
   max-width: 700px;
 }
+
+/* Align the All Packages button with the h2 heading (offset = pretitle + divider height) */
+.packages-header-wrapper .view-all-link {
+  margin-top: 58px;
+}
+
 
 .packages-header-left .gold-divider-wrapper {
   text-align: left !important;
