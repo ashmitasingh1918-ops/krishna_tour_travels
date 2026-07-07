@@ -677,8 +677,9 @@
   align-items: center;
   gap: 15px;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: var(--text-dark);
+  font-family: poppins;
 }
 
 .why-list li i {
