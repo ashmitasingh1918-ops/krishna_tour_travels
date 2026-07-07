@@ -459,12 +459,13 @@
 }
 
 .premium-body-text p {
-  color: #2E2E2E;
+  color: #000;
   font-size: 19px; /* Requested 18-20px */
   line-height: 1.8;
   margin-bottom: 20px;
   text-align: justify;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
+  font-size: 1.35rem;
 }
 
 .premium-body-text strong {
