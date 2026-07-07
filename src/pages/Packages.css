@@ -2,13 +2,13 @@
 .packages-hero {
     height: 80vh;
     min-height: 500px;
-
+/* 
     background-image:
     linear-gradient(
         rgba(11, 46, 107, 0.65),
         rgba(11, 46, 107, 0.65)
     ),
-    url("https://www.tripsavvy.com/thmb/y2p7m2dqW3HGhYq8yiEYeJl1jeo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-673530462-591c41cc5f9b58f4c05ef4d3.jpg");
+    url("https://www.tripsavvy.com/thmb/y2p7m2dqW3HGhYq8yiEYeJl1jeo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-673530462-591c41cc5f9b58f4c05ef4d3.jpg"); */
 
     background-size: cover;
     background-position: center;
@@ -470,8 +470,8 @@
 .packages-hero {
     height: 80vh;
     min-height: 500px;
-
-    background-image: url("https://www.tripsavvy.com/thmb/y2p7m2dqW3HGhYq8yiEYeJl1jeo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-673530462-591c41cc5f9b58f4c05ef4d3.jpg");
+/* 
+    background-image: url("https://www.tripsavvy.com/thmb/y2p7m2dqW3HGhYq8yiEYeJl1jeo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-673530462-591c41cc5f9b58f4c05ef4d3.jpg"); */
 
     background-size: cover;
     background-position: center;

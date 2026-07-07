@@ -5,25 +5,36 @@ import delhi from "../assets/images/delhi.png";
 import triangle from "../assets/images/triangle.png";
 import jaipur from "../assets/images/jaipur.png";
 import hari from "../assets/images/hari.png";
+import tour from "../assets/images/tour.png";
 import { Link } from "react-router-dom";
 import { MdArrowForward } from "react-icons/md";
 function Packages() {
   return (
     <>
   {/* Hero Section */}
-  <section className="packages-hero">
-
-    <div className="container h-100">
-      <div className="row h-100 align-items-center">
-        <div className="col-md-6 hero-content">
-          <h1>Explore Our Tour Packages </h1>
-          <p>
-            Experience the soul of India through meticulously curated journeys starting from the historic heart of Delhi. Luxury pilgrimages designed with ancient tradition and modern precision.
-          </p>
-        </div>
+  {/* Hero Section */}
+<section
+  className="packages-hero"
+  style={{
+    backgroundImage: `linear-gradient(
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.35)
+    ), url(${tour})`,
+  }}
+>
+  <div className="container h-100">
+    <div className="row h-100 align-items-center">
+      <div className="col-md-6 hero-content">
+        <h1>Explore Our Tour Packages</h1>
+        <p>
+          Experience the soul of India through meticulously curated journeys
+          starting from the historic heart of Delhi. Luxury pilgrimages
+          designed with ancient tradition and modern precision.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   {/* Packages Section */}
 <section className="packages-section py-5">
   <div className="container">

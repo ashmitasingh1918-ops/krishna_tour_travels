@@ -3,6 +3,7 @@ import "./About.css";
 import sedanImg from "../assets/images/agra.png";
 import luxuryImg from "../assets/images/delhi.png";
 import aboutHero from "../assets/images/about_us.png";
+import cars from "../assets/images/cars.png";
 
 function About() {
   return (
@@ -23,7 +24,7 @@ function About() {
             </div>
             <div className="col-lg-6 hero-image-col">
               <img
-                src={`${import.meta.env.BASE_URL}images/agra.jpg`}
+                src={cars}
                 alt="Krishna Tours"
                 className="hero-car-img"
               />
@@ -135,6 +136,10 @@ function About() {
               alt="Krishna Tour India Luxury Fleet" 
               className="premium-hero-img" 
             />
+            <div className="brand-logo-watermark">
+              <h5 className="watermark-title">KRISHNA</h5>
+              <div className="watermark-line">TOUR INDIA</div>
+            </div>
           </div>
         </div>
       </section>
