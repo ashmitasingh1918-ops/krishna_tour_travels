@@ -21,22 +21,30 @@
 .hero-content {
     max-width: 600px;
 }
-
 .hero-content h1 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     font-weight: 700;
-    color: white;
     line-height: 1.15;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+
+    color: #B0055B;          /* Logo Blue */
+
+    text-shadow: 0 4px 15px rgba(255,255,255,0.25);
 }
+
+
 
 .hero-content p {
-    font-size: 1.25rem;
-    color: #ffd166;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
     line-height: 1.8;
-    margin-bottom: 30px;
-    font-family: poppins;
+
+    color:  #F8E6C1;          /* Logo Blue */
+
+    text-shadow: 0 2px 8px rgba(255,255,255,0.2);
 }
+
 .package-card {
   background: #fff;
   border-radius: 15px;
@@ -477,21 +485,7 @@
     max-width: 600px;
 }
 
-.hero-content h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    color: white;
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
 
-.hero-content p {
-    font-size: 1.25rem;
-    color: #ffd166;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    font-family: poppins;
-}
 .package-card {
   background: #fff;
   border-radius: 15px;

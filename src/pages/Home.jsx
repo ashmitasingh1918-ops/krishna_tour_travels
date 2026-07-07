@@ -15,7 +15,8 @@ import delhi from "../assets/images/delhi.png";
 import triangle from "../assets/images/triangle.png";
 import logo from "../assets/images/ltp.png";
 import packagesData from "../data/packages";
-import kesh from "../assets/images/harishi.png";
+import kesh from "../assets/images/rishi.jpg";
+import taj from "../assets/images/taj.jpg";
 
 // Helper components for gold flourishes and dividers
 const GoldFlourish = ({ isLeft }) => (
@@ -61,7 +62,7 @@ const GoldDivider = () => (
 
 const Home = () => {
   const slides = [
-    '/newsite/images/newhome.jpeg',
+    taj,
     '/newsite/images/home2.jpeg',
     kesh
   ];

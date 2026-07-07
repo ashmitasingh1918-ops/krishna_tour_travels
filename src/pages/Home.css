@@ -516,12 +516,12 @@ body {
 /* Hero Section */
 .hero-section {
   position: relative;
-  margin-top: 86px;
+  margin-top: 40px;
   min-height: calc(100vh - 86px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 0;
   overflow: hidden;
   background-color: #051b44;
