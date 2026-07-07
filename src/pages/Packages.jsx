@@ -13,27 +13,16 @@ function Packages() {
   {/* Hero Section */}
   <section className="packages-hero">
 
-  <div className="hero-overlay">
-
     <div className="container h-100">
-
       <div className="row h-100 align-items-center">
-
         <div className="col-md-6 hero-content">
-
           <h1>Explore Our Tour Packages </h1>
-
           <p>
             Experience the soul of India through meticulously curated journeys starting from the historic heart of Delhi. Luxury pilgrimages designed with ancient tradition and modern precision.
           </p>
-
         </div>
-
       </div>
-
     </div>
-
-  </div>
   </section>
   {/* Packages Section */}
 <section className="packages-section py-5">

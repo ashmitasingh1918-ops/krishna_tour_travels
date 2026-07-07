@@ -143,6 +143,7 @@
   display: inline-block;
   text-align: left;
 }
+
 .service-row {
   display: flex;
   align-items: center;
@@ -164,6 +165,7 @@
   display: inline-block;
   text-align: left;
 }
+
 .contact-row {
   display: flex;
   align-items: center;
@@ -192,6 +194,10 @@
 
 .icon-circle-blue i {
   font-size: 1rem;
+}
+
+.footer {
+  margin-top: 150px !important;
 }
 
 /* Mobile Responsive */
