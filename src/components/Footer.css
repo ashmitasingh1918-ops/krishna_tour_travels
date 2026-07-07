@@ -4,7 +4,7 @@
     url('https://images.unsplash.com/photo-1599661046289-e31887846eac?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: bottom right;
-  padding: 40px 0 30px;
+  padding: 24px 0 18px;
   color: #0b2e6b;
   font-family: 'Inter', sans-serif;
   border-top: 1px solid #f1e1d1;
@@ -25,7 +25,7 @@
 .footer-title {
   color: #b0055b;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   margin-bottom: 8px;
   text-align: center;
 }
@@ -36,7 +36,7 @@
   background: #d4af37;
   /* gold */
   width: 60px;
-  margin: 0 auto 20px;
+  margin: 0 auto 12px;
   position: relative;
 }
 
@@ -55,7 +55,7 @@
 /* Column 1 Specifics */
 .title-magenta {
   color: #b0055b !important;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .contact-info-row {
@@ -65,7 +65,7 @@
 }
 
 .address-text {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   color: #1a1a1a;
   line-height: 1.5;
   margin: 0;
@@ -113,14 +113,14 @@
 }
 
 .footer-links-list li {
-  margin-bottom: 12px;
+  margin-bottom: 7px;
 }
 
 .footer-links-list a {
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   display: flex;
   align-items: center;
   transition: 0.3s;
@@ -147,11 +147,11 @@
 .service-row {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   font-weight: 600;
   color: #1a1a1a;
   font-family: poppins;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 
 .gold-icon {
@@ -169,12 +169,12 @@
 .contact-row {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   font-weight: 600;
   color: #1a1a1a;
   /* font-size: 0.9rem; */
   font-family: poppins;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   padding-left: 3rem;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .footer {
-  margin-top: 150px !important;
+  margin-top: 80px !important;
 }
 
 /* Mobile Responsive */

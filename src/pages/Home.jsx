@@ -386,7 +386,7 @@ const Home = () => {
                     <div className="package-card-content-improved">
                       <h5 className="package-title-improved">{pkg.title}</h5>
                       <p className="package-duration-improved">📍 {pkg.duration}</p>
-                      <p className="package-desc-improved">{pkg.overview}</p>
+                      <p className="package-desc-improved">{pkg.shortDesc}</p>
                       <Link to={`/packages/${pkg.id}`} className="package-btn-improved">
                         View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
                       </Link>
