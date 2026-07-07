@@ -4,18 +4,24 @@
 
 .fleetPage {
   height: 80vh;
-  background: linear-gradient(
-      rgba(0, 34, 96, 0.2),
-      rgba(0, 33, 96, 0.2)
-    ),
-    url("/images/fleet-hero.jpg");
   margin-top: 30px;
+  margin-bottom: 20px;
+
+  background:
+    linear-gradient(rgba(0,34,96,0.2), rgba(0,33,96,0.2)),
+    url("/images/fleet-hero.jpg");
+
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-}
+  justify-content: center;
 
+  overflow: hidden;
+}
 .fleetSection {
   max-width: 650px;
 }
