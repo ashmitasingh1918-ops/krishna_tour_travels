@@ -4,18 +4,24 @@
 
 .fleetPage {
   height: 80vh;
-  background: linear-gradient(
-      rgba(0, 34, 96, 0.2),
-      rgba(0, 33, 96, 0.2)
-    ),
-    url("https://assets.carandclassic.com/uploads/cars/land_rover/9218539.jpg?ar=16:9&auto=&fit=crop&h=1200&ixlib=php-4.1.0&q=80&w=1200&s=5c4223a0e0743422b29a8b5321400361");
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+  background:
+    linear-gradient(rgba(0,34,96,0.2), rgba(0,33,96,0.2)),
+    url("/images/fleet-hero.jpg");
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-}
+  justify-content: center;
 
+  overflow: hidden;
+}
 .fleetSection {
   max-width: 650px;
 }
