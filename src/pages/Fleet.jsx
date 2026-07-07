@@ -40,12 +40,7 @@ const Fleet = () => {
       {/* Hero Section */}
       <section className="fleetPage">
         <div className="fleetSection">
-          <span>OUR PREMIUM COLLECTION</span>
-          <h1>Travel in Divine Comfort</h1>
-          <p>
-            From executive sedans to luxury group travelers, experience North
-            India's spiritual journey with unmatched prestige.
-          </p>
+
         </div>
       </section>
 
