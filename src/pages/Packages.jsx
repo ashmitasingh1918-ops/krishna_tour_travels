@@ -7,34 +7,71 @@ import jaipur from "../assets/images/jaipur.png";
 import hari from "../assets/images/hari.png";
 import tour from "../assets/images/tour.png";
 import { Link } from "react-router-dom";
-import { MdArrowForward } from "react-icons/md";
+import { MdArrowForward, MdSupportAgent } from "react-icons/md";
+import { FiBriefcase, FiAward, FiHeadphones } from "react-icons/fi";
+import packagesHero from "../assets/images/packages_hero.png";
 function Packages() {
   return (
     <>
-  {/* Hero Section */}
-  {/* Hero Section */}
-<section
-  className="packages-hero"
-  style={{
-    backgroundImage: `linear-gradient(
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0.35)
-    ), url(${tour})`,
-  }}
->
-  <div className="container h-100">
-    <div className="row h-100 align-items-center">
-      <div className="col-md-6 hero-content">
-        <h1>Explore Our Tour Packages</h1>
-        <p>
-          Experience the soul of India through meticulously curated journeys
-          starting from the historic heart of Delhi. Luxury pilgrimages
-          designed with ancient tradition and modern precision.
+  {/* 1. New Premium Hero Section */}
+  <section className="packages-hero-premium">
+    <img
+      src={packagesHero}
+      alt="Scenic Udaipur Lake Palace"
+      className="hero-bg-img"
+    />
+    <div className="hero-gradient-overlay"></div>
+    <div className="container hero-content-wrap">
+      <div className="hero-text-side">
+        <span className="hero-upper-tag">CURATED FOR MEMORIES</span>
+        <div className="tag-bar"></div>
+        <h1 className="hero-main-title">
+          EXPLORE OUR <br />
+          <span className="accent-color">TOUR PACKAGES</span>
+        </h1>
+        
+        <div className="hero-divider">
+          <div className="divider-line"></div>
+          <div className="divider-diamond">♦</div>
+          <div className="divider-line"></div>
+        </div>
+
+        <p className="hero-p">
+          Handpicked journeys across India that blend culture, heritage, comfort and unforgettable experiences. Find the perfect package for your next adventure.
         </p>
+
+        <div className="hero-features-row">
+          <div className="hero-feature-item">
+            <div className="feature-circle magenta-bg">
+              <FiBriefcase />
+            </div>
+            <div className="feature-info">
+              <strong>Curated Experiences</strong>
+              <span>Carefully designed itineraries</span>
+            </div>
+          </div>
+          <div className="hero-feature-item">
+            <div className="feature-circle navy-bg">
+              <FiAward />
+            </div>
+            <div className="feature-info">
+              <strong>Best Value</strong>
+              <span>Quality journeys at great prices</span>
+            </div>
+          </div>
+          <div className="hero-feature-item">
+            <div className="feature-circle gold-bg">
+              <FiHeadphones />
+            </div>
+            <div className="feature-info">
+              <strong>24/7 Support</strong>
+              <span>We're with you, always</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   {/* Packages Section */}
 <section className="packages-section py-5">
   <div className="container">

@@ -1,48 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700;800&display=swap');
 
-.packages-hero {
-    height: 80vh;
-    min-height: 500px;
-/* 
-    background-image:
-    linear-gradient(
-        rgba(11, 46, 107, 0.65),
-        rgba(11, 46, 107, 0.65)
-    ),
-    url("https://www.tripsavvy.com/thmb/y2p7m2dqW3HGhYq8yiEYeJl1jeo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-673530462-591c41cc5f9b58f4c05ef4d3.jpg"); */
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
+/* 1. New Premium Hero Section */
+.packages-hero-premium {
+  position: relative;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000;
 }
 
-.hero-content {
-    max-width: 600px;
-}
-.hero-content h1 {
-    font-size: 3.4rem;
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 22px;
-
-    color: #B0055B;          /* Logo Blue */
-
-    text-shadow: 0 4px 15px rgba(255,255,255,0.25);
+.packages-hero-premium .hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.85;
 }
 
+.packages-hero-premium .hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 40%, transparent 100%);
+  z-index: 1;
+}
 
+@media (max-width: 991px) {
+  .packages-hero-premium .hero-gradient-overlay {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
 
-.hero-content p {
-    font-size: 1.3rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    line-height: 1.8;
+.packages-hero-premium .hero-content-wrap {
+  position: relative;
+  z-index: 2;
+}
 
-    color:  #F8E6C1;          /* Logo Blue */
+.packages-hero-premium .hero-text-side {
+  max-width: 650px;
+}
 
-    text-shadow: 0 2px 8px rgba(255,255,255,0.2);
+.packages-hero-premium .hero-upper-tag {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #b0055b;
+  margin-bottom: 8px;
+}
+
+.packages-hero-premium .tag-bar {
+  width: 40px;
+  height: 4px;
+  background-color: #b0055b;
+  margin-bottom: 25px;
+}
+
+.packages-hero-premium .hero-main-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #0b2e6b; /* Dark Navy */
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.packages-hero-premium .accent-color {
+  color: #b0055b; /* Magenta */
+}
+
+@media (max-width: 768px) {
+  .packages-hero-premium .hero-main-title {
+    font-size: 3rem;
+  }
+}
+
+.packages-hero-premium .hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.packages-hero-premium .divider-line {
+  height: 1px;
+  background-color: #d4af37;
+  flex: 0 0 150px;
+  opacity: 0.5;
+}
+
+.packages-hero-premium .divider-diamond {
+  color: #d4af37;
+  font-size: 1.2rem;
+}
+
+.packages-hero-premium .hero-p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Feature Row in Hero */
+.packages-hero-premium .hero-features-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.packages-hero-premium .hero-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.packages-hero-premium .feature-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.packages-hero-premium .feature-circle.magenta-bg { background-color: #b0055b; }
+.feature-circle.navy-bg { background-color: #0b2e6b; }
+.feature-circle.gold-bg { background-color: #d4af37; }
+
+.packages-hero-premium .feature-info strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.packages-hero-premium .feature-info span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+@media (max-width: 576px) {
+  .packages-hero-premium .hero-features-row {
+    gap: 20px;
+  }
 }
 
 .package-card {
