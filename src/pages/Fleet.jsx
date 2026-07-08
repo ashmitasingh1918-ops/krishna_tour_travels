@@ -59,19 +59,22 @@ const Fleet = () => {
 
         <div className="filterBtns">
           <button className="active" onClick={() => filterItem("")}>
-            All Vehicles
+            ALL VEHICLE'S
           </button>
 
-          <button className="active" onClick={() => filterItem("Luxury")}>
-            Luxury
+          <button className="active" onClick={() => filterItem("SUV’S")}>
+            SUV’S
           </button>
 
-          <button className="active" onClick={() => filterItem("GroupTravel")}>
-            Group Travel
+          <button className="active" onClick={() => filterItem("MVP")}>
+            MVP
           </button>
 
-          <button className="active" onClick={() => filterItem("Executive")}>
-            Executive
+          <button className="active" onClick={() => filterItem("CLASSIC SEDAN’S")}>
+            CLASSIC SEDAN’S
+          </button>
+          <button className="active" onClick={() => filterItem("MINI VANS’S")}>
+            MINI VANS’S
           </button>
         </div>
       </section>

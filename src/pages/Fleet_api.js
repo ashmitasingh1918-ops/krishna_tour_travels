@@ -3,7 +3,7 @@
     id: 1,
     name: "SIZUKI CIAZ",
     category: "Premium Sedan",
-    type: "Luxury",
+    type: "CLASSIC SEDAN’S",
 
     seats: 5,
     luggage: 3,
@@ -58,7 +58,7 @@
     id: 2,
     name: "Maruti Swift Dzire",
     category: "Comfortable Sedan",
-    type: "Executive",
+    type: "CLASSIC SEDAN’S",
 
     seats: 5,
     luggage: 3,
@@ -113,7 +113,7 @@
     id: 3,
     name: "Kia Carens",
     category: "Premium MPV",
-    type: "GroupTravel",
+    type: "MVP",
 
     seats: 6,
     luggage: 4,
@@ -167,7 +167,7 @@
   id: 4,
   name: "Toyota Innova Hycross",
   category: "Premium Family MPV",
-  type: "GroupTravel",
+  type: "SUV’S",
 
   seats: 7,
   luggage: 5,
@@ -221,7 +221,7 @@
   id: 5,
   name: "Toyota Innova Crysta",
   category: "Luxury MPV",
-  type: "Luxury",
+  type: "SUV’S",
 
   seats: 7,
   luggage: 5,
@@ -275,7 +275,7 @@
   id: 6,
   name: "Tempo Traveller",
   category: "Group Traveller",
-  type: "GroupTravel",
+  type: "MINI VANS’S",
  
   seats: 12,
   luggage: 10,
@@ -329,7 +329,7 @@
   id: 7,
   name: "Force Urbania",
   category: "Luxury Van",
-  type: "LuxuryVan",
+  type: "MINI VANS’S",
 
   seats: 17,
   luggage: 12,
