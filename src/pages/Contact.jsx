@@ -4,7 +4,7 @@ import { MdPhone, MdEmail, MdLocationOn, MdAccessTime, MdSend, MdExpandMore, MdS
 import { FiShield, FiBriefcase, FiHeadphones } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
-import brandedHero from '../assets/images/branded_hero.png';
+import branded_hero from "../assets/images/branded_hero.jpg";
 
 const Contact = () => {
   const [formState, setFormState] = useState('idle'); // 'idle' | 'submitting' | 'success'
@@ -84,14 +84,13 @@ const Contact = () => {
       {/* 1. New Premium Hero Section */}
       <section className="contact-hero-premium">
         <img
-          src={brandedHero}
+          src={branded_hero}
           alt="Branded Krishna Tour Car"
           className="hero-bg-img"
         />
         <div className="hero-gradient-overlay"></div>
         <div className="container hero-content-wrap">
           <div className="hero-text-side">
-            <span className="hero-upper-tag">WE'RE HERE TO HELP</span>
             <div className="tag-bar"></div>
             <h1 className="hero-main-title">CONTACT US</h1>
             
@@ -102,8 +101,7 @@ const Contact = () => {
             </div>
 
             <p className="hero-p">
-              Have questions, need assistance, or ready to plan your next trip? Our team is just a message away.
-            </p>
+Experience seamless travel with our premium fleet and dedicated support team. From booking to destination, we're committed to delivering exceptional service.       </p>
 
             <div className="hero-features-row">
               <div className="hero-feature-item">

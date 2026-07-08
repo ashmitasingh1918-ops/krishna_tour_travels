@@ -54,22 +54,16 @@
   max-width: 650px;
 }
 
-.hero-upper-tag {
+/* .hero-upper-tag {
   display: block;
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #b0055b;
+  color: #000;
   margin-bottom: 8px;
-}
+  margin-left: -25px;
 
-.tag-bar {
-  width: 40px;
-  height: 4px;
-  background-color: #b0055b;
-  margin-bottom: 25px;
-}
-
+} */
 .hero-main-title {
   font-family: 'Inter', sans-serif;
   font-size: 3.8rem;
@@ -79,6 +73,9 @@
   margin-bottom: 20px;
   letter-spacing: -2px;
   text-transform: uppercase;
+  margin-left: -280px;
+  margin-top: 12px;
+
 }
 
 @media (max-width: 768px) {
@@ -108,9 +105,10 @@
 
 .hero-p {
   font-size: 1.2rem;
-  color: #555;
+  color: #000;
   line-height: 1.6;
   margin-bottom: 40px;
+  font-family: poppins;
 }
 
 /* Feature Row in Hero */
@@ -152,8 +150,9 @@
 }
 
 .feature-info span {
-  font-size: 0.85rem;
-  color: #777;
+  font-size: 0.95rem;
+  color: #000;
+  font-family: poppins;
 }
 
 @media (max-width: 576px) {
@@ -183,8 +182,9 @@
 }
 
 .section-desc {
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1.2rem;
+  color: #000;
+  font-family: poppins;
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -225,9 +225,10 @@
 
 .detail-text-exact p {
   margin: 0;
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.1rem;
+  color: #000;
   line-height: 1.4;
+  font-family: poppins;
 }
 
 .accent-text {
@@ -249,11 +250,12 @@
 }
 
 .section-title-new {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: 10px;
-  color: #1a1a1a;
+  color: #000;
   text-align: center;
+  font-family: poppins;
 }
 
 .title-line-new {
@@ -265,12 +267,13 @@
 }
 
 .form-label-custom {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1a1a1a;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 8px;
+  font-family: poppins;
 }
 
 .form-control-custom {
@@ -279,8 +282,9 @@
   border: 1px solid #eee;
   border-radius: 10px;
   background-color: #f9f9f9;
-  font-size: 1rem;
+  font-size: 1.05rem;
   transition: 0.3s;
+  font-family: poppins;
 }
 
 .form-control-custom:focus {
@@ -298,10 +302,11 @@
   border: none;
   border-radius: 10px;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: 0.3s;
   cursor: pointer;
   margin-top: 10px;
+  font-family: poppins;
 }
 
 .btn-submit-exact:hover:not(:disabled) {
@@ -421,7 +426,8 @@
 
 .cta-subtitle {
   font-size: 1.25rem;
-  color: #666;
+  font-family: poppins;
+  color: #000;
   margin-bottom: 40px;
 }
 
@@ -510,6 +516,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: #1e293b;
+  font-family: poppins;
 }
 
 .faq-icon-modern {
@@ -529,11 +536,16 @@
   transition: all 0.3s ease;
   color: #475569;
   line-height: 1.6;
+  font-family: poppins;
+  font-size: 1rem;
+
 }
 
 .faq-body-modern.open {
   max-height: 200px;
   padding-bottom: 24px;
+  font-family: poppins;
+  font-size: 1rem;
 }
 
 .cta-features {
@@ -563,14 +575,19 @@
 
 .feature-text-small strong {
   display: block;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #1a1a1a;
+  font-family: sans-serif;
+
 }
 
 .feature-text-small p {
   margin: 0;
   font-size: 0.85rem;
-  color: #777;
+  color: #000;
+  font-family: poppins;
+  font-size: 1.05rem;
+
 }
 
 .cta-image-wrapper {
