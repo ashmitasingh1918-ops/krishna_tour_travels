@@ -73,14 +73,37 @@
   margin-bottom: 20px;
   letter-spacing: -2px;
   text-transform: uppercase;
-  margin-left: -280px;
   margin-top: 12px;
+}
 
+@media (max-width: 991px) {
+  .contact-hero-premium {
+    height: auto;
+    padding: 100px 0 60px;
+  }
+  .hero-main-title {
+    font-size: 2.8rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  .hero-text-side {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero-divider {
+    justify-content: center;
+  }
+  .hero-features-row {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
   .hero-main-title {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+  }
+  .hero-p {
+    font-size: 1rem;
   }
 }
 
@@ -434,13 +457,14 @@
 .btn-book-now-exact {
   background-color: #1a1a1a;
   color: white;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 60px;
   border: none;
   border-radius: 10px;
   font-weight: 800;
   font-size: 1.1rem;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -457,7 +481,8 @@
 .btn-whatsapp-cta {
   background-color: #25D366;
   color: white;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 60px;
   border: none;
   border-radius: 10px;

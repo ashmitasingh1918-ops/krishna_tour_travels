@@ -16,8 +16,11 @@ import delhi from "../assets/images/delhi.png";
 import triangle from "../assets/images/triangle.png";
 import logo from "../assets/images/ltp.png";
 import packagesData from "../data/packages";
-import kesh from "../assets/images/rishi.jpg";
 import taj from "../assets/images/taj.jpg";
+import kesh from "../assets/images/rishi.jpg";
+import mobile1 from "../assets/images/mobile1.png";
+import mobile2 from "../assets/images/mobile2.png";
+import mobile3 from "../assets/images/mobile3.png";
 
 // Helper components for gold flourishes and dividers
 const GoldFlourish = ({ isLeft }) => (
@@ -62,11 +65,21 @@ const GoldDivider = () => (
 );
 
 const Home = () => {
-  const slides = [
+  const [isMobile, setIsMobile] = useState(false);
+  
+  const desktopSlides = [
     taj,
     '/newsite/images/home2.jpeg',
     kesh
   ];
+
+  const mobileSlides = [
+    mobile1,
+    mobile2,
+    mobile3
+  ];
+
+  const slides = isMobile ? mobileSlides : desktopSlides;
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [packageIndex, setPackageIndex] = useState(0);
@@ -83,6 +96,9 @@ const Home = () => {
 
   useEffect(() => {
     const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+
       let cards = 3;
       if (window.innerWidth < 768) {
         cards = 1;

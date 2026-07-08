@@ -77,9 +77,33 @@
   color: #b0055b; /* Magenta */
 }
 
+@media (max-width: 991px) {
+  .packages-hero-premium {
+    height: auto;
+    padding: 100px 0 60px;
+  }
+  .packages-hero-premium .hero-main-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  .packages-hero-premium .hero-text-side {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .packages-hero-premium .hero-divider {
+    justify-content: center;
+  }
+  .packages-hero-premium .hero-features-row {
+    justify-content: center;
+  }
+  .packages-hero-premium .tag-bar {
+    margin: 0 auto 25px;
+  }
+}
+
 @media (max-width: 768px) {
   .packages-hero-premium .hero-main-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 }
 

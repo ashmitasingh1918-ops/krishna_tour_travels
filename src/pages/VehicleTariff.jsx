@@ -133,10 +133,10 @@ const VehicleTariff = () => {
             </tr>
             {tariffInfo.airport.map((item, idx) => (
               <tr key={`air-${idx}`}>
-                <td>{item.desc}</td>
-                <td>{item.km}</td>
-                <td>{item.hours}</td>
-                <td>{item.price}</td>
+                <td data-label="Description">{item.desc}</td>
+                <td data-label="K.M. Limit">{item.km}</td>
+                <td data-label="Hours">{item.hours}</td>
+                <td data-label="Tariff (INR)">{item.price}</td>
               </tr>
             ))}
 
@@ -145,10 +145,10 @@ const VehicleTariff = () => {
             </tr>
             {tariffInfo.local.map((item, idx) => (
               <tr key={`local-${idx}`}>
-                <td>{item.desc}</td>
-                <td>{item.km}</td>
-                <td>{item.hours}</td>
-                <td>{item.price}</td>
+                <td data-label="Description">{item.desc}</td>
+                <td data-label="K.M. Limit">{item.km}</td>
+                <td data-label="Hours">{item.hours}</td>
+                <td data-label="Tariff (INR)">{item.price}</td>
               </tr>
             ))}
           </tbody>

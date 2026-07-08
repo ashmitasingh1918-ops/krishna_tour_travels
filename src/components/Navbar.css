@@ -167,16 +167,201 @@ body{
     flex-shrink: 0;
 }
 
+/* Dropdown Logic and Styling */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 5px;
+  opacity: 0.6;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0b2e6b; /* Dark Navy brand color */
+  min-width: 240px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1100;
+  border-top: 3px solid #b0055b; /* Magenta accent bar */
+}
+
+.nav-item-dropdown:hover .dropdown-menu-custom {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-item-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+  color: #D4A017;
+}
+
+.dropdown-menu-custom li {
+  padding: 0;
+}
+
+.dropdown-menu-custom a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.2s;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.dropdown-menu-custom li:last-child a {
+  border-bottom: none;
+}
+
+.dropdown-menu-custom a:hover {
+  background-color: #b0055b; /* Magenta hover background */
+  color: #ffffff;
+  padding-left: 25px;
+}
+
+/* Gold arrow on right for some items as per screenshot */
+.dropdown-menu-custom a::after {
+  content: '›';
+  font-size: 1.2rem;
+  color: #d4af37; /* Gold indicator */
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.dropdown-menu-custom a:hover::after {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.dropdown-menu-custom .divider {
+  height: 1px;
+  background-color: rgba(255,255,255,0.1);
+  margin: 8px 0;
+}
+
+/* Submenu (Level 2) */
+.has-submenu {
+  position: relative;
+}
+
+.dropdown-submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #0b2e6b; /* Same Navy as parent */
+  min-width: 210px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 10px 0 30px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  z-index: 1200;
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.has-submenu:hover > .dropdown-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.side-arrow {
+  font-size: 1.1rem;
+  color: #d4af37;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/* Mobile Dropdown (Responsive) */
 @media (max-width: 992px) {
-    .nav-btn-item {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    .nav-btn-book {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-    }
+  .dropdown-menu-custom {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background-color: #f9f9f9;
+    box-shadow: none;
+    min-width: 100%;
+    padding: 0;
+    display: none; /* Hide by default on mobile, can toggle with JS if needed, but for now we simplify */
+  }
+
+  .nav-item-dropdown:hover .dropdown-menu-custom {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .dropdown-menu-custom a {
+    color: #030751;
+    border-bottom: 1px solid #eee;
+    padding-left: 30px;
+  }
+  
+  .dropdown-menu-custom a:hover {
+    padding-left: 35px;
+    background-color: #f0f0f0;
+  }
+
+  /* Mobile Submenu Handling */
+  .dropdown-submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background-color: #f1f1f1;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-left: none;
+    display: none;
+  }
+
+  .has-submenu:hover > .dropdown-submenu {
+    display: block;
+  }
+
+  .dropdown-submenu a {
+    padding-left: 50px !important;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .side-arrow {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+
+  .nav-btn-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .nav-btn-book {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
 }

@@ -50,16 +50,56 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-item">
+            <li className="nav-item nav-item-dropdown">
               <Link className="nav-link" to="/fleet">
-                Our Fleet
+                Our Fleet <span className="dropdown-arrow">▼</span>
               </Link>
+              <ul className="dropdown-menu-custom">
+                <li className="has-submenu">
+                  <Link to="/fleet?category=sedan">Classic Sedans <span className="side-arrow">›</span></Link>
+                  <ul className="dropdown-submenu">
+                    <li><Link to="/vehicle/2">Maruti Swift Dzire</Link></li>
+                    <li><Link to="/vehicle/1">Maruti Ciaz</Link></li>
+                  </ul>
+                </li>
+                <li className="has-submenu">
+                  <Link to="/fleet?category=suv">SUV's & MUV's <span className="side-arrow">›</span></Link>
+                  <ul className="dropdown-submenu">
+                    <li><Link to="/vehicle/5">Toyota Innova Crysta</Link></li>
+                    <li><Link to="/vehicle/4">Toyota Innova Hycross</Link></li>
+                  </ul>
+                </li>
+                <li className="has-submenu">
+                  <Link to="/fleet?category=mvp">MVP <span className="side-arrow">›</span></Link>
+                  <ul className="dropdown-submenu">
+                    <li><Link to="/vehicle/3">Kia Carens</Link></li>
+                  </ul>
+                </li>
+                <li className="has-submenu">
+                  <Link to="/fleet?category=van">Mini Vans & Coaches <span className="side-arrow">›</span></Link>
+                  <ul className="dropdown-submenu">
+                    <li><Link to="/vehicle/6">Tempo Traveller (12S)</Link></li>
+                    <li><Link to="/vehicle/7">Force Urbania (17S)</Link></li>
+                  </ul>
+                </li>
+                <li className="divider"></li>
+                <li><Link to="/fleet">All Vehicles</Link></li>
+              </ul>
             </li>
 
-            <li className="nav-item">
+            <li className="nav-item nav-item-dropdown">
               <Link className="nav-link" to="/packages">
-                Tour Packages
+                Tour Packages <span className="dropdown-arrow">▼</span>
               </Link>
+              <ul className="dropdown-menu-custom">
+                <li><Link to="/packages/delhi-local">Delhi Local City Tour</Link></li>
+                <li><Link to="/packages/delhi-agra-delhi-2n">Delhi-Agra-Delhi Tour</Link></li>
+                <li><Link to="/packages/golden-triangle">Golden Triangle Tour</Link></li>
+                <li><Link to="/packages/delhi-haridwar-rishikesh">Haridwar & Rishikesh</Link></li>
+              
+                <li className="divider"></li>
+                <li><Link to="/packages">All Tour Packages</Link></li>
+              </ul>
             </li>
 
             <li className="nav-item">
