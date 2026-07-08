@@ -1,6 +1,6 @@
 .vehicle-details {
     max-width: 1200px;
-    margin: 20px auto 60px;
+    margin: 80px auto 60px; /* Reduced to sit closer to the navbar */
     padding: 10px;
 }
 
@@ -8,12 +8,40 @@
    Title
 =========================== */
 
+.vehicle-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; /* Reduced since container already handles navbar clearance */
+    margin-bottom: 30px;
+}
+
 .vehicle-title {
-    text-align: center;
-    color: #0b2f75;
+    color: #032478; /* Updated Navy to match brand */
     font-size: 38px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.back-to-fleet-btn {
+    background-color: #B0055B;
+    color: #ffffff !important;
+    border-radius: 8px;
+    padding: 10px 24px;
     font-weight: 700;
-    margin-bottom: 40px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 12px rgba(176, 5, 91, 0.2);
+}
+
+.back-to-fleet-btn:hover {
+    background-color: #92044b;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(176, 5, 91, 0.35);
+    color: #ffffff !important;
 }
 
 /* ===========================
@@ -237,6 +265,18 @@
 }
 
 @media (max-width: 768px) {
+
+    .vehicle-details-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .back-to-fleet-btn {
+        width: 100%;
+        justify-content: center;
+    }
 
     .vehicle-title {
         font-size: 30px;

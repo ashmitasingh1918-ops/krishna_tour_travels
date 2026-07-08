@@ -13,8 +13,13 @@ const VehicleDetails = () => {
 
   return (
     <div className="vehicle-details">
-      {/* Vehicle Title */}
-      <h1 className="vehicle-title">{vehicle.name}</h1>
+      {/* Vehicle Header with Back Button */}
+      <div className="vehicle-details-header">
+        <h1 className="vehicle-title">{vehicle.name}</h1>
+        <Link to="/fleet" className="back-to-fleet-btn">
+          Go Back to Fleet
+        </Link>
+      </div>
 
       {/* Vehicle Images */}
       <div className="vehicle-images">

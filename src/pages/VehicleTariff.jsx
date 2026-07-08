@@ -133,10 +133,10 @@ const VehicleTariff = () => {
             </tr>
             {tariffInfo.airport.map((item, idx) => (
               <tr key={`air-${idx}`}>
-                <td data-label="Description">{item.desc}</td>
-                <td data-label="K.M. Limit">{item.km}</td>
-                <td data-label="Hours">{item.hours}</td>
-                <td data-label="Tariff (INR)">{item.price}</td>
+                <td data-label="Description" className={!item.desc ? "empty-cell" : ""}>{item.desc}</td>
+                <td data-label="K.M. Limit" className={!item.km ? "empty-cell" : ""}>{item.km}</td>
+                <td data-label="Hours" className={!item.hours ? "empty-cell" : ""}>{item.hours}</td>
+                <td data-label="Tariff (INR)" className={!item.price ? "empty-cell" : ""}>{item.price}</td>
               </tr>
             ))}
 
@@ -145,10 +145,10 @@ const VehicleTariff = () => {
             </tr>
             {tariffInfo.local.map((item, idx) => (
               <tr key={`local-${idx}`}>
-                <td data-label="Description">{item.desc}</td>
-                <td data-label="K.M. Limit">{item.km}</td>
-                <td data-label="Hours">{item.hours}</td>
-                <td data-label="Tariff (INR)">{item.price}</td>
+                <td data-label="Description" className={!item.desc ? "empty-cell" : ""}>{item.desc}</td>
+                <td data-label="K.M. Limit" className={!item.km ? "empty-cell" : ""}>{item.km}</td>
+                <td data-label="Hours" className={!item.hours ? "empty-cell" : ""}>{item.hours}</td>
+                <td data-label="Tariff (INR)" className={!item.price ? "empty-cell" : ""}>{item.price}</td>
               </tr>
             ))}
           </tbody>

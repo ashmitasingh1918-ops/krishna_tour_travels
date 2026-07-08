@@ -148,11 +148,19 @@
 
   .tariff-table td {
     text-align: right !important;
-    padding: 12px 15px;
+    padding: 16px 15px; /* Increased padding for better spacing */
     position: relative;
     padding-left: 50%;
-    font-size: 1rem;
+    font-size: 1.05rem;
     border-bottom: 1px solid #edf2f7;
+    min-height: 52px; /* Prevent height collapse */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .tariff-table td.empty-cell {
+    display: none; /* Hide empty rows on mobile for cleaner UI */
   }
 
   .tariff-table td::before {
@@ -161,12 +169,15 @@
     left: 15px;
     width: 45%;
     padding-right: 10px;
-    white-space: nowrap;
+    white-space: normal; /* Allow label wrapping if needed */
     text-align: left;
     font-weight: 700;
     color: #0b2f75;
     text-transform: uppercase;
     font-size: 0.85rem;
+    line-height: 1.2;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .tariff-table .group-header td {

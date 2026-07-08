@@ -17,7 +17,8 @@ import {
   MdGridView,
   MdKingBed,
   MdGroups,
-  MdBusinessCenter
+  MdBusinessCenter,
+  MdAirportShuttle
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -77,13 +78,17 @@ const Fleet = () => {
               <MdGridView className="filter-icon" /> All Vehicles
             </button>
             <button className="active" onClick={() => filterItem("SUV’S")}>
-              <MdKingBed className="filter-icon" /> Luxury
+              <MdKingBed className="filter-icon" /> SUV'S
             </button>
             <button className="active" onClick={() => filterItem("MVP")}>
-              <MdGroups className="filter-icon" /> Group Travel
+              <MdGroups className="filter-icon" /> MVP
+
             </button>
             <button className="active" onClick={() => filterItem("CLASSIC SEDAN’S")}>
-              <MdBusinessCenter className="filter-icon" /> Executive
+              <MdBusinessCenter className="filter-icon" /> CLASSIC SEDAN’S
+            </button>
+            <button className="active" onClick={() => filterItem("MINI VANS’S")}>
+              <MdAirportShuttle className="filter-icon" /> MINI VANS’S
             </button>
           </div>
         </div>

@@ -1,7 +1,8 @@
 /* Package Header */
 
 .package-header {
-    padding: 40px 0 20px;
+    padding: 20px 0 20px;
+    margin-top: 80px; /* To clear the fixed navbar */
 }
 
 .package-header-card {
