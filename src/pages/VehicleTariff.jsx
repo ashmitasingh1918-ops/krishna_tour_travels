@@ -160,6 +160,7 @@ const VehicleTariff = () => {
         <ul className="tariff-terms-list">
           <li><MdCheckCircleOutline className="term-icon" /> All rates are in Indian Rupees.</li>
           <li><MdCheckCircleOutline className="term-icon" /> Complimentary water bottles.</li>
+          <li><MdCheckCircleOutline className="term-icon" /> Complimentary WI-FI.</li>
           <li><MdCheckCircleOutline className="term-icon" /> Timing and mileage will be calculated from our garage to our garage.</li>
           <li><MdCheckCircleOutline className="term-icon" /> Duty for more than four hours will be charged as full-day duty.</li>
           <li><MdCheckCircleOutline className="term-icon" /> All interstate taxes, toll taxes, and parking will be charged extra as per actual receipts wherever applicable.</li>

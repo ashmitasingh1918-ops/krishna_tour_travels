@@ -48,6 +48,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
    included: [
   "Our Own Company Cabs",
+  "Complimentary WI-FI",
   "Pickup & Drop from Airport / Hotel",
   "Polite & Professional Drivers",
   "Planned Tours to Visit All Sites in Delhi",
@@ -118,6 +119,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   included: [
     "Our Own Company Cabs",
+    "Complimentary WI-FI",
     "Pickup & Drop from Airport / Hotel",
     "Polite & Professional Drivers",
     "Planned Tours to Visit All Sites",
@@ -221,6 +223,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     included: [
   "Our Own Company Cabs",
+  "Complimentary WI-FI",
   "Pick up and drop from Airport / Hotel.",
   "Polite & Professional Drivers.",
   "Planned Tours to Visit All Sites in Delhi.",
@@ -302,6 +305,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   included: [
     "Our Own Company Cabs",
+    "Complimentary WI-FI",
     "Pickup & Drop from Airport / Hotel",
     "Polite & Professional Drivers",
     "Planned Tours to Visit All Sites",
@@ -364,6 +368,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   included: [
     "Our Own Company Cabs",
+    "Complimentary WI-FI",
     "Pickup & Drop from Airport / Hotel",
     "Polite & Professional Drivers",
     "Planned Tours to Visit All Sites",
@@ -423,6 +428,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   included: [
     "Our Own Company Cabs",
+    "Complimentary WI-FI",
     "Pickup & Drop from Airport / Hotel",
     "Polite & Professional Drivers",
     "Planned Tours to Visit All Sites",

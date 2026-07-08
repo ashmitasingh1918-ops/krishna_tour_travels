@@ -3,7 +3,22 @@ import fleetApi from "./Fleet_api";
 import "./Fleet.css";
 import VehicleCard from "./VehicleCard";
 import fleetData from "./Fleet_api";
-import { MdArrowForward, MdSupportAgent, MdVerifiedUser, MdCleaningServices, MdPriceCheck } from "react-icons/md";
+import { 
+  MdArrowForward, 
+  MdSupportAgent, 
+  MdVerifiedUser, 
+  MdCleaningServices, 
+  MdPriceCheck,
+  MdLocationOn,
+  MdStar,
+  MdPeople,
+  MdDirectionsCar,
+  MdPhoneInTalk,
+  MdGridView,
+  MdKingBed,
+  MdGroups,
+  MdBusinessCenter
+} from "react-icons/md";
 import { Link } from "react-router-dom";
 
 // Gold Divider Component
@@ -44,50 +59,141 @@ const Fleet = () => {
         </div>
       </section>
 
-      {/* Vehicle Filter */}
-      <section className="fleet-filter-section">
-        <div className="fleet-filter-header-wrapper">
+      {/* Main Fleet Section with Sidebars */}
+      <section className="fleet-layout-section">
+        
+        {/* Header and Filter Buttons - Full Width */}
+        <div className="fleet-header-wrapper">
           <div className="fleet-filter-header-left">
-            <span className="section-pretitle">ELITE COLLECTION</span>
-            <GoldDivider />
+            <span className="section-pretitle">OUR FLEET</span>
             <h2 className="fleet-filter-title">
-              <span className="title-elite">Elite Fleet</span> <span className="title-selection">Selection</span>
+              <span className="title-elite">Drive Your</span> <span className="title-selection">Journey Your Way</span>
             </h2>
-            <p className="fleet-filter-desc">Pristine vehicles for every pilgrimage and corporate need.</p>
+            <p className="fleet-filter-desc">A wide range of well-maintained vehicles to suit every travel need and budget.</p>
+          </div>
+
+          <div className="filterBtns">
+            <button className="active" onClick={() => filterItem("")}>
+              <MdGridView className="filter-icon" /> All Vehicles
+            </button>
+            <button className="active" onClick={() => filterItem("SUV’S")}>
+              <MdKingBed className="filter-icon" /> Luxury
+            </button>
+            <button className="active" onClick={() => filterItem("MVP")}>
+              <MdGroups className="filter-icon" /> Group Travel
+            </button>
+            <button className="active" onClick={() => filterItem("CLASSIC SEDAN’S")}>
+              <MdBusinessCenter className="filter-icon" /> Executive
+            </button>
           </div>
         </div>
 
-        <div className="filterBtns">
-          <button className="active" onClick={() => filterItem("")}>
-            ALL VEHICLE'S
-          </button>
+        <div className="fleet-container">
+          {/* Left Sidebar (Now aligned with cards) */}
+          <aside className="fleet-sidebar fleet-sidebar-left">
+            <div className="sidebar-card">
+              <div className="sidebar-item">
+                <div className="sidebar-icon-box">
+                  <MdCleaningServices />
+                </div>
+                <div className="sidebar-text">
+                  <h5>100% Sanitized Vehicles</h5>
+                  <p>Regularly cleaned and sanitized for your safety.</p>
+                </div>
+              </div>
 
-          <button className="active" onClick={() => filterItem("SUV’S")}>
-            SUV’S
-          </button>
+              <div className="sidebar-item">
+                <div className="sidebar-icon-box">
+                  <MdLocationOn />
+                </div>
+                <div className="sidebar-text">
+                  <h5>Pan India Service</h5>
+                  <p>Available in 100+ cities across India.</p>
+                </div>
+              </div>
 
-          <button className="active" onClick={() => filterItem("MVP")}>
-            MVP
-          </button>
+              <div className="sidebar-item">
+                <div className="sidebar-icon-box">
+                  <MdSupportAgent />
+                </div>
+                <div className="sidebar-text">
+                  <h5>24x7 Support</h5>
+                  <p>Our team is always here to help you.</p>
+                </div>
+              </div>
 
-          <button className="active" onClick={() => filterItem("CLASSIC SEDAN’S")}>
-            CLASSIC SEDAN’S
-          </button>
-          <button className="active" onClick={() => filterItem("MINI VANS’S")}>
-            MINI VANS’S
-          </button>
+              <div className="sidebar-item">
+                <div className="sidebar-icon-box">
+                  <MdPriceCheck />
+                </div>
+                <div className="sidebar-text">
+                  <h5>Best Price Guarantee</h5>
+                  <p>Get the best rates with no hidden charges.</p>
+                </div>
+              </div>
+
+              {/* Stats Section */}
+              <div className="sidebar-item">
+                <div className="sidebar-icon-box">
+                  <MdStar />
+                </div>
+                <div className="sidebar-text">
+                  <h5>4.9/5 Google Rating</h5>
+                  <div className="stars">★★★★★</div>
+                </div>
+              </div>
+
+              <div className="sidebar-item">
+                <div className="sidebar-icon-box">
+                  <MdDirectionsCar />
+                </div>
+                <div className="sidebar-text">
+                  <h5>15+ Vehicle Types</h5>
+                  <p>To choose from across categories.</p>
+                </div>
+              </div>
+
+              <div className="sidebar-item">
+                <div className="sidebar-icon-box">
+                  <MdPeople />
+                </div>
+                <div className="sidebar-text">
+                  <h5>10,000+ Happy Customers</h5>
+                  <p>Trusted by thousands across North India.</p>
+                </div>
+              </div>
+
+              {/* Contact Box */}
+              <div className="sidebar-contact-card">
+                <div className="contact-icon-row">
+                   <div className="contact-icon-circle">
+                      <MdPhoneInTalk />
+                   </div>
+                   <div className="contact-info-text">
+                      <p>Need Help?</p>
+                      <span>We're just a call away</span>
+                   </div>
+                </div>
+                <div className="sidebar-contact-numbers">
+                  <h4>+91 88007 70603</h4>
+                  <h4>+91 89204 62315</h4>
+                </div>
+              </div>
+
+            </div>
+          </aside>
+
+          {/* Vehicle Cards Grid */}
+          <div className="vehicleCards">
+            {vehiclesData.map((vehicle) => (
+              <VehicleCard
+                key={vehicle.id}
+                vehicle={vehicle}
+              />
+            ))}
+          </div>
         </div>
       </section>
-
-      {/* Vehicle Cards */}
-    <div className="vehicleCards">
-  {vehiclesData.map((vehicle) => (
-    <VehicleCard
-      key={vehicle.id}
-      vehicle={vehicle}
-    />
-  ))}
-</div>
 
       {/* Package Advantages */}
       <section className="packageAdv">

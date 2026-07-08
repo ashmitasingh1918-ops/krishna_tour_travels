@@ -1,7 +1,7 @@
   const fleetData = [
   {
     id: 1,
-    name: "SIZUKI CIAZ",
+    name: "Sizuki Ciaz",
     category: "Premium Sedan",
     type: "CLASSIC SEDAN’S",
 
