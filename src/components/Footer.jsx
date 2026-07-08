@@ -100,6 +100,19 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      <div className="footer-bottom mt-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 text-center">
+              <div className="footer-bottom-divider"></div>
+              <p className="copyright-text mb-0">
+                &copy; {new Date().getFullYear()} <span className="fw-bold">KRISHNA TOUR INDIA</span>. All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

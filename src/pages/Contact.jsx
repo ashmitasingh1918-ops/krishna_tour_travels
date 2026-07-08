@@ -5,6 +5,7 @@ import { FiShield, FiBriefcase, FiHeadphones } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
 import branded_hero from "../assets/images/branded_hero.jpg";
+import kia_car from "../assets/images/kia.jpeg";
 
 const Contact = () => {
   const [formState, setFormState] = useState('idle'); // 'idle' | 'submitting' | 'success'
@@ -399,8 +400,8 @@ Experience seamless travel with our premium fleet and dedicated support team. Fr
             <div className="col-lg-5 mt-5 mt-lg-0">
               <div className="cta-image-wrapper">
                 <img
-                  src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/41564/hyundai-creta-right-front-three-quarter9.jpeg?q=80"
-                  alt="White SUV"
+                  src={kia_car}
+                  alt="Kia Luxury SUV"
                   className="cta-car-img"
                 />
               </div>

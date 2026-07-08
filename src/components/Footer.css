@@ -259,3 +259,26 @@
     background-color: #25d366;
     border-color: #25d366;
   }
+
+  .footer-bottom {
+    padding-bottom: 24px;
+    width: 100%;
+  }
+
+  .footer-bottom-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(11, 46, 107, 0.2), transparent);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .copyright-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    letter-spacing: 0.5px;
+  }
+
+  .copyright-text .fw-bold {
+    color: #0b2e6b;
+  }
