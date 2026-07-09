@@ -94,7 +94,7 @@ const Contact = () => {
           <div className="hero-text-side">
             <div className="tag-bar"></div>
             <h1 className="hero-main-title">CONTACT US</h1>
-            
+
             <div className="hero-divider">
               <div className="divider-line"></div>
               <div className="divider-diamond">♦</div>
@@ -102,7 +102,7 @@ const Contact = () => {
             </div>
 
             <p className="hero-p">
-Experience seamless travel with our premium fleet and dedicated support team. From booking to destination, we're committed to delivering exceptional service.       </p>
+              Experience seamless travel with our premium fleet and dedicated support team. From booking to destination, we're committed to delivering exceptional service.       </p>
 
             <div className="hero-features-row">
               <div className="hero-feature-item">
@@ -201,9 +201,9 @@ Experience seamless travel with our premium fleet and dedicated support team. Fr
                     <div className="detail-text-exact">
                       <h6>WhatsApp Us</h6>
                       <p> +91 8800770603</p>
-                      <a 
-                        href="https://wa.me/8920462315" 
-                        target="_blank" 
+                      <a
+                        href="https://wa.me/8800770603"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="accent-text"
                       >
@@ -364,7 +364,7 @@ Experience seamless travel with our premium fleet and dedicated support team. Fr
               <div className="d-flex gap-3 mb-5">
                 <button className="btn-book-now-exact">BOOK NOW <span className="arrow">›</span></button>
                 <a
-                  href="https://wa.me/8920462315?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+                  href="https://wa.me/8800770603?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp-cta"

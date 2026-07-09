@@ -436,6 +436,35 @@
   flex-shrink: 0;
 }
 
+/* Trust Features Bar Styling */
+.vehicle-card-features-bar {
+  background-color: #fdf6f9; /* Warm light-pink brand style overlay */
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 24px;
+  border: 1px solid #fff0f5;
+}
+
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px; /* Compact to fit labels */
+  font-weight: 700;
+  color: #555;
+  line-height: 1.25;
+  font-family: poppins;
+}
+
+.bar-icon {
+  font-size: 1.25rem;
+  color: #B0055B; /* Accent brand color */
+  flex-shrink: 0;
+}
+
 .vehicle-card-buttons {
   display: flex;
   gap: 12px;
@@ -736,4 +765,19 @@
     width: 28px;
     height: 28px;
   }
-}
+
+  /* Compact screens */
+  .vehicle-card-specs {
+    flex-wrap: wrap;
+    gap: 10px 15px;
+  }
+
+  .spec-item {
+    font-size: 13px;
+  }
+
+  .vehicle-card-features-bar {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid on mobile */
+    gap: 10px 8px;
+  }
+}

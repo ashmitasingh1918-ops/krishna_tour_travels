@@ -1001,13 +1001,38 @@ body {
 
 @media (max-width: 768px) {
   .promise-grid {
-    flex-direction: column;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
   }
   .promise-section-title {
     font-size: 2.2rem;
   }
   .promise-card {
-    padding: 40px 20px;
+    padding: 25px 15px 20px 15px !important;
+    border-radius: 12px !important;
+  }
+  .promise-icon-wrapper {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 auto 15px auto !important;
+  }
+  .promise-icon,
+  .promise-rupee-icon {
+    font-size: 20px !important;
+  }
+  .promise-title {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+  }
+  .promise-desc {
+    font-size: 0.8rem !important;
+    margin-bottom: 10px !important;
+  }
+  .card-number {
+    left: 15px !important;
+    padding: 4px 8px !important;
+    font-size: 10px !important;
   }
 }
 
@@ -1278,6 +1303,7 @@ body {
   }
   .hero-slide {
     background-position: center center !important;
+    background-size: 100% 100% !important; /* Fills the container exactly with no cropping */
   }
 
   .container {
@@ -1292,6 +1318,15 @@ body {
     grid-template-columns: 1fr;
   }
   
+  .hero-section {
+    aspect-ratio: 460 / 341 !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 15px !important;
+  }
+  
   .hero-main-title {
     font-size: 1.9rem;
   }
@@ -1301,7 +1336,12 @@ body {
   }
   
   .promise-section-title {
-    font-size: 1.8rem;
+    font-size: 1.45rem !important;
+    white-space: nowrap !important;
+  }
+
+  .promise-section-title .cursive-highlight {
+    margin: 0 5px !important;
   }
   
   .heading-flourish {
