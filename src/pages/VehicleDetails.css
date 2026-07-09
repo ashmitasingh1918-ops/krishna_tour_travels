@@ -48,9 +48,14 @@
    Images
 =========================== */
 
+/* ===========================
+   Images
+=========================== */
+
 .vehicle-images {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
     margin-bottom: 45px;
 }
@@ -58,9 +63,11 @@
 .vehicle-image {
     width: 48%;
     height: 350px;
-    object-fit: cover;
+    object-fit: contain;      /* Shows the full image */
+    background: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: block;
 }
 
 /* ===========================
@@ -264,13 +271,44 @@
     }
 }
 
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 992px) {
+
+    .vehicle-images {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .vehicle-image {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+
+    .similar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+
+    .vehicle-details {
+        padding: 15px;
+        margin-top: 70px;
+    }
 
     .vehicle-details-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
-        margin-top: 20px;
+    }
+
+    .vehicle-title {
+        font-size: 32px;
     }
 
     .back-to-fleet-btn {
@@ -278,30 +316,48 @@
         justify-content: center;
     }
 
-    .vehicle-title {
-        font-size: 30px;
+    .vehicle-images {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .vehicle-image {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
     }
 
     .vehicle-card {
-        padding: 25px;
+        padding: 20px;
     }
 
     .vehicle-info h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .vehicle-info h3 {
-        font-size: 24px;
+        font-size: 22px;
+    }
+
+    .vehicle-info p,
+    .feature-list li {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .vehicle-details-table {
+        overflow-x: auto;
+    }
+
+    .vehicle-details-table table {
+        min-width: 500px;
     }
 
     .vehicle-details-table th,
     .vehicle-details-table td {
-        padding: 12px;
-        font-size: 15px;
-    }
-
-    .vehicle-details-table th {
-        width: 45%;
+        font-size: 14px;
+        padding: 10px;
     }
 
     .similar-grid {
@@ -309,7 +365,12 @@
     }
 
     .similar-title {
-        font-size: 32px;
+        font-size: 28px;
         text-align: center;
+    }
+
+    .similar-image {
+        height: 220px;
+        object-fit: cover;
     }
 }
