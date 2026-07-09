@@ -15,7 +15,7 @@ function Footer() {
             <div className="contact-info-row d-flex align-items-start mb-2">
               <i className="bi bi-geo-alt-fill me-3 title-magenta"></i>
               <p className="address-text">
-                Rz-7/232 J-Block west sagarpur new delhi 110046 near Sakuntla hospital
+                Rz-7/232 J-Block west sagarpur new delhi 110046 (India) near Sakuntla hospital
               </p>
             </div>
 
@@ -76,7 +76,7 @@ function Footer() {
                 <div className="icon-circle-blue">
                   <i className="bi bi-telephone-fill"></i>
                 </div>
-                <span>+91 8800770603</span>
+                <span> +91 8800770603 </span>
               </div>
               <div className="contact-row">
                 <div className="icon-circle-blue">

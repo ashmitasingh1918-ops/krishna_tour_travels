@@ -24,7 +24,7 @@ const Contact = () => {
   }, [location]);
 
   const officeLocation = {
-    address: "Rz-7/232 J-Block west sagarpur new delhi 110046 near Sakuntla hospital",
+    address: "Rz-7/232 J-Block west sagarpur new delhi 110046 (India) near Sakuntla hospital",
     googleMapsEmbedUrl: "https://maps.google.com/maps?q=Rz-7/232%20J-Block%20west%20sagarpur%20new%20delhi%20110046&t=&z=14&ie=UTF8&iwloc=B&output=embed"
   };
 
@@ -200,7 +200,7 @@ Experience seamless travel with our premium fleet and dedicated support team. Fr
                     </div>
                     <div className="detail-text-exact">
                       <h6>WhatsApp Us</h6>
-                      <p>+91 8920462315</p>
+                      <p> +91 8800770603</p>
                       <a 
                         href="https://wa.me/8920462315" 
                         target="_blank" 
