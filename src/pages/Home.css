@@ -563,19 +563,7 @@ body {
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(5, 27, 68, 0.75) 0%,
-    rgba(5, 27, 68, 0.45) 45%,
-    rgba(5, 27, 68, 0.15) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
+  display: none !important;
 }
 
 .hero-content-wrapper {
@@ -1298,9 +1286,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hero-overlay {
-    background: rgba(5, 27, 68, 0.4); 
-  }
   .hero-slide {
     background-position: center center !important;
     background-size: 100% 100% !important; /* Fills the container exactly with no cropping */

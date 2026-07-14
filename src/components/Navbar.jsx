@@ -19,6 +19,16 @@ function Navbar() {
             className="logo-img"
           />
         </Link>
+        
+        {/* Mobile/Tablet Inline Navigation Links */}
+        <div className="mobile-inline-nav-links">
+          <Link className="mobile-inline-link" to="/fleet">
+            Fleets
+          </Link>
+          <Link className="mobile-inline-link" to="/packages">
+            Packages
+          </Link>
+        </div>
 
         <button
           className="navbar-toggler"
@@ -50,7 +60,7 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-item nav-item-dropdown">
+            <li className="nav-item nav-item-dropdown desktop-only-nav-item">
               <Link className="nav-link" to="/fleet">
                 Our Fleet <span className="dropdown-arrow">▼</span>
               </Link>
@@ -87,7 +97,7 @@ function Navbar() {
               </ul>
             </li>
 
-            <li className="nav-item nav-item-dropdown">
+            <li className="nav-item nav-item-dropdown desktop-only-nav-item">
               <Link className="nav-link" to="/packages">
                 Tour Packages <span className="dropdown-arrow">▼</span>
               </Link>

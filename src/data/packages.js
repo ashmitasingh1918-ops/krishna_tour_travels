@@ -1,9 +1,9 @@
-import n from "../assets/places/2n.png";
-import local from "../assets/places/local-tour.png";
-import tri from "../assets/places/tri.png";
-import jai from "../assets/places/jai.png";
-import harid from "../assets/places/harid.png";
-import taj from "../assets/places/taj.png";
+import delhiTour from "../assets/images/delhi_tour.png";
+import delhi from "../assets/images/delhi.png";
+import triangle from "../assets/images/triangle.png";
+import jaipur from "../assets/images/jaipur.png";
+import hari from "../assets/images/hari.png";
+import agra from "../assets/images/agra.png";
 const packages = [
   {
     id: "delhi-local",
@@ -12,7 +12,7 @@ const packages = [
 
     duration: "1 Night / 2 Days",
 
-    gallery: local,
+    gallery: delhiTour,
 
     overview:
       "Explore the rich heritage of Old and New Delhi with guided sightseeing covering iconic landmarks and cultural attractions.",
@@ -74,7 +74,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   // price: "₹6,500",
 
-  gallery: n,
+  gallery: delhi,
 
   overview:
     "Discover the perfect blend of history, culture, and architecture with this Delhi-Agra-Delhi tour. Explore the iconic landmarks of Delhi and witness the timeless beauty of the Taj Mahal and Agra Fort, two of India's most celebrated heritage sites.",
@@ -146,7 +146,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     // price: "₹24,900",
 
-    gallery: tri,
+    gallery: triangle,
 
     overview:
 "Discover India's most iconic destinations on the Golden Triangle Tour covering Delhi, Agra, Jaipur, and Mandawa. Experience magnificent Mughal monuments, royal palaces, historic forts, colorful markets, and the rich cultural heritage of North India.",
@@ -250,7 +250,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   // price: "₹12,900",
 
-  gallery: jai,
+  gallery: jaipur,
 
   overview:
     "Experience the famous Golden Triangle circuit covering Delhi, Agra, and Jaipur. Visit iconic Mughal monuments, majestic forts, royal palaces, and discover the rich heritage and culture of North India.",
@@ -331,7 +331,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   // price: "₹5,500",
 
-  gallery: harid, // import your package image
+  gallery: hari, // import your package image
 
   overview:
     "Experience a spiritual journey to Haridwar and Rishikesh, two of India's most sacred destinations. Witness the divine Ganga Aarti, visit famous temples, explore ashrams, and enjoy the peaceful atmosphere of the holy Ganges.",
@@ -394,7 +394,7 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
   // price: "₹4,500",
 
-  gallery: taj,
+  gallery: agra,
 
   overview:
     "Experience the timeless beauty of Agra with a comfortable trip from Delhi. Visit the majestic Agra Fort and witness the breathtaking Taj Mahal, one of the Seven Wonders of the World.",
