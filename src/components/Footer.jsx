@@ -37,6 +37,8 @@ function Footer() {
               <li><Link to="/"><i className="bi bi-chevron-right gold-chevron"></i> Home</Link></li>
               <li><Link to="/about"><i className="bi bi-chevron-right gold-chevron"></i> About Us</Link></li>
               <li><Link to="/fleet"><i className="bi bi-chevron-right gold-chevron"></i> Our Fleet</Link></li>
+              <li><Link to="/packages"><i className="bi bi-chevron-right gold-chevron"></i> Tour Packages</Link></li>
+              <li><Link to="/blog"><i className="bi bi-chevron-right gold-chevron"></i> Blog</Link></li>
               <li><Link to="/contact"><i className="bi bi-chevron-right gold-chevron"></i> Contact Us</Link></li>
             </ul>
           </div>

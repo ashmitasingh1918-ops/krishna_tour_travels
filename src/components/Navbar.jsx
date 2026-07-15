@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../assets/images/ltp.png";
 import { MdCalendarToday } from "react-icons/md";
@@ -22,12 +22,12 @@ function Navbar() {
         
         {/* Mobile/Tablet Inline Navigation Links */}
         <div className="mobile-inline-nav-links">
-          <Link className="mobile-inline-link" to="/fleet">
+          <NavLink className="mobile-inline-link" to="/fleet">
             Fleets
-          </Link>
-          <Link className="mobile-inline-link" to="/packages">
+          </NavLink>
+          <NavLink className="mobile-inline-link" to="/packages">
             Packages
-          </Link>
+          </NavLink>
         </div>
 
         <button
@@ -49,21 +49,21 @@ function Navbar() {
           <ul className="navbar-nav ms-auto align-items-center">
 
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <NavLink className="nav-link" to="/" end>
                 Home
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <NavLink className="nav-link" to="/about">
                 About Us
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item nav-item-dropdown desktop-only-nav-item">
-              <Link className="nav-link" to="/fleet">
+              <NavLink className="nav-link" to="/fleet">
                 Our Fleet <span className="dropdown-arrow">▼</span>
-              </Link>
+              </NavLink>
               <ul className="dropdown-menu-custom">
                 <li className="has-submenu">
                   <Link to="/fleet?category=sedan">Classic Sedans <span className="side-arrow">›</span></Link>
@@ -98,9 +98,9 @@ function Navbar() {
             </li>
 
             <li className="nav-item nav-item-dropdown desktop-only-nav-item">
-              <Link className="nav-link" to="/packages">
+              <NavLink className="nav-link" to="/packages">
                 Tour Packages <span className="dropdown-arrow">▼</span>
-              </Link>
+              </NavLink>
               <ul className="dropdown-menu-custom">
                 <li><Link to="/packages/delhi-local">Delhi Local City Tour</Link></li>
                 <li><Link to="/packages/delhi-agra-delhi-2n">Delhi-Agra-Delhi Tour</Link></li>
@@ -113,9 +113,15 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <NavLink className="nav-link" to="/blog">
+                Blog
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/contact">
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item nav-btn-item">

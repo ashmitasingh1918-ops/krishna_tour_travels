@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Fleet from "./pages/Fleet";
 import Contact from "./pages/Contact";
 import Packages from "./pages/Packages";
+import Blog from "./pages/Blog";
 import VehicleDetails from "./pages/VehicleDetails";
 import VehicleTariff from "./pages/VehicleTariff";
 import PackageDetails from "./pages/PackageDetails";
@@ -23,6 +24,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/fleet" element={<Fleet />} />
         <Route path="/packages" element={<Packages />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/vehicle/:id" element={<VehicleDetails />} />
