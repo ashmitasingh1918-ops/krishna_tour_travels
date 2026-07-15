@@ -4,6 +4,22 @@ import logo from "../assets/images/ltp.png";
 import { MdCalendarToday } from "react-icons/md";
 
 function Navbar() {
+  const closeNavbar = () => {
+    const collapseEl = document.getElementById("navbarNav");
+    if (collapseEl && collapseEl.classList.contains("show")) {
+      if (window.bootstrap?.Collapse) {
+        const bsCollapse = window.bootstrap.Collapse.getInstance(collapseEl) 
+          || new window.bootstrap.Collapse(collapseEl, { toggle: false });
+        bsCollapse.hide();
+      } else {
+        const toggler = document.querySelector(".navbar-toggler");
+        if (toggler && !toggler.classList.contains("collapsed")) {
+          toggler.click();
+        }
+      }
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
 
@@ -12,6 +28,7 @@ function Navbar() {
         <Link
           className="navbar-brand d-flex align-items-center"
           to="/"
+          onClick={closeNavbar}
         >
           <img
             src={logo}
@@ -22,10 +39,10 @@ function Navbar() {
         
         {/* Mobile/Tablet Inline Navigation Links */}
         <div className="mobile-inline-nav-links">
-          <NavLink className="mobile-inline-link" to="/fleet">
+          <NavLink className="mobile-inline-link" to="/fleet" onClick={closeNavbar}>
             Fleets
           </NavLink>
-          <NavLink className="mobile-inline-link" to="/packages">
+          <NavLink className="mobile-inline-link" to="/packages" onClick={closeNavbar}>
             Packages
           </NavLink>
         </div>
@@ -45,6 +62,7 @@ function Navbar() {
         <div
           className="collapse navbar-collapse"
           id="navbarNav"
+          onClick={closeNavbar}
         >
           <ul className="navbar-nav ms-auto align-items-center">
 
