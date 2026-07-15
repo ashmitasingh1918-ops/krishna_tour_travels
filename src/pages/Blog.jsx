@@ -1,9 +1,6 @@
-import React from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   FaCalendarAlt,
-  FaQuoteLeft,
-  FaStar,
   FaUsers,
   FaCarSide,
   FaShieldAlt,
@@ -17,7 +14,6 @@ import {
 } from "react-icons/fa";
 
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import blogData from "./Blog_api";
 
 import "./Blog.css";
@@ -119,45 +115,70 @@ const Blog = () => {
           {/* Article Content Section */}
           <section className="blogArticleSection">
             <div className="blogContainer">
-              <div className="articleMainWrapper">
-                <article className="blogArticleContent">
-                  {currentBlog.content && Array.isArray(currentBlog.content) ? (
-                    currentBlog.content.map((block, idx) => {
-                      if (block.type === "paragraph") {
-                        return <p key={idx} className="detailParagraph">{block.text}</p>;
-                      }
-                      if (block.type === "heading") {
-                        return <h3 key={idx} className="detailSubheading">{block.text}</h3>;
-                      }
-                      if (block.type === "tip") {
-                        return (
-                          <div key={idx} className="detailTipBox">
-                            <span className="tipBoxIcon">💡</span>
-                            <div className="tipBoxText">
-                              <h5>Travel Tip</h5>
-                              <p>{block.text}</p>
-                            </div>
-                          </div>
-                        );
-                      }
-                      return null;
-                    })
-                  ) : (
-                    <p className="detailParagraph">{currentBlog.description}</p>
-                  )}
+              <div className="blogDetailsLayout">
+                {/* Left Column: Large Featured Image */}
+                <div className="blogDetailsLeft">
+                  <div className="blogFeaturedImageWrapper">
+                    <img 
+                      src={currentBlog.image || currentBlog.coverImage} 
+                      alt={currentBlog.title} 
+                      className="blogFeaturedImage"
+                    />
+                  </div>
+                </div>
 
-                  {/* Tags */}
-                  {currentBlog.tags && (
-                    <div className="articleTagsContainer">
-                      <span className="tagsLabel">Tags:</span>
-                      <div className="articleTagsList">
-                        {currentBlog.tags.map((tag, idx) => (
-                          <span key={idx} className="articleTag">#{tag}</span>
-                        ))}
+                {/* Right Column: Article Details */}
+                <div className="blogDetailsRight">
+                  <div className="blogDetailsAuthorMeta">
+                    <span className="blogAuthorInfo">
+                      By <strong className="blogAuthorName">{currentBlog.author}</strong>
+                    </span>
+                    <span className="blogMetaSeparator">•</span>
+                    <span className="blogReadTime">{currentBlog.readTime}</span>
+                  </div>
+
+                  <article className="blogArticleContent">
+                    {currentBlog.content && Array.isArray(currentBlog.content) ? (
+                      currentBlog.content.map((block, idx) => {
+                        if (block.type === "paragraph") {
+                          return <p key={idx} className="detailParagraph">{block.text}</p>;
+                        }
+                        if (block.type === "heading") {
+                          return <h3 key={idx} className="detailSubheading">{block.text}</h3>;
+                        }
+                        if (block.type === "tip") {
+                          return (
+                            <div key={idx} className="detailTipBox">
+                              <span className="tipBoxIcon">💡</span>
+                              <div className="tipBoxText">
+                                <h5>Travel Tip</h5>
+                                <p>{block.text}</p>
+                              </div>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })
+                    ) : (
+                      <p className="detailParagraph">{currentBlog.description}</p>
+                    )}
+
+                    {/* Tags */}
+                    {currentBlog.tags && (
+                      <div className="articleTagsContainer">
+                        <span className="tagsLabel">Tags:</span>
+                        <div className="articleTagsList">
+                          {currentBlog.tags.map((tag, idx) => (
+                            <span key={idx} className="articleTag">#{tag}</span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </article>
+                    )}
+                  </article>
+                </div>
+              </div>
+
+              <div className="articleMainWrapper">
 
                 {/* Article Footer: Navigation & Share */}
                 <div className="detailNavigation">
