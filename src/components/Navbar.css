@@ -419,4 +419,28 @@ body{
     font-size: 12.5px;
     padding: 6px 8px;
   }
+}
+
+/* Header row layout */
+.navbar-header-mobile-wrap {
+  display: contents;
+}
+
+@media (max-width: 991px) {
+  .navbar-header-mobile-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navbar-toggler {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 48px !important;
+    max-width: 130px !important;
+  }
 }

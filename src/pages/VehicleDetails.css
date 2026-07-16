@@ -1,6 +1,6 @@
 .vehicle-details {
     max-width: 1200px;
-    margin: 80px auto 60px; /* Reduced to sit closer to the navbar */
+    margin: 110px auto 60px; /* Increased to 110px to avoid navbar overlapping */
     padding: 10px;
 }
 
@@ -23,8 +23,35 @@
     margin: 0;
 }
 
+.vehicle-details-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.view-tariff-btn {
+    background-color: #032478; /* Premium Navy */
+    color: #ffffff !important;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 12px rgba(3, 36, 120, 0.2);
+}
+
+.view-tariff-btn:hover {
+    background-color: #021a59;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(3, 36, 120, 0.35);
+    color: #ffffff !important;
+}
+
 .back-to-fleet-btn {
-    background-color: #B0055B;
+    background-color: #B0055B; /* Premium Pink */
     color: #ffffff !important;
     border-radius: 8px;
     padding: 10px 24px;
@@ -298,7 +325,7 @@
 
     .vehicle-details {
         padding: 15px;
-        margin-top: 70px;
+        margin-top: 110px !important;
     }
 
     .vehicle-details-header {
@@ -311,6 +338,13 @@
         font-size: 32px;
     }
 
+    .vehicle-details-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .view-tariff-btn,
     .back-to-fleet-btn {
         width: 100%;
         justify-content: center;

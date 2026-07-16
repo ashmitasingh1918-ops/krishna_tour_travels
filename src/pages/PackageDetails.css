@@ -61,7 +61,7 @@
     padding: 25px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     font-family: poppins;
-    font-size: 1.35rem;
+    font-size: 1rem;
 }
 
 .highlights-card {
@@ -77,7 +77,7 @@
 }
 
 .package-overview p {
-    font-size: 1.35rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #000;
     font-family: poppins;
@@ -126,8 +126,7 @@
     padding-bottom: 12px;
     border-bottom: 1px solid #eee;
     font-family: poppins;
-    font-size: 1.35rem;
-    
+    font-size: 1rem;
 }
 
 .highlight-item i {
@@ -183,7 +182,7 @@
 .itinerary-card p {
     line-height: 2;
     color: #000;
-    font-size: 1.25rem;
+    font-size: 1rem;
     white-space: pre-line;
     margin-bottom: 0;
     font-family: poppins;
@@ -295,7 +294,7 @@
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     font-family: poppins;
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 .package-header {
     margin-bottom: 20px;

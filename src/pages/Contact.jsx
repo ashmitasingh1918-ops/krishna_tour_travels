@@ -158,7 +158,7 @@ const Contact = () => {
                     <div className="detail-text-exact">
                       <h6>Call Us</h6>
                       <p>+91 8800770603</p>
-                      <p>+91 8920462315</p>
+                      <p>+91 9717393115</p>
                     </div>
                   </div>
 

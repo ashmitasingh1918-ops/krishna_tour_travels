@@ -25,39 +25,41 @@ function Navbar() {
 
       <div className="container-fluid">
 
-        <Link
-          className="navbar-brand d-flex align-items-center"
-          to="/"
-          onClick={closeNavbar}
-        >
-          <img
-            src={logo}
-            alt="Krishna Tours Logo"
-            className="logo-img"
-          />
-        </Link>
-        
-        {/* Mobile/Tablet Inline Navigation Links */}
-        <div className="mobile-inline-nav-links">
-          <NavLink className="mobile-inline-link" to="/fleet" onClick={closeNavbar}>
-            Fleets
-          </NavLink>
-          <NavLink className="mobile-inline-link" to="/packages" onClick={closeNavbar}>
-            Packages
-          </NavLink>
-        </div>
+        <div className="navbar-header-mobile-wrap">
+          <Link
+            className="navbar-brand d-flex align-items-center"
+            to="/"
+            onClick={closeNavbar}
+          >
+            <img
+              src={logo}
+              alt="Krishna Tours Logo"
+              className="logo-img"
+            />
+          </Link>
+          
+          {/* Mobile/Tablet Inline Navigation Links */}
+          <div className="mobile-inline-nav-links">
+            <NavLink className="mobile-inline-link" to="/fleet" onClick={closeNavbar}>
+              Fleets
+            </NavLink>
+            <NavLink className="mobile-inline-link" to="/packages" onClick={closeNavbar}>
+              Packages
+            </NavLink>
+          </div>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <div
           className="collapse navbar-collapse"

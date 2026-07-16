@@ -172,8 +172,11 @@ const VehicleTariff = () => {
         </ul>
       </div>
 
-      <div className="tariff-action" style={{ marginTop: '2rem', textAlign: 'center' }}>
-        <Link to={`/vehicle/${vehicle.id}`} className="btn btn-primary">
+      <div className="tariff-actions">
+        <Link to="/fleet" className="tariff-btn tariff-btn-fleet">
+          Go Back to Fleet
+        </Link>
+        <Link to={`/vehicle/${vehicle.id}`} className="tariff-btn tariff-btn-primary">
           View Vehicle Details
         </Link>
       </div>
