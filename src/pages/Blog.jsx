@@ -187,7 +187,17 @@ const Blog = () => {
                     {currentBlog.content && Array.isArray(currentBlog.content) ? (
                       currentBlog.content.map((block, idx) => {
                         if (block.type === "paragraph") {
-                          return <p key={idx} className="detailParagraph">{block.text}</p>;
+                          const parts = block.text.split(/(\*\*.*?\*\*)/g);
+                          return (
+                            <p key={idx} className="detailParagraph">
+                              {parts.map((part, i) => {
+                                if (part.startsWith('**') && part.endsWith('**')) {
+                                  return <strong key={i}>{part.slice(2, -2)}</strong>;
+                                }
+                                return part;
+                              })}
+                            </p>
+                          );
                         }
                         if (block.type === "heading") {
                           return <h3 key={idx} className="detailSubheading">{block.text}</h3>;
@@ -368,9 +378,6 @@ const Blog = () => {
                     
                     <div className="latestBlogCardContent">
                       <div className="blogMeta">
-                        <span className="blogMetaItem">
-                          <FaCalendarAlt className="blogMetaIcon" /> {blog.date}
-                        </span>
                         <span className="blogMetaItem">
                           <span className="blogMetaIcon">📁</span> {blog.category || "Travel"}
                         </span>
