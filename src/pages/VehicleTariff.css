@@ -36,7 +36,8 @@
   width: 48%;
   height: 320px;
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -47,6 +48,8 @@
 
   .tariff-vehicle-image {
     width: 100%;
+    height: auto;
+    max-height: 320px;
   }
 }
 
