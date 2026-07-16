@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   FaCalendarAlt,
@@ -38,11 +39,22 @@ const Blog = () => {
     ? blogsList.find((blog) => blog.id === Number(id))
     : null;
 
+  const [activeSlideIdx, setActiveSlideIdx] = useState(0);
+
+  // Auto-play the blog details slideshow if multiple images exist
+  useEffect(() => {
+    setActiveSlideIdx(0);
+    if (currentBlog && currentBlog.images && currentBlog.images.length > 1) {
+      const interval = setInterval(() => {
+        setActiveSlideIdx((prev) => (prev + 1) % currentBlog.images.length);
+      }, 3500);
+      return () => clearInterval(interval);
+    }
+  }, [currentBlog]);
+
   // Listing page logic:
-  // Find the featured blog (featured === true)
-  const featuredBlog = blogsList.find((blog) => blog.featured);
-  // Remaining blogs as latest blogs
-  const latestBlogs = blogsList.filter((blog) => !blog.featured);
+  // Render all blogs in the main grid list
+  const latestBlogs = blogsList;
 
   // Details page logic:
   // Find previous and next blogs for navigation
@@ -94,20 +106,6 @@ const Blog = () => {
                   {currentBlog.category}
                 </span>
                 <h1 className="detailsPostTitle">{currentBlog.title}</h1>
-                
-                <div className="detailsPostMeta">
-                  <span className="detailsMetaItem">
-                    By <span className="metaAuthor">{currentBlog.author}</span>
-                  </span>
-                  <span className="detailsMetaDivider">|</span>
-                  <span className="detailsMetaItem">
-                    <FaCalendarAlt /> {currentBlog.publishedDate || currentBlog.date}
-                  </span>
-                  <span className="detailsMetaDivider">|</span>
-                  <span className="detailsMetaItem">
-                    {currentBlog.readTime}
-                  </span>
-                </div>
               </div>
             </div>
           </section>
@@ -119,23 +117,71 @@ const Blog = () => {
                 {/* Left Column: Large Featured Image */}
                 <div className="blogDetailsLeft">
                   <div className="blogFeaturedImageWrapper">
-                    <img 
-                      src={currentBlog.image || currentBlog.coverImage} 
-                      alt={currentBlog.title} 
-                      className="blogFeaturedImage"
-                    />
+                    {currentBlog.images && currentBlog.images.length > 0 ? (
+                      <div className="blog-detail-slider">
+                        {currentBlog.images.map((imgUrl, index) => (
+                          <img
+                            key={index}
+                            src={imgUrl}
+                            alt={`${currentBlog.title} slide ${index + 1}`}
+                            className={`blogFeaturedImage slider-image ${index === activeSlideIdx ? 'active' : ''}`}
+                            style={{
+                              opacity: index === activeSlideIdx ? 1 : 0,
+                              visibility: index === activeSlideIdx ? 'visible' : 'hidden',
+                              position: 'absolute',
+                              top: 0,
+                              left: 0,
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover',
+                              transition: 'opacity 0.5s ease-in-out'
+                            }}
+
+                          />
+                        ))}
+                        {currentBlog.images.length > 1 && (
+                          <>
+                            <button 
+                              className="slider-btn prev-btn" 
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setActiveSlideIdx((prev) => (prev - 1 + currentBlog.images.length) % currentBlog.images.length);
+                              }}
+                            >
+                              ‹
+                            </button>
+                            <button 
+                              className="slider-btn next-btn" 
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setActiveSlideIdx((prev) => (prev + 1) % currentBlog.images.length);
+                              }}
+                            >
+                              ›
+                            </button>
+                            <div className="slider-dots">
+                              {currentBlog.images.map((_, index) => (
+                                <span 
+                                  key={index} 
+                                  className={`slider-dot ${index === activeSlideIdx ? 'active' : ''}`}
+                                  onClick={() => setActiveSlideIdx(index)}
+                                />
+                              ))}
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    ) : (
+                      <img 
+                        src={currentBlog.image || currentBlog.coverImage} 
+                        alt={currentBlog.title} 
+                        className="blogFeaturedImage"
+                      />
+                    )}
                   </div>
                 </div>
 
-                {/* Right Column: Article Details */}
                 <div className="blogDetailsRight">
-                  <div className="blogDetailsAuthorMeta">
-                    <span className="blogAuthorInfo">
-                      By <strong className="blogAuthorName">{currentBlog.author}</strong>
-                    </span>
-                    <span className="blogMetaSeparator">•</span>
-                    <span className="blogReadTime">{currentBlog.readTime}</span>
-                  </div>
 
                   <article className="blogArticleContent">
                     {currentBlog.content && Array.isArray(currentBlog.content) ? (
@@ -286,66 +332,22 @@ const Blog = () => {
       {!isDetailsView && (
         <div className="blogListingView">
           {/* 1. Hero Section */}
-          <section className="blogHeroSection">
-            <div className="blogHeroOverlay"></div>
-            <div className="blogHeroContent">
-              <span className="blogHeroBadge">BLOG</span>
-              <h1 className="blogHeroHeading">Stories from Happy Travelers</h1>
-              <p className="blogHeroDescription">
-                Real experiences and travel diaries from our amazing clients who explored the beauty of India with Krishna Tour India.
-              </p>
-              <a href="#featured-story" className="blogBtn blogBtn-primary heroBtn">
-                Explore Stories
-              </a>
-            </div>
+          <section 
+            className="blogHeroSection"
+            style={{
+              backgroundImage: `url('${import.meta.env.BASE_URL}images/b.png')`
+            }}
+          >
+            <a 
+              href="#travel-stories" 
+              className="blogBtn blogBtn-primary heroBtn"
+            >
+              Explore Stories
+            </a>
           </section>
 
-          {/* 2. Featured Story Section */}
-          {featuredBlog && (
-            <section id="featured-story" className="featuredBlogSection">
-              <div className="blogContainer">
-                <span className="blogSectionPretitle">FEATURED STORY</span>
-                <h2 className="blogSectionHeading">Highlight of the Month</h2>
-                
-                <div className="featuredBlogCard">
-                  <div className="featuredBlogImageWrapper">
-                    <img
-                      src={featuredBlog.image}
-                      alt={featuredBlog.title}
-                      className="featuredBlogImage"
-                    />
-                    <span className="blogCategoryBadge">
-                      {featuredBlog.category || "Featured Travel"}
-                    </span>
-                  </div>
-                  
-                  <div className="featuredBlogContent">
-                    <div className="blogMeta">
-                      <span className="blogMetaItem">
-                        <FaCalendarAlt className="blogMetaIcon" /> {featuredBlog.date}
-                      </span>
-                      <span className="blogMetaItem">
-                        <span className="blogMetaIcon">📁</span> {featuredBlog.category || "Travel"}
-                      </span>
-                    </div>
-                    
-                    <h3 className="featuredBlogTitle">{featuredBlog.title}</h3>
-                    <p className="featuredBlogDesc">{featuredBlog.description}</p>
-                    
-                    <Link
-                      to={`/blog/${featuredBlog.id}`}
-                      className="blogBtn blogBtn-primary"
-                    >
-                      Read More
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-
-          {/* 3. Latest Stories Section */}
-          <section className="latestStoriesSection">
+          {/* 3. Stories Grid Section */}
+          <section id="travel-stories" className="latestStoriesSection">
             <div className="blogContainer">
               <span className="blogSectionPretitle">LATEST STORIES</span>
               <h2 className="blogSectionHeading">Travel Diaries & Updates</h2>

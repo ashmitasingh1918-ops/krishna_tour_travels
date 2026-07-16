@@ -66,7 +66,7 @@
 }
 
 .address-text {
-  font-size: 1.15rem;
+  font-size: 0.92rem;
 
   color: #1a1a1a;
   line-height: 1.5;
@@ -122,7 +122,7 @@
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.92rem;
 
   display: flex;
   align-items: center;
@@ -154,7 +154,7 @@
   font-weight: 600;
   color: #1a1a1a;
   font-family: poppins;
-  font-size: 1.1rem;
+  font-size: 0.92rem;
 }
   .gold-icon {
     color: #d4af37;
@@ -177,9 +177,9 @@
     /* font-size: 0.9rem; */
     font-family: poppins;
 
-    font-size: 1.1rem;
+    font-size: 0.92rem;
 
-    padding-left: 3rem;
+    padding-left: 2rem;
   }
 
   .icon-circle-blue {

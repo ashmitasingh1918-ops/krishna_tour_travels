@@ -258,13 +258,18 @@ const Fleet = () => {
         </p>
 
         <div className="ctaBtns">
-          <button className="quoteBtn">
+          <Link className="quoteBtn" to="/contact#contactForm">
             Get a Free Quote
-          </button>
+          </Link>
 
-          <button className="whatsappBtn">
+          <a 
+            className="whatsappBtn"
+            href="https://wa.me/918800770603?text=Hi!%20I%27m%20interested%20in%20booking%20a%20custom%20tour%20package."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             WhatsApp Us
-          </button>
+          </a>
         </div>
       </section>
     </>

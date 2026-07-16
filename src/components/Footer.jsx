@@ -20,10 +20,9 @@ function Footer() {
             </div>
 
             <div className="footer-social-links mt-3">
-              <a href="#" className="social-icon facebook"><i className="bi bi-facebook"></i></a>
+              <a href="https://www.facebook.com/share/1bgpof5NUT/" target="_blank" rel="noopener noreferrer" className="social-icon facebook"><i className="bi bi-facebook"></i></a>
               <a href="https://wa.me/8800770603?text=Hello%20Krishna%20Tour%20India,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" className="social-icon whatsapp"><i className="bi bi-whatsapp"></i></a>
-              <a href="#" className="social-icon instagram"><i className="bi bi-instagram"></i></a>
-              <a href="#" className="social-icon twitter"><i className="bi bi-twitter-x"></i></a>
+              <a href="https://www.instagram.com/krishna_tour_india?igsh=MWRjNDk1eG9seXJ4cg==" target="_blank" rel="noopener noreferrer" className="social-icon instagram"><i className="bi bi-instagram"></i></a>
             </div>
           </div>
 
@@ -37,7 +36,6 @@ function Footer() {
               <li><Link to="/"><i className="bi bi-chevron-right gold-chevron"></i> Home</Link></li>
               <li><Link to="/about"><i className="bi bi-chevron-right gold-chevron"></i> About Us</Link></li>
               <li><Link to="/fleet"><i className="bi bi-chevron-right gold-chevron"></i> Our Fleet</Link></li>
-              <li><Link to="/packages"><i className="bi bi-chevron-right gold-chevron"></i> Tour Packages</Link></li>
               <li><Link to="/blog"><i className="bi bi-chevron-right gold-chevron"></i> Blog</Link></li>
               <li><Link to="/contact"><i className="bi bi-chevron-right gold-chevron"></i> Contact Us</Link></li>
             </ul>

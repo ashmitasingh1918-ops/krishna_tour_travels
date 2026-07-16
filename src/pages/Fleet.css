@@ -624,22 +624,29 @@
 .customPackage {
   max-width: 1000px;
   margin: 80px auto;
-  background: linear-gradient(135deg, #002c85, #0b2f75);
+  background: linear-gradient(135deg, #032478 0%, #0b2e6b 100%);
   color: white;
   text-align: center;
   padding: 60px 30px;
   border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(3, 36, 120, 0.15);
 }
 
 .customPackage h2 {
   font-size: 2.3rem;
   margin-bottom: 15px;
+  font-weight: 800;
+  font-family: sans-serif;
+  letter-spacing: -0.5px;
 }
 
 .customPackage p {
   max-width: 650px;
   margin: auto;
   line-height: 1.8;
+  font-family: poppins;
+  font-size: 1.05rem;
+  opacity: 0.9;
 }
 
 .ctaBtns {
@@ -650,22 +657,56 @@
 }
 
 .quoteBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   border: none;
-  background: #ffc107;
-  color: black;
+  background: linear-gradient(135deg, #c2941b, #a37c15);
+  color: white !important;
   padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 25px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 13px;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(194, 148, 27, 0.35);
+  transition: all 0.3s ease;
+}
+
+.quoteBtn:hover {
+  background: linear-gradient(135deg, #a37c15, #876610);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(194, 148, 27, 0.5);
+  text-decoration: none;
 }
 
 .whatsappBtn {
-  border: 1px solid white;
-  background: transparent;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  color: white !important;
   padding: 12px 28px;
-  border-radius: 8px;
+  border-radius: 25px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 13px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsappBtn:hover {
+  background: white;
+  color: #032478 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  border-color: white;
 }
 
 
