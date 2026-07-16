@@ -12,8 +12,8 @@
     transmission: "Manual",
     fuel: "Petrol",
 
-    image: `${import.meta.env.BASE_URL}images/SIZUKI-CIAZ.jpg`,
-    interior: `${import.meta.env.BASE_URL}images/SIZUKI-CIAZ-interior.jpg`,
+    image: `${import.meta.env.BASE_URL}images/Ciaz.Exterior.png`,
+    interior: `${import.meta.env.BASE_URL}images/Ciaz.Interior 1.png`,
 
     description:
       "The Suzuki Ciaz is a premium sedan offering exceptional comfort, fuel efficiency, and spacious interiors. It is perfect for airport transfers, business meetings, city rides, and family travel.",
@@ -176,7 +176,7 @@
   transmission: "Automatic",
   fuel: "Petrol Hybrid",
 
-  image: `${import.meta.env.BASE_URL}images/innova.jpg`,
+  image: `${import.meta.env.BASE_URL}images/innova2.png`,
   interior: `${import.meta.env.BASE_URL}images/innova-interior.jpg`,
 
   description:
@@ -230,7 +230,7 @@
   transmission: "Manual",
   fuel: "Diesel",
 
-  image: `${import.meta.env.BASE_URL}images/crysta.jpg`,
+  image: `${import.meta.env.BASE_URL}images/crysta.png`,
   interior: `${import.meta.env.BASE_URL}images/crysta-interior.png`,
 
   description:
