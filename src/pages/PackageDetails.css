@@ -91,6 +91,39 @@
     gap: 18px;
 }
 
+.package-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.back-link {
+    text-decoration: none;
+}
+
+.back-btn {
+    background: #ffffff;
+    color: #9E0B57;
+    border: 2px solid #9E0B57;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.back-btn:hover {
+    background: #9E0B57;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(158, 11, 87, 0.2);
+}
+
 .quote-btn{
     background: #9E0B57;
     color: white;
@@ -100,37 +133,56 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .quote-btn:hover{
     background: #7b0843;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(158, 11, 87, 0.2);
 }
 
 
 /* Highlights */
 
+/* Tour Highlights */
+
+.highlights-card {
+    background: #fff;
+    border-left: 4px solid #f4c542;
+    border-radius: 16px;
+    padding: 35px;
+    min-height: 360px;          /* Increased height */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .highlights-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px 30px;
-    margin-top: 20px;
+    gap: 28px 40px;             /* More spacing */
+    margin-top: 30px;
 }
 
 .highlight-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eee;
-    font-family: poppins;
-    font-size: 1rem;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ececec;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
 }
 
 .highlight-item i {
     color: #f5b82e;
+    font-size: 1.1rem;
 }
 .tour-gallery {
     display: flex;

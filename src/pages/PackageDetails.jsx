@@ -43,11 +43,19 @@ function PackageDetails() {
     {packageData.price}
   </h2>
 
-  <Link to="/contact#contactForm">
-    <button className="quote-btn">
-      Get a Quote
-    </button>
-  </Link>
+  <div className="package-action-buttons">
+    <Link to="/packages" className="back-link">
+      <button className="back-btn">
+        Go Back
+      </button>
+    </Link>
+
+    <Link to="/contact#contactForm">
+      <button className="quote-btn">
+        Get a Quote
+      </button>
+    </Link>
+  </div>
 
 </div>
 
