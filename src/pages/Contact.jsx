@@ -362,7 +362,7 @@ const Contact = () => {
               <p className="cta-subtitle">Safe, Reliable & Comfortable Rides at the Best Prices.</p>
 
               <div className="d-flex gap-3 mb-5">
-                <button className="btn-book-now-exact">BOOK NOW <span className="arrow">›</span></button>
+                <a href="#contactForm" className="btn-book-now-exact" onClick={(e) => { e.preventDefault(); document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' }); }}>BOOK NOW <span className="arrow">›</span></a>
                 <a
                   href="https://wa.me/8800770603?text=Hello%20Krishna%20Tours,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
                   target="_blank"

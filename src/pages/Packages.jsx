@@ -241,6 +241,36 @@ function Packages() {
     </div>
   </div>
 </section>
+{/* Majestic Rajasthan Circuit */}
+<section className="packages-section py-5">
+  <div className="container">
+    <div className="row g-4 justify-content-center">
+      <div className="col-12 col-md-6 col-lg-4">
+        <div className="package-card-improved">
+          <div className="package-image-wrapper">
+            <div className="package-duration-badge">10N / 11D</div>
+            <img
+              src={jaipur}
+              alt="Majestic Rajasthan Circuit"
+              className="img-fluid w-100"
+            />
+          </div>
+          <div className="package-card-content-improved">
+            <h5 className="package-title-improved">Majestic Rajasthan Circuit</h5>
+            <p className="package-duration-improved">📍 Delhi–Mandawa–Bikaner–Jaisalmer–Jodhpur–Pushkar–Jaipur–Agra–Delhi</p>
+            <p className="package-desc-improved">A grand royal circuit across Rajasthan's most iconic destinations — deserts, golden forts, palaces, and spiritual lakes.</p>
+            <Link
+              to="/packages/majestic-rajasthan-circuit"
+              className="package-btn-improved"
+            >
+              View Details <MdArrowForward style={{ width: '18px', height: '18px' }} />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {/* Why Book With Us */}
 {/* Why Book With Us */}
 <section className="why-book-section py-5">
