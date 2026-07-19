@@ -169,7 +169,7 @@
 
 .highlight-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
 
     padding-bottom: 18px;
@@ -183,6 +183,7 @@
 .highlight-item i {
     color: #f5b82e;
     font-size: 1.1rem;
+    margin-top: 4px;
 }
 .tour-gallery {
     display: flex;
@@ -219,16 +220,31 @@
     background: #ffffff;
     padding: 30px;
     border-radius: 15px;
-
     border-left: 5px solid #0b2e6b;
-
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
 }
 
 .itinerary-card h4 {
     color: #0b2e6b;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+}
+
+.itinerary-toggle-icon {
+    display: none;
+}
+
+.itinerary-content {
+    margin-top: 15px;
+    display: block;
 }
 
 .itinerary-card p {
@@ -238,6 +254,7 @@
     white-space: pre-line;
     margin-bottom: 0;
     font-family: poppins;
+    text-align: justify;
 }
 
 
@@ -354,10 +371,38 @@
 
 .itinerary-card {
     margin-top: 20px;
-}
-.itinerary-card {
     max-width: 1000px;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+.itinerary-header {
+    cursor: pointer;
+}
+
+.itinerary-toggle-icon {
+    display: inline-block;
+    color: #0b2e6b;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.itinerary-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.itinerary-card.open .itinerary-content {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.itinerary-card.open .itinerary-toggle-icon {
+    transform: rotate(180deg);
 }
 
 .info-card {
@@ -404,4 +449,21 @@
     font-size: 0.9rem;
     font-weight: 600;
 }
+
+    /* Mobile Highlights Optimization */
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .highlights-card {
+        padding: 25px;
+        min-height: auto;
+    }
+
+    .highlight-item {
+        font-size: 1rem;
+        padding-bottom: 12px;
+    }
 }

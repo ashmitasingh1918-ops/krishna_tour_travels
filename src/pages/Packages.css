@@ -14,11 +14,21 @@
   .packages-hero-premium {
     padding-top: 76px;
   }
+  .packages-hero-premium .hero-bg-img {
+    height: 260px;
+    object-fit: cover;
+    object-position: 15% center;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 480px) {
   .packages-hero-premium {
     padding-top: 64px;
+  }
+  .packages-hero-premium .hero-bg-img {
+    height: 200px;
+    object-position: 10% center;
   }
 }
 

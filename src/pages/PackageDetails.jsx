@@ -1,10 +1,19 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import packages from "../data/packages";
 import "./PackageDetails.css";
 import { Link } from "react-router-dom";
 
 function PackageDetails() {
   const { packageId } = useParams();
+  const [openDays, setOpenDays] = useState({});
+
+  const toggleDay = (index) => {
+    setOpenDays((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
 
   const packageData = packages.find(
     (item) => item.id === packageId
@@ -141,22 +150,27 @@ function PackageDetails() {
             Day Wise Itinerary
           </h2>
 
-          {packageData.itinerary.map((day, index) => (
+          {packageData.itinerary.map((day, index) => {
+            const isOpen = !!openDays[index];
+            return (
+              <div
+                className={`itinerary-card mb-4 ${isOpen ? "open" : ""}`}
+                key={index}
+                onClick={() => toggleDay(index)}
+              >
+                <div className="itinerary-header">
+                  <h4>
+                    {day.day} - {day.title}
+                  </h4>
+                  <i className="bi bi-chevron-down itinerary-toggle-icon"></i>
+                </div>
 
-            <div
-              className="itinerary-card mb-4"
-              key={index}
-            >
-
-              <h4>
-                {day.day} - {day.title}
-              </h4>
-
-              <p>{day.description}</p>
-
-            </div>
-
-          ))}
+                <div className="itinerary-content">
+                  <p>{day.description}</p>
+                </div>
+              </div>
+            );
+          })}
 
         </section>
 
