@@ -260,6 +260,11 @@
     border-color: #25d366;
   }
 
+  .social-icon.tripadvisor:hover {
+    background-color: #00af87;
+    border-color: #00af87;
+  }
+
   .footer-bottom {
     padding-bottom: 24px;
     width: 100%;

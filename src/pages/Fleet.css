@@ -759,8 +759,24 @@
     grid-template-columns: 1fr;
   }
   
+  .section-pretitle {
+    font-size: 0.9rem !important;
+  }
+
+  .vehicle-card-name {
+    font-size: 1.15rem !important;
+  }
+
+  .customPackage h2 {
+    font-size: 1.5rem;
+  }
+
+  .customPackage p {
+    font-size: 0.95rem;
+  }
+
   .fleet-filter-title {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
 
   .advGrid {
@@ -790,11 +806,11 @@
   }
 
   .adv-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .adv-card-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .adv-card-icon-wrapper {

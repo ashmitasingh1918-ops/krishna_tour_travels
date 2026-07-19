@@ -676,8 +676,79 @@
   font-size: 1.4rem;
 }
 
+@media (max-width: 991px) {
+  .premium-heading {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+}
+
 @media (max-width: 768px) {
   .why-list {
     grid-template-columns: 1fr;
+  }
+  
+  .about-page .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .about-hero .tagline {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-hero .description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  
+  .feature-text h6 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-text p {
+    font-size: 0.95rem;
+  }
+  
+  .feature-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+  
+  .premium-heading {
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+  
+  .premium-body-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .why-list li {
+    font-size: 0.95rem;
+  }
+  
+  .why-list li i {
+    font-size: 1.1rem;
+  }
+  
+  .quote-text-italic {
+    font-size: 1rem !important;
+  }
+  
+  .quote-icon-side {
+    font-size: 1.8rem;
+  }
+  
+  .mission-content h4 {
+    font-size: 1.15rem;
+    text-align: center;
+  }
+  
+  .mission-content p {
+    font-size: 0.95rem;
+    text-align: center;
   }
 }

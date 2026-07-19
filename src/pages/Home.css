@@ -1296,7 +1296,7 @@ body {
   }
   
   .display-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .promise-grid, .fleet-grid, .tours-grid {
@@ -1313,16 +1313,16 @@ body {
   }
   
   .hero-main-title {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
   
   .hero-cursive-tagline {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
   
   .promise-section-title {
-    font-size: 1.45rem !important;
-    white-space: nowrap !important;
+    font-size: 1.3rem !important;
+    white-space: normal !important;
   }
 
   .promise-section-title .cursive-highlight {
@@ -1331,6 +1331,18 @@ body {
   
   .heading-flourish {
     display: none !important;
+  }
+
+  .section-pretitle {
+    font-size: 0.9rem !important;
+  }
+
+  .package-title-improved {
+    font-size: 1.15rem !important;
+  }
+
+  .package-desc-improved {
+    font-size: 0.95rem !important;
   }
 
   .fleet-header-wrapper {
@@ -1346,11 +1358,11 @@ body {
   }
 
   .fleet-header-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .fleet-header-desc {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .fleet-view-link {
@@ -1373,11 +1385,11 @@ body {
   }
 
   .packages-header-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .packages-header-desc {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .packages-view-link {

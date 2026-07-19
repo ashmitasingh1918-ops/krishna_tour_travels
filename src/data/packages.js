@@ -1,9 +1,20 @@
-import delhiTour from "../assets/places/local-tour.png";
-import mandawa from "../assets/places/mandawa.png";
-import tri from "../assets/places/tri.png";
-import jaipur from "../assets/places/jai.png";
-import hari from "../assets/places/harid.png";
-import agra from "../assets/places/taj.png";
+// Detail page (interior) images
+import detailDelhiTour from "../assets/places/local-tour.png";
+import detailMandawa from "../assets/places/mandawa.png";
+import detailTri from "../assets/places/tri.png";
+import detailJaipur from "../assets/places/jai.png";
+import detailHari from "../assets/places/harid.png";
+import detailAgra from "../assets/places/taj.png";
+
+// Homepage slider card images
+import cardDelhiTour from "../assets/images/delhi_tour.png";
+import cardMandawa from "../assets/images/mandawa.png";
+import cardTriangle from "../assets/images/triangle.png";
+import cardJaipur from "../assets/images/jaipur.png";
+import cardHari from "../assets/images/hari.png";
+import cardAgra from "../assets/images/agra.png";
+import cardDelhi from "../assets/images/delhi.png";
+
 const packages = [
   {
     id: "delhi-local",
@@ -12,7 +23,9 @@ const packages = [
 
     duration: "1 Night / 2 Days",
 
-    gallery: delhiTour,
+    cardImage: cardDelhiTour,
+
+    gallery: detailDelhiTour,
 
     overview:
       "Discover the vibrant blend of history and culture in India’s capital. This short getaway takes you through the architectural marvels of Humayun’s Tomb and Qutub Minar, the patriotic charm of India Gate, and the grandeur of Rashtrapati Bhavan. Experience the spiritual aura of Jama Masjid, followed by a lively rickshaw ride through Chandni Chowk, where bustling bazaars and historic lanes bring Old Delhi to life. Perfect for travelers seeking a quick yet immersive introduction to Delhi’s heritage and modern highlights.",
@@ -74,7 +87,9 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     // price: "₹6,500",
 
-    gallery: agra,
+    cardImage: cardDelhi,
+
+    gallery: detailAgra,
 
     overview:
       "Discover the perfect blend of history, culture, and architecture with this Delhi-Agra-Delhi tour. Explore the iconic landmarks of Delhi and witness the timeless beauty of the Taj Mahal and Agra Fort, two of India's most celebrated heritage sites.",
@@ -146,7 +161,9 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     // price: "₹24,900",
 
-    gallery: tri,
+    cardImage: cardTriangle,
+
+    gallery: detailTri,
 
     overview:
       "Discover India's most iconic destinations on the Golden Triangle Tour covering Delhi, Agra, Jaipur, and Mandawa. Experience magnificent Mughal monuments, royal palaces, historic forts, colorful markets, and the rich cultural heritage of North India.",
@@ -250,7 +267,9 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     // price: "₹12,900",
 
-    gallery: jaipur,
+    cardImage: cardJaipur,
+
+    gallery: detailJaipur,
 
     overview:
       "Experience the famous Golden Triangle circuit covering Delhi, Agra, and Jaipur. Visit iconic Mughal monuments, majestic forts, royal palaces, and discover the rich heritage and culture of North India.",
@@ -331,7 +350,9 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     // price: "₹5,500",
 
-    gallery: hari, // import your package image
+    cardImage: cardHari,
+
+    gallery: detailHari, // import your package image
 
     overview:
       "Experience a spiritual journey to Haridwar and Rishikesh, two of India's most sacred destinations. Witness the divine Ganga Aarti, visit famous temples, explore ashrams, and enjoy the peaceful atmosphere of the holy Ganges.",
@@ -394,7 +415,9 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     // price: "₹4,500",
 
-    gallery: agra,
+    cardImage: cardAgra,
+
+    gallery: detailAgra,
 
     overview:
       "Experience the timeless beauty of Agra with a comfortable trip from Delhi. Visit the majestic Agra Fort and witness the breathtaking Taj Mahal, one of the Seven Wonders of the World.",
@@ -452,7 +475,9 @@ Later in the evening, return to your hotel with wonderful memories of Delhi sigh
 
     duration: "10 Nights / 11 Days",
 
-    gallery: mandawa,
+    cardImage: cardMandawa,
+
+    gallery: detailMandawa,
 
     overview:
       "Embark on a grand journey across the royal deserts, painted cities, and golden forts of Rajasthan. From the ornate havelis of Mandawa and the vast Thar Desert of Jaisalmer to the Blue City of Jodhpur, the rose-pink lakes of Pushkar, and the majestic Pink City of Jaipur — this circuit is a feast for the senses, culminating with the iconic Taj Mahal in Agra before returning to Delhi.",

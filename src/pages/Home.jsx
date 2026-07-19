@@ -397,7 +397,7 @@ const Home = () => {
                   <div className="package-card-improved">
                     <div className="package-image-wrapper">
                       <div className="package-duration-badge">{getBadge(pkg.duration)}</div>
-                      <img src={pkg.gallery} alt={pkg.title} className="img-fluid w-100" />
+                      <img src={pkg.cardImage} alt={pkg.title} className="img-fluid w-100" />
                     </div>
                     <div className="package-card-content-improved">
                       <h5 className="package-title-improved">{pkg.title}</h5>
