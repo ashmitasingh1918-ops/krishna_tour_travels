@@ -69,7 +69,7 @@ const Home = () => {
   
   const desktopSlides = [
     taj,
-    '/newsite/images/home2.jpeg',
+    `${import.meta.env.BASE_URL}images/home2.jpeg`,
     kesh
   ];
 
