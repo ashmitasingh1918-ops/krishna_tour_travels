@@ -162,14 +162,14 @@
 
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px 40px;             /* More spacing */
     margin-top: 30px;
 }
 
 .highlight-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
 
     padding-bottom: 18px;
@@ -183,7 +183,6 @@
 .highlight-item i {
     color: #f5b82e;
     font-size: 1.1rem;
-    margin-top: 4px;
 }
 .tour-gallery {
     display: flex;
@@ -356,15 +355,53 @@
         text-align: center;
 
     }
-    .overview-card,
-.highlights-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    font-family: poppins;
-    font-size: 1rem;
-}
+    .overview-card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        font-family: poppins;
+        font-size: 1rem;
+    }
+
+    .highlights-card {
+        background: #ffffff;
+        padding: 20px 15px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        font-family: poppins;
+        font-size: 1rem;
+        min-height: auto;
+    }
+
+    .highlights-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
+        margin-top: 20px;
+    }
+
+    .highlight-item {
+        align-items: flex-start;
+        font-size: 0.85rem;
+        padding-bottom: 12px;
+        gap: 6px;
+    }
+
+    .highlight-item i {
+        margin-top: 2px;
+        font-size: 0.95rem;
+    }
+
+    .info-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .info-list li {
+        font-size: 0.95rem;
+        padding: 8px 0;
+    }
+
 .package-header {
     margin-bottom: 20px;
 }
@@ -449,21 +486,4 @@
     font-size: 0.9rem;
     font-weight: 600;
 }
-
-    /* Mobile Highlights Optimization */
-    .highlights-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin-top: 20px;
-    }
-
-    .highlights-card {
-        padding: 25px;
-        min-height: auto;
-    }
-
-    .highlight-item {
-        font-size: 1rem;
-        padding-bottom: 12px;
-    }
 }
