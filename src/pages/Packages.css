@@ -10,6 +10,14 @@
   background: linear-gradient(to right, #b07450 0%, #c17a55 25%, #bc7365 50%, #ad857e 75%, #716576 100%);
 }
 
+@media (max-width: 991px) {
+  .packages-hero-premium {
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .packages-hero-premium {
     padding-top: 76px;
@@ -88,35 +96,7 @@
   color: #b0055b; /* Magenta */
 }
 
-@media (max-width: 991px) {
-  .packages-hero-premium {
-    height: auto;
-    padding: 100px 0 60px;
-  }
-  .packages-hero-premium .hero-main-title {
-    font-size: 2.8rem;
-    text-align: center;
-  }
-  .packages-hero-premium .hero-text-side {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .packages-hero-premium .hero-divider {
-    justify-content: center;
-  }
-  .packages-hero-premium .hero-features-row {
-    justify-content: center;
-  }
-  .packages-hero-premium .tag-bar {
-    margin: 0 auto 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .packages-hero-premium .hero-main-title {
-    font-size: 2.2rem;
-  }
-}
+/* Cleaned up unused legacy hero styles */
 
 .packages-hero-premium .hero-divider {
   display: flex;
