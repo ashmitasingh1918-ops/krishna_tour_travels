@@ -100,7 +100,7 @@ function About() {
             </h2>
             
             <div className="premium-body-text">
-              <p><strong>Krishna Tour India </strong>is a <strong>trusted car rental and transportation company </strong>based in <strong>New Delhi, India, </strong>serving customers with reliable travel solutions since <strong>2012. </strong>Founded under the leadership of <strong>Mr. Ramprakash Gupta and his son Gaurav Gupta</strong>, the company has grown steadily over the years, earning a reputation for quality, affordability, and customer satisfaction.</p>
+              <p><strong>Krishna Tour India </strong>is a <strong>trusted car rental and transportation company </strong>based in <strong>New Delhi, India, </strong>serving customers with reliable travel solutions since <strong>2012. </strong>Founded under the leadership of <strong>Mr. Ramprakash Gupta </strong>, the company has grown steadily over the years, earning a reputation for quality, affordability, and customer satisfaction.</p>
               
               <p>For more than <strong>years</strong>, Krishna Tour India has been providing <strong>safe, comfortable, and cost-effective </strong>transportation services for individuals, families, corporate clients, and tourists. Our commitment to excellence has helped us build lasting relationships with customers who value dependable and professional travel services.</p>
               

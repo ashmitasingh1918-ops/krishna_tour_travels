@@ -32,10 +32,10 @@ function Navbar() {
             onClick={closeNavbar}
           >
             <img
-              src={logo}
-              alt="Krishna Tours Logo"
-              className="logo-img"
-            />
+  src={logo}
+  alt="Krishna Tour India"
+  className="logo-img"
+/>
           </Link>
           
           {/* Mobile/Tablet Inline Navigation Links */}

@@ -8,7 +8,7 @@
   margin-bottom: 20px;
 
   background:
-    linear-gradient(rgba(0,34,96,0.2), rgba(0,33,96,0.2)),
+    linear-gradient(rgba(0, 34, 96, 0.2), rgba(0, 33, 96, 0.2)),
     url("/images/fleet-hero.jpg");
 
   background-size: cover;
@@ -22,6 +22,7 @@
 
   overflow: hidden;
 }
+
 .fleetSection {
   max-width: 650px;
 }
@@ -46,6 +47,7 @@
   .fleetSection h1 {
     font-size: 2.2rem;
   }
+
   .fleetPage {
     height: auto;
     padding: 80px 20px;
@@ -80,9 +82,16 @@
   border-bottom: 1px solid #f0f0f0;
 }
 
+/* LEFT HEADER CONTENT */
+
 .fleet-filter-header-left {
   flex: 1;
-  max-width: 700px;
+  width: 100%;
+  max-width: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .fleet-filter-header-left .gold-divider-wrapper {
@@ -97,22 +106,38 @@
   width: fit-content;
 }
 
+/* OUR FLEET */
+
 .section-pretitle {
+  display: block;
+
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: #032478;
   text-transform: uppercase;
-  display: block;
-  margin-bottom: 8px;
   font-family: sans-serif;
+
+  margin: 0 0 16px 0;
+  padding: 0;
 }
 
+/* DRIVE YOUR JOURNEY YOUR WAY */
+
 .fleet-filter-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  margin: 16px 0 16px 0;
-  line-height: 1.2;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+
+  white-space: nowrap;
+
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: left;
+
+  margin: 0 0 12px 0;
+  padding: 0;
 }
 
 .title-elite {
@@ -123,33 +148,45 @@
   color: #032478;
 }
 
+/* DESCRIPTION */
+
 .fleet-filter-desc {
   font-size: 1.1rem;
   color: #666;
   font-weight: 500;
   line-height: 1.6;
-  margin: 12px 0 0 0;
-  font-family: poppins;
+  font-family: Poppins, sans-serif;
+
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
+
+/* MAIN FLEET LAYOUT */
 
 .fleet-layout-section {
   max-width: 1400px;
   margin: 70px auto 40px;
   padding: 0 20px;
-  display: block; /* Ensure it's not flex */
+  display: block;
 }
+
+/* HEADER + FILTER BUTTONS */
 
 .fleet-header-wrapper {
   width: 100%;
   margin-bottom: 50px;
+
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* Shifting filters down relative to title */
+  align-items: flex-end;
   gap: 30px;
 }
 
+/* SIDEBAR + VEHICLE CARDS */
+
 .fleet-container {
-  display: flex; /* Use flex for sidebar + cards */
+  display: flex;
   gap: 40px;
   align-items: flex-start;
 }
@@ -166,6 +203,59 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .fleet-header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fleet-filter-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fleet-layout-section {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .fleet-header-wrapper {
+    margin-bottom: 30px;
+    gap: 25px;
+  }
+
+  .section-pretitle {
+    font-size: 1.1rem;
+  }
+
+  .fleet-filter-title {
+    width: 100%;
+    white-space: normal;
+    font-size: 2rem;
+  }
+
+  .fleet-filter-desc {
+    font-size: 1rem;
+  }
+
+  .fleet-container {
+    flex-direction: column;
+  }
+
+  .fleet-sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .vehicleCards {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Sidebar General */
@@ -190,7 +280,8 @@
 .sidebar-item {
   display: flex;
   gap: 20px;
-  padding: 55px 24px; /* Increased length as requested */
+  padding: 55px 24px;
+  /* Increased length as requested */
   align-items: center;
   border-bottom: 1px solid #f5f5f5;
   transition: background 0.3s ease;
@@ -288,12 +379,14 @@
 }
 
 .sidebar-decoration {
-  display: none; /* Hidden as requested */
+  display: none;
+  /* Hidden as requested */
 }
 
 .sidebar-decoration img {
   width: 100%;
-  height: 480px; /* Tall decorative image to fill space */
+  height: 480px;
+  /* Tall decorative image to fill space */
   object-fit: cover;
   display: block;
   image-rendering: auto;
@@ -305,7 +398,8 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 10px; /* Fine-tune bottom alignment */
+  margin-bottom: 10px;
+  /* Fine-tune bottom alignment */
 }
 
 .filterBtns button {
@@ -438,7 +532,8 @@
 
 /* Trust Features Bar Styling */
 .vehicle-card-features-bar {
-  background-color: #fdf6f9; /* Warm light-pink brand style overlay */
+  background-color: #fdf6f9;
+  /* Warm light-pink brand style overlay */
   border-radius: 12px;
   padding: 12px 10px;
   display: grid;
@@ -452,7 +547,8 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 10.5px; /* Compact to fit labels */
+  font-size: 10.5px;
+  /* Compact to fit labels */
   font-weight: 700;
   color: #555;
   line-height: 1.25;
@@ -461,7 +557,8 @@
 
 .bar-icon {
   font-size: 1.25rem;
-  color: #B0055B; /* Accent brand color */
+  color: #B0055B;
+  /* Accent brand color */
   flex-shrink: 0;
 }
 
@@ -718,9 +815,10 @@
   .fleet-container {
     grid-template-columns: 1fr;
   }
-  
+
   .fleet-sidebar {
-    display: none; /* Hide sidebars on smaller screens to prioritize cards */
+    display: none;
+    /* Hide sidebars on smaller screens to prioritize cards */
   }
 
   .fleet-main-content {
@@ -758,7 +856,7 @@
   .vehicleCards {
     grid-template-columns: 1fr;
   }
-  
+
   .section-pretitle {
     font-size: 0.9rem !important;
   }
@@ -834,7 +932,8 @@
   }
 
   .vehicle-card-features-bar {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid on mobile */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2x2 grid on mobile */
     gap: 10px 8px;
   }
-}
+}

@@ -68,7 +68,7 @@ const Fleet = () => {
           <div className="fleet-filter-header-left">
             <span className="section-pretitle">OUR FLEET</span>
             <h2 className="fleet-filter-title">
-              <span className="title-elite">Drive Your</span> <span className="title-selection">Journey Your Way</span>
+              <span className="title-elite">Drive Your </span> <span className="title-selection">Journey Your Way</span>
             </h2>
             <p className="fleet-filter-desc">A wide range of well-maintained vehicles to suit every travel need and budget.</p>
           </div>
