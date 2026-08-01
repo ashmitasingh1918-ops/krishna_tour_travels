@@ -6,8 +6,14 @@ import { FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
 import branded_hero from "../assets/images/branded_hero.jpg";
 import kia_car from "../assets/images/kia.jpeg";
+import useSEO from "../hooks/useSEO";
 
 const Contact = () => {
+  useSEO({
+    title: "Contact Us | Book Private Tour & Car Driver in India",
+    description: "Get in touch with Krishna Tour India for custom trip planning, car rental inquiries, WhatsApp booking (+91 8800770603), and instant travel support."
+  });
+
   const [formState, setFormState] = useState('idle'); // 'idle' | 'submitting' | 'success'
   const [openFaq, setOpenFaq] = useState(0);
   const location = useLocation();

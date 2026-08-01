@@ -12,8 +12,14 @@ import { Link } from "react-router-dom";
 import { MdArrowForward, MdSupportAgent } from "react-icons/md";
 import { FiBriefcase, FiAward, FiHeadphones } from "react-icons/fi";
 import tour6 from "../assets/images/tour6.png";
+import useSEO from "../hooks/useSEO";
 
 function Packages() {
+  useSEO({
+    title: "Customized India Tour Packages | Golden Triangle & Heritage Tours",
+    description: "Discover handcrafted India tour packages including Golden Triangle, Delhi City Tour, Agra Taj Mahal, Rajasthan, and Haridwar Rishikesh packages with private car & driver."
+  });
+
   return (
     <>
       {/* 1. New Premium Hero Section */}

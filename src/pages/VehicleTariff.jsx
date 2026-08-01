@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { MdCheckCircleOutline } from "react-icons/md";
 import fleetData from "./Fleet_api";
 import "./VehicleTariff.css";
+import useSEO from "../hooks/useSEO";
 
 const tariffs = {
   1: { // Maruti Ciaz
@@ -90,6 +91,13 @@ const VehicleTariff = () => {
   const vehicle = fleetData.find(
     (item) => item.id === Number(id)
   );
+
+  useSEO({
+    title: vehicle ? `${vehicle.name} Rental Tariff & Rates` : "Vehicle Tariff Details",
+    description: vehicle
+      ? `Transparent pricing and rental rates for ${vehicle.name} from Krishna Tour India. Airport transfers, local city tours, and outstation per KM rates.`
+      : "Car rental rates and vehicle tariffs from Krishna Tour India."
+  });
 
   if (!vehicle) {
     return <h2>Vehicle Not Found</h2>;
