@@ -533,45 +533,53 @@ body {
 /* Hero Slideshow Section    */
 /* ========================= */
 
-/* margin-top is set dynamically via JS (navbarHeight state) so the
-   hero always sits flush beneath the fixed navbar at every screen size. */
+/* margin-top set via JS inline style — always flush under the fixed navbar */
 .hero-section {
   width: 100%;
-  overflow: hidden;
-  background: #000;
-  /* No margin-top here — set via inline style in JSX */
+  background: transparent;
 }
 
+/* Slideshow container — height is determined by the active (relative) slide */
 .hero-slideshow {
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.hero-slides-track {
-  display: flex;
-  transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-  will-change: transform;
-}
-
-/* Each slide takes exactly 100% of the container width */
+/* ── Opacity cross-fade approach ──
+   Inactive slides: absolute (no height effect) + invisible.
+   Active slide:    relative (sets container height) + visible.
+   This means each image shows at its FULL natural size — no black bars,
+   no cropping, regardless of differing image heights. */
 .hero-slide {
-  flex: 0 0 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Image fills full width, height auto = no cropping, no stretching */
+.hero-slide.active {
+  position: relative;   /* participates in normal flow → sets parent height */
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Full image, natural size — no clipping, no stretching */
 .hero-slide img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
-  vertical-align: bottom; /* removes inline gap below image */
 }
 
 /* Legacy elements hidden */
 .hero-overlay,
-.hero-content-wrapper {
+.hero-content-wrapper,
+.hero-slides-track {
   display: none !important;
 }
 /* Our Promise Section */

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import fleetApi from "./Fleet_api";
 import "./Fleet.css";
 import VehicleCard from "./VehicleCard";
@@ -42,6 +42,18 @@ const Fleet = () => {
     description: "Browse Krishna Tour India's fleet of luxury sedans, SUVs, Urbania, and Tempo Travellers with professional English speaking drivers."
   });
 
+  const [navbarHeight, setNavbarHeight] = useState(86);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      const navbar = document.querySelector('.custom-navbar');
+      if (navbar) setNavbarHeight(navbar.getBoundingClientRect().height);
+    };
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
+
   const [vehiclesData, setVehiclesData] = useState(fleetApi);
 
   const filterItem = (type) => {
@@ -60,7 +72,7 @@ const Fleet = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="fleetPage">
+      <section className="fleetPage" style={{ marginTop: navbarHeight }}>
         <div className="fleetSection">
 
         </div>

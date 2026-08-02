@@ -155,19 +155,14 @@ const Home = () => {
     <div className="home-container">
       <section className="hero-section" style={{ marginTop: navbarHeight }}>
         <div className="hero-slideshow">
-          <div
-            className="hero-slides-track"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {slides.map((slide, index) => (
-              <div className="hero-slide" key={index}>
-                <img
-                  src={slide}
-                  alt={`Slide ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
+          {slides.map((slide, index) => (
+            <div
+              className={`hero-slide${index === currentSlide ? ' active' : ''}`}
+              key={index}
+            >
+              <img src={slide} alt={`Slide ${index + 1}`} />
+            </div>
+          ))}
         </div>
       </section>
 

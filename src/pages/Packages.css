@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700;800&display=swap');
 
-/* 1. New Premium Hero Section */
+/* Packages hero — margin-top set in JSX via JS measurement of
+   the fixed navbar's actual rendered height. No padding-top needed
+   since the image itself starts at the very top of the section. */
 .packages-hero-premium {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-top: 0;
-  padding-top: 86px;
+  margin-top: 0; /* overridden via inline style in JSX */
   background: linear-gradient(to right, #b07450 0%, #c17a55 25%, #bc7365 50%, #ad857e 75%, #716576 100%);
 }
 
 @media (max-width: 991px) {
   .packages-hero-premium {
     height: auto;
-    padding-top: 80px;
     padding-bottom: 0;
   }
 }
 
 @media (max-width: 768px) {
-  .packages-hero-premium {
-    padding-top: 76px;
-  }
   .packages-hero-premium .hero-bg-img {
     height: 260px;
     object-fit: cover;
@@ -31,9 +28,6 @@
 }
 
 @media (max-width: 480px) {
-  .packages-hero-premium {
-    padding-top: 64px;
-  }
   .packages-hero-premium .hero-bg-img {
     height: 200px;
     object-position: 10% center;

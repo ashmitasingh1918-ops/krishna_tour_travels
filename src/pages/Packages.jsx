@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Packages.css";
 import delhiTour from "../assets/images/delhi_tour.png";
 import agra from "../assets/images/agra.png";
@@ -20,10 +20,22 @@ function Packages() {
     description: "Discover handcrafted India tour packages including Golden Triangle, Delhi City Tour, Agra Taj Mahal, Rajasthan, and Haridwar Rishikesh packages with private car & driver."
   });
 
+  const [navbarHeight, setNavbarHeight] = useState(86);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      const navbar = document.querySelector('.custom-navbar');
+      if (navbar) setNavbarHeight(navbar.getBoundingClientRect().height);
+    };
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
+
   return (
     <>
       {/* 1. New Premium Hero Section */}
-      <section className="packages-hero-premium">
+      <section className="packages-hero-premium" style={{ marginTop: navbarHeight }}>
         <img
           src={tour6}
           alt="Tour Packages Banner"
