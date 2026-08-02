@@ -11,12 +11,12 @@
   --on-surface-variant: #434652;
   --on-primary: #ffffff;
   --outline: #f0f0f0;
-  
+
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
 
   --shadow-level-2: 0px 10px 40px rgba(0, 0, 0, 0.05);
-  
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 24px;
@@ -176,7 +176,8 @@ body {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  margin-top: 15px; /* Increased from 4px */
+  margin-top: 15px;
+  /* Increased from 4px */
 }
 
 .nav-btn {
@@ -227,8 +228,10 @@ body {
   overflow: hidden;
   width: 100%;
   border-radius: 16px;
-  padding: 15px 0; /* Add padding so hover translate and box-shadow is not clipped */
-  margin: -15px 0; /* Offset padding */
+  padding: 15px 0;
+  /* Add padding so hover translate and box-shadow is not clipped */
+  margin: -15px 0;
+  /* Offset padding */
 }
 
 .fleet-slider-track {
@@ -297,9 +300,11 @@ body {
     height: 42px;
     font-size: 24px;
   }
+
   .fleet-slider-arrow.arrow-left {
     left: -15px;
   }
+
   .fleet-slider-arrow.arrow-right {
     right: -15px;
   }
@@ -524,222 +529,51 @@ body {
   cursor: pointer;
 }
 
-/* Hero Section */
+/* ========================= */
+/* Hero Slideshow Section    */
+/* ========================= */
+
+/* margin-top is set dynamically via JS (navbarHeight state) so the
+   hero always sits flush beneath the fixed navbar at every screen size. */
 .hero-section {
-  position: relative;
-  margin-top: 86px;
-  min-height: calc(100vh - 86px);
-  height: calc(100vh - 86px);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 0;
-  padding-bottom: 0;
+  width: 100%;
   overflow: hidden;
-  background-color: #051b44;
+  background: #000;
+  /* No margin-top here — set via inline style in JSX */
 }
 
 .hero-slideshow {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 1;
   overflow: hidden;
 }
 
 .hero-slides-track {
   display: flex;
-  height: 100%;
-  transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: transform;
 }
 
+/* Each slide takes exactly 100% of the container width */
 .hero-slide {
-  height: 100%;
-  flex-shrink: 0; /* Critical for multi-slide track */
-  background-size: 100% 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  transform: scale(1);
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
 }
 
-.hero-overlay {
+/* Image fills full width, height auto = no cropping, no stretching */
+.hero-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  vertical-align: bottom; /* removes inline gap below image */
+}
+
+/* Legacy elements hidden */
+.hero-overlay,
+.hero-content-wrapper {
   display: none !important;
 }
-
-.hero-content-wrapper {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  padding-top: 0;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 30px;
-  align-items: center;
-}
-
-.hero-left-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  max-width: 600px;
-}
-
-.hero-cursive-tagline {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.8rem;
-  color: #ffc107;
-  display: block;
-  margin-bottom: 8px;
-  line-height: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.hero-main-title {
-  font-family: var(--font-heading);
-  font-size: 2.85rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.2;
-  margin: 0 0 16px 0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  letter-spacing: -0.01em;
-}
-
-.hero-main-title .highlight-text {
-  color: #ffc107;
-  display: block;
-}
-
-.hero-subtext {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
-  margin: 0 0 35px 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-}
-
-.hero-trust-badges {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.trust-badge-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #ffffff;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-}
-
-.trust-badge-icon {
-  color: #ffc107;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-}
-
-/* Hero Right Column (Car & Booking) */
-.hero-right-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
-}
-
-.hero-car-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 560px;
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
-  animation: floatCar 6s infinite ease-in-out;
-}
-
-@keyframes floatCar {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-.hero-car-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.car-door-sticker {
-  position: absolute;
-  top: 48%;
-  right: 17%;
-  width: 16%;
-  background: #ffffff;
-  padding: 1.5px;
-  border: 1.2px solid #B0055B;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-  transform: skewY(-2.5deg) rotate(-2.5deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sticker-logo-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-booking-container {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 28px;
-}
-
-.btn-hero-book {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background-color: #B0055B;
-  color: #ffffff !important;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  box-shadow: 0 6px 20px rgba(176, 5, 91, 0.4);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.btn-hero-book:hover {
-  background-color: #92044b;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(176, 5, 91, 0.55);
-}
-
-.arrow-icon-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  background-color: #ffffff;
-  color: #B0055B;
-  border-radius: 50%;
-  font-size: 0.95rem;
-}
-
-
 /* Our Promise Section */
 /* Our Promise Section - New Design */
 .promise-section {
@@ -827,10 +661,23 @@ body {
 }
 
 @keyframes flyPlane {
-  0% { transform: translate(-200px, 0) rotate(15deg); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translate(200px, -20px) rotate(15deg); opacity: 0; }
+  0% {
+    transform: translate(-200px, 0) rotate(15deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(200px, -20px) rotate(15deg);
+    opacity: 0;
+  }
 }
 
 .promise-grid-container {
@@ -883,7 +730,7 @@ body {
   font-weight: 800;
   font-size: 14px;
   z-index: 2;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .promise-icon-wrapper {
@@ -967,14 +814,17 @@ body {
   --theme-color: #083e9e;
   border-bottom: 5px solid #083e9e;
 }
+
 .theme-green {
   --theme-color: #28a745;
   border-bottom: 5px solid #28a745;
 }
+
 .theme-purple {
   --theme-color: #6f42c1;
   border-bottom: 5px solid #6f42c1;
 }
+
 .theme-orange {
   --theme-color: #fd7e14;
   border-bottom: 5px solid #fd7e14;
@@ -984,6 +834,7 @@ body {
   .promise-arrow {
     display: none;
   }
+
   .promise-grid {
     gap: 20px;
   }
@@ -995,30 +846,37 @@ body {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
   }
+
   .promise-section-title {
     font-size: 2.2rem;
   }
+
   .promise-card {
     padding: 25px 15px 20px 15px !important;
     border-radius: 12px !important;
   }
+
   .promise-icon-wrapper {
     width: 50px !important;
     height: 50px !important;
     margin: 0 auto 15px auto !important;
   }
+
   .promise-icon,
   .promise-rupee-icon {
     font-size: 20px !important;
   }
+
   .promise-title {
     font-size: 1rem !important;
     margin-bottom: 8px !important;
   }
+
   .promise-desc {
     font-size: 0.8rem !important;
     margin-bottom: 10px !important;
   }
+
   .card-number {
     left: 15px !important;
     padding: 4px 8px !important;
@@ -1240,89 +1098,44 @@ body {
   .promise-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .fleet-grid, .tours-grid {
+
+  .fleet-grid,
+  .tours-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 992px) {
-  .hero-section {
-    min-height: calc(100vh - 86px);
-    height: calc(100vh - 86px);
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-  .hero-left-col {
-    align-items: center;
-    text-align: center;
-  }
-  .hero-cursive-tagline {
-    font-size: 2.4rem;
-  }
-  .hero-main-title {
-    font-size: 2.3rem;
-  }
-  .hero-subtext {
-    font-size: 1.05rem;
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-trust-badges {
-    justify-content: center;
-  }
-  .hero-right-col {
-    align-items: center;
-  }
-  .hero-booking-container {
-    justify-content: center;
-    padding-right: 0;
-    margin-right: 0;
-  }
-
-
+  /* hero-section margin-top handled by JS — no overrides needed */
 }
 
 @media (max-width: 768px) {
-  .hero-slide {
-    background-position: center center !important;
-    background-size: 100% 100% !important; /* Fills the container exactly with no cropping */
-  }
+  /* hero-slide now uses <img> tags, background rules not applicable */
 
   .container {
     padding: 0 1.25rem;
   }
-  
+
   .display-title {
     font-size: 28px;
   }
 
-  .promise-grid, .fleet-grid, .tours-grid {
+  .promise-grid,
+  .fleet-grid,
+  .tours-grid {
     grid-template-columns: 1fr;
   }
-  
-  .hero-section {
-    aspect-ratio: 460 / 341 !important;
-    min-height: auto !important;
-    height: auto !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin-top: 76px !important;
-  }
-  
+
+  /* hero-section margin-top handled by JS — no overrides needed */
+
   .hero-main-title {
     font-size: 1.6rem;
   }
-  
+
   .hero-cursive-tagline {
     font-size: 1.8rem;
   }
-  
+
   .promise-section-title {
     font-size: 1.3rem !important;
     white-space: normal !important;
@@ -1331,7 +1144,7 @@ body {
   .promise-section-title .cursive-highlight {
     margin: 0 5px !important;
   }
-  
+
   .heading-flourish {
     display: none !important;
   }

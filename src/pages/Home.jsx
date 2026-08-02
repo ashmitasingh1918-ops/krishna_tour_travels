@@ -73,7 +73,8 @@ const Home = () => {
   });
 
   const [isMobile, setIsMobile] = useState(false);
-  
+  const [navbarHeight, setNavbarHeight] = useState(86);
+
   const desktopSlides = [
     taj,
     `${import.meta.env.BASE_URL}images/home2.jpeg`,
@@ -102,9 +103,15 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const handleResize = () => {
+    const updateLayout = () => {
       const mobile = window.innerWidth < 768;
       setIsMobile(mobile);
+
+      // Measure the actual fixed navbar height so hero sits flush beneath it
+      const navbar = document.querySelector('.custom-navbar');
+      if (navbar) {
+        setNavbarHeight(navbar.getBoundingClientRect().height);
+      }
 
       let cards = 3;
       if (window.innerWidth < 768) {
@@ -116,9 +123,9 @@ const Home = () => {
       setPackageIndex((prev) => Math.min(prev, packagesData.length - cards));
       setFleetIndex((prev) => Math.min(prev, fleetData.length - cards));
     };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    updateLayout();
+    window.addEventListener('resize', updateLayout);
+    return () => window.removeEventListener('resize', updateLayout);
   }, []);
 
   const handleNextPackages = () => {
@@ -146,35 +153,20 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* Hero Section */}
-      <section className="hero-section">
-        {/* Background Slideshow */}
+      <section className="hero-section" style={{ marginTop: navbarHeight }}>
         <div className="hero-slideshow">
           <div
             className="hero-slides-track"
-            style={{
-              transform: `translateX(-${(currentSlide * 100) / slides.length}%)`,
-              width: `${slides.length * 100}%`
-            }}
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {slides.map((slide, index) => (
-              <div
-                key={index}
-                className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
-                style={{
-                  backgroundImage: `url(${slide})`,
-                  width: `${100 / slides.length}%`
-                }}
-              />
+              <div className="hero-slide" key={index}>
+                <img
+                  src={slide}
+                  alt={`Slide ${index + 1}`}
+                />
+              </div>
             ))}
-          </div>
-          <div className="hero-overlay"></div>
-        </div>
-
-        {/* Hero Content Overlay */}
-        <div className="container hero-content-wrapper">
-          <div className="hero-left-col">
-
           </div>
         </div>
       </section>
@@ -316,8 +308,8 @@ const Home = () => {
         <div className="fleet-slider-container">
           {/* Left Arrow */}
           {fleetIndex > 0 && (
-            <button 
-              className="fleet-slider-arrow arrow-left" 
+            <button
+              className="fleet-slider-arrow arrow-left"
               onClick={handlePreviousFleet}
               aria-label="Previous vehicles"
             >
@@ -327,8 +319,8 @@ const Home = () => {
 
           {/* Right Arrow */}
           {fleetIndex < fleetData.length - visibleCards && (
-            <button 
-              className="fleet-slider-arrow arrow-right" 
+            <button
+              className="fleet-slider-arrow arrow-right"
               onClick={handleNextFleet}
               aria-label="Next vehicles"
             >
@@ -337,7 +329,7 @@ const Home = () => {
           )}
 
           <div className="fleet-slider-viewport">
-            <div 
+            <div
               className="fleet-slider-track"
               style={{
                 transform: `translateX(-${(fleetIndex * 100) / visibleCards}%)`
@@ -372,8 +364,8 @@ const Home = () => {
         <div className="packages-slider-container">
           {/* Left Arrow */}
           {packageIndex > 0 && (
-            <button 
-              className="packages-slider-arrow arrow-left" 
+            <button
+              className="packages-slider-arrow arrow-left"
               onClick={handlePrevPackages}
               aria-label="Previous packages"
             >
@@ -383,8 +375,8 @@ const Home = () => {
 
           {/* Right Arrow */}
           {packageIndex < packagesData.length - visibleCards && (
-            <button 
-              className="packages-slider-arrow arrow-right" 
+            <button
+              className="packages-slider-arrow arrow-right"
               onClick={handleNextPackages}
               aria-label="Next packages"
             >
@@ -393,7 +385,7 @@ const Home = () => {
           )}
 
           <div className="packages-slider-viewport">
-            <div 
+            <div
               className="packages-slider-track"
               style={{
                 transform: `translateX(-${(packageIndex * 100) / visibleCards}%)`
