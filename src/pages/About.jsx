@@ -4,8 +4,14 @@ import sedanImg from "../assets/images/agra.png";
 import luxuryImg from "../assets/images/delhi.png";
 import aboutHero from "../assets/images/about_us.png";
 import cars from "../assets/images/cars.png";
+import useSEO from "../hooks/useSEO";
 
 function About() {
+  useSEO({
+    title: "About Us | Premier Private Tours & Drivers in India",
+    description: "Learn about Krishna Tour India - your trusted travel partner for luxury car rentals, private drivers, and custom India tour itineraries."
+  });
+
   return (
     <div className="about-page">
       {/* Hero Section */}
@@ -25,7 +31,7 @@ function About() {
             <div className="col-lg-6 hero-image-col">
               <img
                 src={cars}
-                alt="Krishna Tours"
+                alt="Krishna Tour India Luxury Fleet"
                 className="hero-car-img"
               />
             </div>

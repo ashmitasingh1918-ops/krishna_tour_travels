@@ -22,6 +22,8 @@ import mobile1 from "../assets/images/mobile1.png";
 import mobile2 from "../assets/images/mobile2.png";
 import mobile3 from "../assets/images/mobile3.png";
 
+import useSEO from "../hooks/useSEO";
+
 // Helper components for gold flourishes and dividers
 const GoldFlourish = ({ isLeft }) => (
   <svg
@@ -65,6 +67,11 @@ const GoldDivider = () => (
 );
 
 const Home = () => {
+  useSEO({
+    title: "India Tour Packages & Private Car Rentals",
+    description: "Explore India's heritage, culture and iconic destinations with Krishna Tour India. Premium private cars, Golden Triangle tours, and personalized driver services."
+  });
+
   const [isMobile, setIsMobile] = useState(false);
   
   const desktopSlides = [

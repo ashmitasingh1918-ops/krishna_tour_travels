@@ -527,12 +527,13 @@ body {
 /* Hero Section */
 .hero-section {
   position: relative;
-  margin-top: 40px;
+  margin-top: 86px;
   min-height: calc(100vh - 86px);
+  height: calc(100vh - 86px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 20px;
+  padding-top: 0;
   padding-bottom: 0;
   overflow: hidden;
   background-color: #051b44;
@@ -557,8 +558,9 @@ body {
 .hero-slide {
   height: 100%;
   flex-shrink: 0; /* Critical for multi-slide track */
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center center;
+  background-repeat: no-repeat;
   transform: scale(1);
 }
 
@@ -1245,9 +1247,10 @@ body {
 
 @media (max-width: 992px) {
   .hero-section {
-    min-height: calc(90vh - 86px);
-    padding-top: 40px;
-    padding-bottom: 80px;
+    min-height: calc(100vh - 86px);
+    height: calc(100vh - 86px);
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1309,7 +1312,7 @@ body {
     height: auto !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-    margin-top: 15px !important;
+    margin-top: 76px !important;
   }
   
   .hero-main-title {

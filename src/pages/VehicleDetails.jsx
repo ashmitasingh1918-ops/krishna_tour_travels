@@ -1,11 +1,19 @@
 import { useParams, Link } from "react-router-dom";
 import fleetData from "./Fleet_api";
 import "./VehicleDetails.css";
+import useSEO from "../hooks/useSEO";
 
 const VehicleDetails = () => {
   const { id } = useParams();
 
   const vehicle = fleetData.find((item) => item.id === Number(id));
+
+  useSEO({
+    title: vehicle ? `${vehicle.name} Car Rental with Driver` : "Vehicle Details",
+    description: vehicle
+      ? `Rent ${vehicle.name} with professional driver from Krishna Tour India. Capacity: ${vehicle.seatingCapacity || 'comfortable'}.`
+      : "Luxury vehicle details and car rental specs from Krishna Tour India."
+  });
 
   if (!vehicle) {
     return <h2 className="not-found">Vehicle Not Found</h2>;

@@ -16,6 +16,7 @@ import {
 
 import Navbar from "../components/Navbar";
 import blogData from "./Blog_api";
+import useSEO from "../hooks/useSEO";
 
 import "./Blog.css";
 
@@ -38,6 +39,13 @@ const Blog = () => {
   const currentBlog = isDetailsView
     ? blogsList.find((blog) => blog.id === Number(id))
     : null;
+
+  useSEO({
+    title: currentBlog ? currentBlog.title : "India Travel Blog & Driver Guides",
+    description: currentBlog
+      ? (currentBlog.excerpt || currentBlog.title)
+      : "Read travel tips, Golden Triangle guides, driver recommendations and India travel advice from Krishna Tour India."
+  });
 
   const [activeSlideIdx, setActiveSlideIdx] = useState(0);
 

@@ -3,6 +3,7 @@ import { useState } from "react";
 import packages from "../data/packages";
 import "./PackageDetails.css";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO";
 
 function PackageDetails() {
   const { packageId } = useParams();
@@ -18,6 +19,13 @@ function PackageDetails() {
   const packageData = packages.find(
     (item) => item.id === packageId
   );
+
+  useSEO({
+    title: packageData ? packageData.title : "Tour Package Details",
+    description: packageData
+      ? (packageData.overview ? packageData.overview.slice(0, 160) : `${packageData.title} package details`)
+      : "Detailed itinerary for Krishna Tour India tour packages."
+  });
 
   if (!packageData) {
     return (

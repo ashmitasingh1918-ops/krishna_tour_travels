@@ -21,6 +21,7 @@ import {
   MdAirportShuttle
 } from "react-icons/md";
 import { Link } from "react-router-dom";
+import useSEO from "../hooks/useSEO";
 
 // Gold Divider Component
 const GoldDivider = () => (
@@ -36,6 +37,11 @@ const GoldDivider = () => (
 
 
 const Fleet = () => {
+  useSEO({
+    title: "Luxury Fleet & Car Rentals in India",
+    description: "Browse Krishna Tour India's fleet of luxury sedans, SUVs, Urbania, and Tempo Travellers with professional English speaking drivers."
+  });
+
   const [vehiclesData, setVehiclesData] = useState(fleetApi);
 
   const filterItem = (type) => {
